@@ -78,7 +78,7 @@ const WorkSchedule = () => {
             <React.Fragment key={index}>
               <tr className="text-center border-b border-input-bordergrey">
                 <td className="text-start px-2 py-1.5">{row.title}</td>
-                <td>{row.quantity}</td>
+                <td className="px-4 text-start">{row.quantity}</td>
                 <td>{row.mon}</td>
                 <td>{row.tue}</td>
                 <td>{row.wed}</td>

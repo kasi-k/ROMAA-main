@@ -14,6 +14,14 @@ import { TbCalendarDue } from "react-icons/tb";
 import { LuClipboardList } from "react-icons/lu";
 import Schedule from "./TodaySchedule";
 import WorkSchedule from "./WorkSchedule";
+import MaterialRequest from "./MaterialRequest";
+import MaterialRequestStatus from "./MaterialRequestStatus";
+import { MdOutlineCheckCircle } from "react-icons/md";
+import { IoMdTime } from "react-icons/io";
+import { TbCalendarTime } from "react-icons/tb";
+import { RiMenuAddFill } from "react-icons/ri";
+import { IoDiscOutline } from "react-icons/io5";
+import { SlBadge } from "react-icons/sl";
 
 const summaryData = [
   { title: "Verified", subtitle: "My Profile Status" },
@@ -95,111 +103,55 @@ const EmployeeDashboard = () => {
             title="My Profile Status"
             value="Verified"
             status="KYC is Complete"
+            icon={<MdOutlineCheckCircle size={24} color="#2A848D" />}
           />
           <SummaryCard
             title="Today's working hours"
             value="5h 20m"
             status="Today's Hours"
+            icon={<IoMdTime size={24} color="#2A848D" />}
           />
           <SummaryCard
-            title="Overview"
+            title="Attendance This month "
             value="96%"
-            status="Attendance This month"
+            status="Overview"
+            icon={<TbCalendarTime size={24} color="#2A848D" />}
           />
-          <SummaryCard
-            title="Task Remainder"
-            value="3"
-            status="Task Due"
-          />
-          <SummaryCard
-            title="Score"
-            value="88%"
-            status="Perfomance Score"
-          />
-          <SummaryCard
-            title="Count"
-            value="5"
-            status="Appreciations"
-          />
+          <SummaryCard title="Task Due" value="3" status=" Task Remainder" icon={<RiMenuAddFill size={24} color="#2A848D"/>} />
+          <SummaryCard title="Perfomance Score" value="88%" status=" Score" icon={<IoDiscOutline size={24} color="#2A848D"/>} />
+          <SummaryCard title="Appreciations" value="5" status=" Count" icon={<SlBadge size={24} color="#2A848D"/>} />
         </div>
 
         {/* Schedule + Material */}
         <div className="grid md:grid-cols-3 gap-4">
           {/* Schedule */}
           <div className="md:col-span-2 grid grid-cols-2 gap-4">
-      <Schedule/>
+            <Schedule />
 
-       <WorkSchedule/>
+            <WorkSchedule />
           </div>
 
-          {/* Material Request */}
-          <div className="bg-white p-4 rounded-md shadow">
-            <h3 className="font-semibold mb-2">Material Request</h3>
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="text-left text-gray-500">
-                  <th>Name</th>
-                  <th>Quantity</th>
-                  <th>Unit</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {materials.map((item, idx) => (
-                  <tr key={idx} className="border-t">
-                    <td>{item.name}</td>
-                    <td>{item.qty}</td>
-                    <td>{item.unit}</td>
-                    <td className="text-green-600">{item.status}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <MaterialRequest />
         </div>
 
-        {/* Machinery + Chart */}
-        <div className="grid md:grid-cols-2 gap-4">
-          {/* Machinery Table */}
-          <div className="bg-white p-4 rounded-md shadow overflow-x-auto">
-            <h3 className="font-semibold mb-2">Machinery Request Status</h3>
-            <table className="w-full text-sm">
-              <thead className="text-gray-500 text-left">
-                <tr>
-                  <th>S.no</th>
-                  <th>Request ID</th>
-                  <th>Machine</th>
-                  <th>Site Location</th>
-                  <th>Date</th>
-                  <th>Status</th>
-                  <th>Remarks</th>
-                </tr>
-              </thead>
-              <tbody>
-                {requests.map((r, i) => (
-                  <tr key={i} className="border-t">
-                    <td>{i + 1}</td>
-                    <td>{r.id}</td>
-                    <td>{r.machine}</td>
-                    <td>{r.location}</td>
-                    <td>{r.date}</td>
-                    <td>{r.status}</td>
-                    <td>{r.remarks}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        <div className="grid md:grid-cols-12 gap-4">
+          <div className="col-span-8 bg-white p-4 rounded-md shadow">
+            <MaterialRequestStatus />
           </div>
-
-          {/* Bar Chart */}
-          <div className="bg-white p-4 rounded-md shadow">
-            <h3 className="font-semibold mb-2">Current Project Status</h3>
-            <ResponsiveContainer width="100%" height={220}>
-              <BarChart data={datachart}>
-                <XAxis dataKey="name" />
-                <YAxis />
+          <div className="bg-white col-span-4 p-4 rounded-md shadow">
+            <h3 className="font-semibold mb-10">Current Project Status</h3>
+            <ResponsiveContainer width="100%" height={240} >
+              <BarChart data={datachart}    margin={{ top: 24, right: 16, left: 0, bottom: 0 }}>
+                <XAxis dataKey="name" axisLine={false} tickLine={false} />
+                <YAxis
+                  domain={[0, 100]}
+                  ticks={[0, 20, 40, 60, 80, 100]}
+                   interval={0}
+                  axisLine={false}
+                  tickLine={false}
+                />
                 <Tooltip />
-                <Bar dataKey="value" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="value" fill="#5E52CE" barSize={20} radius={4} />
               </BarChart>
             </ResponsiveContainer>
           </div>

@@ -38,7 +38,7 @@ const ForgotPassword = () => {
             </p>
           </form>
           <p
-            onClick={() => navigate("/login")}
+            onClick={() => navigate("/")}
             className="text-center cursor-pointer text-sm py-4 hover:underline"
           >
             Back to Login
