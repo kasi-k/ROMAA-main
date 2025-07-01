@@ -2,6 +2,7 @@ import { IoCartOutline } from "react-icons/io5";
 import Filters from "../../../components/Filters";
 import Table from "../../../components/Table";
 import { purchasebilldata } from "../../../components/Data";
+import CreateBill from "./CreateBill";
 
 const Columns = [
   { label: "Date", key: "date" },
@@ -21,8 +22,9 @@ const PurchaseBill = () => {
       pagetitle="Purchase Bill"
       endpoint={purchasebilldata}
       columns={Columns}
-      AddModal={true}
+      AddModal={CreateBill}
       ViewModal={true}
+      routepoint={"viewpurchasebill"}
       FilterModal={Filters}
       addButtonLabel="Create Bill"
       addButtonIcon={<IoCartOutline size={24} />}

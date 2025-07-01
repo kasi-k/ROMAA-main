@@ -19,6 +19,7 @@ const GoodsReceipt = () => {
       endpoint={goodsreceiptdata}
       columns={Columns}
       EditModal={true}
+      routepoint={"viewgoodreceipt"}
       ViewModal={true}
       FilterModal={Filters}
     />

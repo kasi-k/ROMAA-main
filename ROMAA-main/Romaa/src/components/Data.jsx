@@ -6774,3 +6774,372 @@ export const EMDTableData = [
     status: "Submitted",
   },
 ];
+
+//new data
+
+export const roaddetailsData = [
+  {
+    item_description: "Dismantling clearing away and",
+    number: "1*8*1",
+    length: 0.67,
+    breadth: 0.78,
+    density: 0.465
+  },
+  {
+    item_description: "Dismantling clearing away and",
+    number: "1*8*1",
+    length: 0.67,
+    breadth: 0.78,
+    density: 0.465
+  },
+  {
+    item_description: "Dismantling clearing away and",
+    number: "1*8*1",
+    length: 0.67,
+    breadth: 0.78,
+    density: 0.465
+  },
+  {
+    item_description: "Dismantling clearing away and",
+    number: "1*8*1",
+    length: 0.67,
+    breadth: 0.78,
+    density: 0.465
+  },
+  {
+    item_description: "Dismantling clearing away and",
+    number: "1*8*1",
+    length: 0.67,
+    breadth: 0.78,
+    density: 0.465
+  },
+  {
+    item_description: "Dismantling clearing away and",
+    number: "1*8*1",
+    length: 0.67,
+    breadth: 0.78,
+    density: 0.465
+  },
+  {
+    item_description: "Dismantling clearing away and",
+    number: "1*8*1",
+    length: 0.67,
+    breadth: 0.78,
+    density: 0.465
+  },
+  {
+    item_description: "Dismantling clearing away and",
+    number: "1*8*1",
+    length: 0.67,
+    breadth: 0.78,
+    density: 0.465
+  },
+  {
+    item_description: "Dismantling clearing away and",
+    number: "1*8*1",
+    length: 0.67,
+    breadth: 0.78,
+    density: 0.465
+  }
+]
+
+export const roadabstractData= [
+  {
+    ItemDescription: "Dismantling clearing away and",
+    Quantity: 5568.75,
+    Unit: "M3",
+    Rate: 0.78,
+    Amount: "₹537786"
+  },
+  {
+    ItemDescription: "Dismantling clearing away and",
+    Quantity: 5568.75,
+    Unit: "M3",
+    Rate: 0.78,
+    Amount: "₹537786"
+  },
+  {
+    ItemDescription: "Dismantling clearing away and",
+    Quantity: 5568.75,
+    Unit: "M3",
+    Rate: 0.78,
+    Amount: "₹537786"
+  },
+  {
+    ItemDescription: "Dismantling clearing away and",
+    Quantity: 5568.75,
+    Unit: "M3",
+    Rate: 0.78,
+    Amount: "₹537786"
+  },
+  {
+    ItemDescription: "Dismantling clearing away and",
+    Quantity: 5568.75,
+    Unit: "M3",
+    Rate: 0.78,
+    Amount: "₹537786"
+  },
+  {
+    ItemDescription: "Dismantling clearing away and",
+    Quantity: 5568.75,
+    Unit: "M3",
+    Rate: 0.78,
+    Amount: "₹537786"
+  },
+  {
+    ItemDescription: "Dismantling clearing away and",
+    Quantity: 5568.75,
+    Unit: "M3",
+    Rate: 0.78,
+    Amount: "₹537786"
+  },
+  {
+    ItemDescription: "Dismantling clearing away and",
+    Quantity: 5568.75,
+    Unit: "M3",
+    Rate: 0.78,
+    Amount: "₹537786"
+  },
+  {
+    ItemDescription: "Dismantling clearing away and",
+    Quantity: 5568.75,
+    Unit: "M3",
+    Rate: 0.78,
+    Amount: "₹537786"
+  },
+  {
+    ItemDescription: "Dismantling clearing away and",
+    Quantity: 5568.75,
+    Unit: "M3",
+    Rate: 0.78,
+    Amount: "₹537786"
+  }
+];
+
+export const TableReportSiteData = [
+  {
+    Site: "Site Name",
+    Location: "Chennai",
+    PlannedDate: "06.01.2025",
+    AchievedDate: "08.05.2025",
+    AssignedTo: "Tamil",
+    Status: "Completed"
+  },
+  {
+    Site: "Site Name",
+    Location: "Chennai",
+    PlannedDate: "06.01.2025",
+    AchievedDate: "08.05.2025",
+    AssignedTo: "Tamil",
+    Status: "Completed"
+  },
+  {
+    Site: "Site Name",
+    Location: "Chennai",
+    PlannedDate: "06.01.2025",
+    AchievedDate: "08.05.2025",
+    AssignedTo: "Tamil",
+    Status: "Completed"
+  },
+  {
+    Site: "Site Name",
+    Location: "Chennai",
+    PlannedDate: "06.01.2025",
+    AchievedDate: "08.05.2025",
+    AssignedTo: "Tamil",
+    Status: "Completed"
+  },
+  {
+    Site: "Site Name",
+    Location: "Chennai",
+    PlannedDate: "06.01.2025",
+    AchievedDate: "08.05.2025",
+    AssignedTo: "Tamil",
+    Status: "Completed"
+  },
+  {
+    Site: "Site Name",
+    Location: "Chennai",
+    PlannedDate: "06.01.2025",
+    AchievedDate: "08.05.2025",
+    AssignedTo: "Tamil",
+    Status: "Completed"
+  },
+  {
+    Site: "Site Name",
+    Location: "Chennai",
+    PlannedDate: "06.01.2025",
+    AchievedDate: "08.05.2025",
+    AssignedTo: "Tamil",
+    Status: "Completed"
+  },
+  {
+    Site: "Site Name",
+    Location: "Chennai",
+    PlannedDate: "06.01.2025",
+    AchievedDate: "08.05.2025",
+    AssignedTo: "Tamil",
+    Status: "Completed"
+  }
+];
+
+export const MachineryEntryData = [
+  {
+    Date: "06.01.2025",
+    Machine: "Name",
+    StartReading: 4563,
+    EndReading: 4563,
+    Attachments: "Links",
+    ActionBy: "Name"
+  },
+  {
+    Date: "06.01.2025",
+    Machine: "Name",
+    StartReading: 4563,
+    EndReading: 4563,
+    Attachments: "Links",
+    ActionBy: "Name"
+  },
+  {
+    Date: "06.01.2025",
+    Machine: "Name",
+    StartReading: 4563,
+    EndReading: 4563,
+    Attachments: "Links",
+    ActionBy: "Name"
+  },
+  {
+    Date: "06.01.2025",
+    Machine: "Name",
+    StartReading: 4563,
+    EndReading: 4563,
+    Attachments: "Links",
+    ActionBy: "Name"
+  },
+  {
+    Date: "06.01.2025",
+    Machine: "Name",
+    StartReading: 4563,
+    EndReading: 4563,
+    Attachments: "Links",
+    ActionBy: "Name"
+  },
+  {
+    Date: "06.01.2025",
+    Machine: "Name",
+    StartReading: 4563,
+    EndReading: 4563,
+    Attachments: "Links",
+    ActionBy: "Name"
+  },
+  {
+    Date: "06.01.2025",
+    Machine: "Name",
+    StartReading: 4563,
+    EndReading: 4563,
+    Attachments: "Links",
+    ActionBy: "Name"
+  },
+  {
+    Date: "06.01.2025",
+    Machine: "Name",
+    StartReading: 4563,
+    EndReading: 4563,
+    Attachments: "Links",
+    ActionBy: "Name"
+  }
+];
+
+export const RetainingWallReportData = [
+  {
+    description: "Earthwork Excavation",
+    nos: "",
+    length: "",
+    breadth: "",
+    depth: "",
+    contents: "",
+    details: [
+      { item: "a) Manual Excavation", output: "100 cft", trademen: "2 labors", remarks: "" },
+      { item: "b) Excavation", output: "100 cft", trademen: "2 labors", remarks: "" }
+    ]
+  },
+  {
+    description: "Concreting - RMC",
+    nos: "",
+    length: "",
+    breadth: "",
+    depth: "",
+    contents: "",
+    details: [
+      { item: "", output: "100 cft", trademen: "2 labors", remarks: "" }
+    ]
+  },
+  {
+    description: "Reinforcement",
+    nos: "",
+    length: "",
+    breadth: "",
+    depth: "",
+    contents: "",
+    details: [
+      { item: "a) For Slab", output: "100 cft", trademen: "2 labors", remarks: "" },
+      { item: "b) For Footing", output: "100 cft", trademen: "2 labors", remarks: "" }
+    ]
+  }
+];
+
+export const purchaseEnquireData = [
+  {
+    description: "Retaining Wall",
+    details: [
+      {
+        contractor: "Contractor Name",
+        unitCost: 235,
+        unit: "M3",
+        date: "2025-04-01",
+        total: 76875,
+        level: "L2",
+        creditDays: 54,
+      },
+      {
+        contractor: "Contractor Name",
+        unitCost: 235,
+        unit: "M3",
+        date: "2025-04-01",
+        total: 76875,
+        level: "L1",
+        creditDays: 54,
+      },
+      {
+        contractor: "Contractor Name",
+        unitCost: 235,
+        unit: "M3",
+        date: "2025-04-01",
+        total: 76875,
+        level: "L3",
+        creditDays: 54,
+      },
+      {
+        contractor: "Contractor Name",
+        unitCost: 235,
+        unit: "M3",
+        date: "2025-04-01",
+        total: 76875,
+        level: "L4",
+        creditDays: 54,
+      },
+    ],
+  },
+  {
+    description: "Retaining Wall",
+    details: [],
+  },
+  {
+    description: "Retaining Wall",
+    details: [],
+  },
+  {
+    description: "Retaining Wall",
+    details: [],
+  },
+];

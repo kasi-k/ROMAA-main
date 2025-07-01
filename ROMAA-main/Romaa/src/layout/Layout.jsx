@@ -282,7 +282,23 @@ const LayOut = () => {
           title: "Weekly Billing",
           icon: <RiDiscountPercentLine size={23} />,  
           to: "/site/weeklybillingsite",
-        }
+        },
+        {
+          title: "Reconciliation",
+          icon: <TbFileOrientation size={23} />,  
+          to: "/site/reconciliationsite",
+        },
+           {
+          title: "Planned vs Achieved",
+          icon: <Quote size={23} />,  
+          to: "/site/plannedvsachived",
+        },
+           {
+          title: "Machinery Entry",
+          icon: <LuGlassWater size={23} />,  
+          to: "/site/machineryentry",
+        },
+
       ],
     },
     {
@@ -460,7 +476,7 @@ const LayOut = () => {
         {
           title: "Schedule",
           icon: <LuCalendar1 size={23} />,
-          to: "/reports/schedule",
+          // to: "/reports/schedule",
         },
         {
           title: "Planned Vs Actual",

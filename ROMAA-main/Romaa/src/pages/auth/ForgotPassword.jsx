@@ -31,13 +31,14 @@ const ForgotPassword = () => {
             </label>
 
             <p
+                onClick={() => navigate("/resetpassword")}
               className=" cursor-pointer bg-darkest-blue text-white text-center   w-full py-2 my-3 rounded-md text-lg font-semibold transition duration-200 "
             >
               Send Email
             </p>
           </form>
           <p
-            onClick={() => navigate("/resetpassword")}
+            onClick={() => navigate("/login")}
             className="text-center cursor-pointer text-sm py-4 hover:underline"
           >
             Back to Login

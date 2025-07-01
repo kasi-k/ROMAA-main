@@ -7,6 +7,12 @@ import GSsite from "./GS/GSsite";
 import BillQtySite from "./BillQty/BillQtySite";
 import NewInletSite from "./NewInletDetSite/NewInletSite";
 import NewInletAbsSite from "./NewInletAbsSite/NewInletAbsSite";
+import RoadDetailed from "../../projects/Detailed estimate/road detailed/RoadDetailed";
+import RoadAbstract from "./RoadAbstract/RoadAbstract";
+import Retainingwall from "./RetainingWall/RatainingWall";
+import RetainingAbstractSite from "./retaining abstract site/RetainingAbstractSite";
+import ContractSite from "./contract site/ContractSite";
+import VendorSite from "./vendor site/VendorSite";
 
 const tabs = [
   {
@@ -47,29 +53,34 @@ const tabs = [
   {
     id: "5",
     label: " Road Detailed",
-  
+  component:<RoadDetailed />,
     
   },
   {
     id: "6",
     label: " Road Abstract",
+    component:<RoadAbstract />
   },
 
   {
     id: "7",
     label: " Retaining Wall",
+    component:<Retainingwall />
   },
   {
     id: "8",
     label: " Retaining Abstract",
+    component:<RetainingAbstractSite />
   },
   {
     id: "9",
     label: "Contract",
+    component:<ContractSite />
   },
   {
     id: "10",
     label: "Vendor",
+    component:<VendorSite />  
   },
 ];
 

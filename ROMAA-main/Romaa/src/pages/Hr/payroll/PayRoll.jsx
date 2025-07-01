@@ -20,7 +20,7 @@ const PayRoll = () => {
       columns={Columns}
       endpoint={payrolldata}
       EditModal={true}
-      ViewModal={true}
+      routepoint={"viewpayroll"}
       FilterModal={Filters}
     />
   );
