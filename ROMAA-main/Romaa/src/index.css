@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+@import "tailwindcss";
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* dark-theme */
+  --color-light-blue: #e3ecff;
+  --color-darkest-blue: #314165;
+  --color-border-sidebar: #d0d6ff;
+  --color-select-subbar: #E2E2FF;
+  --color-greyish: #616161;
+  --color-input-bordergrey: #D0D6FF;
+
+  --font-roboto-flex: "Roboto Flex", sans-serif;
+}
