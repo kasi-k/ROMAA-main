@@ -2238,9 +2238,9 @@ export const SupplierOutstandingData = [
       {
         bill: "#656758",
         amount: "₹586587",
-        particles: "Particle"
-      }
-    ]
+        particles: "Particle",
+      },
+    ],
   },
   {
     date: "13.05.2025",
@@ -2250,9 +2250,9 @@ export const SupplierOutstandingData = [
       {
         bill: "#781234",
         amount: "₹325000",
-        particles: "Granules"
-      }
-    ]
+        particles: "Granules",
+      },
+    ],
   },
   {
     date: "13.05.2025",
@@ -2262,9 +2262,9 @@ export const SupplierOutstandingData = [
       {
         bill: "#990321",
         amount: "₹452300",
-        particles: "Dust"
-      }
-    ]
+        particles: "Dust",
+      },
+    ],
   },
   {
     date: "13.05.2025",
@@ -2274,9 +2274,9 @@ export const SupplierOutstandingData = [
       {
         bill: "#110987",
         amount: "₹123456",
-        particles: "Nano Powder"
-      }
-    ]
+        particles: "Nano Powder",
+      },
+    ],
   },
   {
     date: "13.05.2025",
@@ -2286,12 +2286,11 @@ export const SupplierOutstandingData = [
       {
         bill: "#563839",
         amount: "₹789000",
-        particles: "Resin"
-      }
-    ]
-  }
+        particles: "Resin",
+      },
+    ],
+  },
 ];
-
 
 export const Summarydata = [
   {
@@ -2375,7 +2374,7 @@ export const BOQSplitData = [
     unit: "Bags",
     rate: 320,
     amount: 32000,
-      fuel: "511",
+    fuel: "511",
   },
   {
     itemdesc: "Sand",
@@ -2383,7 +2382,7 @@ export const BOQSplitData = [
     unit: "Tons",
     rate: 850,
     amount: 12750,
-      fuel: "511",
+    fuel: "511",
   },
   {
     itemdesc: "Bricks",
@@ -2391,7 +2390,7 @@ export const BOQSplitData = [
     unit: "Nos",
     rate: 6,
     amount: 3000,
-      fuel: "511",
+    fuel: "511",
   },
   {
     itemdesc: "Steel Rods",
@@ -2399,7 +2398,7 @@ export const BOQSplitData = [
     unit: "Kg",
     rate: 75,
     amount: 3750,
-      fuel: "511",
+    fuel: "511",
   },
   {
     itemdesc: "Concrete Mix",
@@ -2407,7 +2406,6 @@ export const BOQSplitData = [
     unit: "Cubic Meters",
     rate: 1200,
     amount: 12000,
-    
   },
 ];
 
@@ -2466,8 +2464,6 @@ export const RateAnalysisdata = [
     Amount: 90000,
   },
 ];
-
-
 
 export const BoqSitedata = [
   {
@@ -3512,26 +3508,33 @@ export const MaterialAdvanceData = [
 export const TechnicalSpecificationsData = [
   {
     title: "Concrete Mix",
-    specifications: "M25 grade concrete with 20mm aggregate, IS 456:2000 compliant.",
+    specifications:
+      "M25 grade concrete with 20mm aggregate, IS 456:2000 compliant.",
   },
   {
     title: "Reinforcement Steel",
-    specifications: "Fe500D TMT bars, IS 1786:2008 compliant, corrosion resistant.",
+    specifications:
+      "Fe500D TMT bars, IS 1786:2008 compliant, corrosion resistant.",
   },
 ];
 export const OtherTermsData = [
   {
     title: "Site Access",
-    termsdescription: "Contractor shall have access to the site during working hours only.",
+    termsdescription:
+      "Contractor shall have access to the site during working hours only.",
   },
   {
     title: "Safety Compliance",
-    termsdescription: "All workers must comply with safety regulations and wear protective gear.",
+    termsdescription:
+      "All workers must comply with safety regulations and wear protective gear.",
   },
 ];
 export const NotesData = [
   { notes: "All measurements must be jointly recorded and signed." },
-  { notes: "No work shall commence without written approval from the authority." },
+  {
+    notes:
+      "No work shall commence without written approval from the authority.",
+  },
 ];
 
 export const Piechartprojectdata = [
@@ -3551,9 +3554,8 @@ export const Locationcolor = ["#F4A79D", "#FDC153", "#F68D2B"];
 export const PiechartProjectType = [
   { name: "Government", value: 80 },
   { name: "Private", value: 40 },
-
 ];
-export const ProjectTypecolor = ["#2B65F6",  "#7E53FD"];
+export const ProjectTypecolor = ["#2B65F6", "#7E53FD"];
 
 export const PiechartBillvsReceived = [
   { name: "Billed", value: 40 },
@@ -3565,83 +3567,83 @@ export const Billreceivedcolors = ["#FDC153", "#F4A79D", "#D19DF4"];
 export const ViewOrderDashboarddata = [
   {
     "Work order ID": "WO-001",
-    "Date": "13.05.2025",
+    Date: "13.05.2025",
     "Client name": "ABC Constructions",
     "Project name": "Skyline Towers",
-    "Location": "Chennai",
-    "Amount": "₹12,00,000",
+    Location: "Chennai",
+    Amount: "₹12,00,000",
   },
   {
     "Work order ID": "WO-002",
-    "Date": "15.05.2025",
+    Date: "15.05.2025",
     "Client name": "XYZ Infra",
     "Project name": "Green Meadows",
-    "Location": "Bangalore",
-    "Amount": "₹8,50,000",
+    Location: "Bangalore",
+    Amount: "₹8,50,000",
   },
   {
     "Work order ID": "WO-003",
-    "Date": "20.05.2025",
+    Date: "20.05.2025",
     "Client name": "LMN Builders",
     "Project name": "Riverfront Residency",
-    "Location": "Hyderabad",
-    "Amount": "₹10,75,000",
+    Location: "Hyderabad",
+    Amount: "₹10,75,000",
   },
   {
     "Work order ID": "WO-004",
-    "Date": "22.05.2025",
+    Date: "22.05.2025",
     "Client name": "PQR Estates",
     "Project name": "Sunshine Villas",
-    "Location": "Mumbai",
-    "Amount": "₹9,20,000",
+    Location: "Mumbai",
+    Amount: "₹9,20,000",
   },
   {
     "Work order ID": "WO-005",
-    "Date": "25.05.2025",
+    Date: "25.05.2025",
     "Client name": "DEF Developers",
     "Project name": "Hilltop Enclave",
-    "Location": "Delhi",
-    "Amount": "₹11,30,000",
+    Location: "Delhi",
+    Amount: "₹11,30,000",
   },
   {
     "Work order ID": "WO-001",
-    "Date": "13.05.2025",
+    Date: "13.05.2025",
     "Client name": "ABC Constructions",
     "Project name": "Skyline Towers",
-    "Location": "Chennai",
-    "Amount": "₹12,00,000",
+    Location: "Chennai",
+    Amount: "₹12,00,000",
   },
   {
     "Work order ID": "WO-002",
-    "Date": "15.05.2025",
+    Date: "15.05.2025",
     "Client name": "XYZ Infra",
     "Project name": "Green Meadows",
-    "Location": "Bangalore",
-    "Amount": "₹8,50,000",
+    Location: "Bangalore",
+    Amount: "₹8,50,000",
   },
   {
     "Work order ID": "WO-003",
-    "Date": "20.05.2025",
+    Date: "20.05.2025",
     "Client name": "LMN Builders",
     "Project name": "Riverfront Residency",
-    "Location": "Hyderabad",
-    "Amount": "₹10,75,000",
+    Location: "Hyderabad",
+    Amount: "₹10,75,000",
   },
   {
     "Work order ID": "WO-004",
-    "Date": "22.05.2025",
+    Date: "22.05.2025",
     "Client name": "PQR Estates",
     "Project name": "Sunshine Villas",
-    "Location": "Mumbai",
-    "Amount": "₹9,20,000",
+    Location: "Mumbai",
+    Amount: "₹9,20,000",
   },
   {
     "Work order ID": "WO-005",
-    "Date": "25.05.2025",
+    Date: "25.05.2025",
     "Client name": "DEF Developers",
     "Project name": "Hilltop Enclave",
-    "Location": "Delhi",
-    "Amount": "₹11,30,000",
+    Location: "Delhi",
+    Amount: "₹11,30,000",
   },
 ];
 export const UsersData = [
@@ -3651,7 +3653,7 @@ export const UsersData = [
     phoneNumber: "95684 79534",
     email: "ahgdkaj@gmail.com",
     status: "Active",
-    createdBy: "Super Admin"
+    createdBy: "Super Admin",
   },
   {
     name: "John",
@@ -3659,7 +3661,7 @@ export const UsersData = [
     phoneNumber: "95684 79534",
     email: "ahgdkaj@gmail.com",
     status: "Active",
-    createdBy: "Super Admin"
+    createdBy: "Super Admin",
   },
   {
     name: "John",
@@ -3667,7 +3669,7 @@ export const UsersData = [
     phoneNumber: "95684 79534",
     email: "ahgdkaj@gmail.com",
     status: "Active",
-    createdBy: "Super Admin"
+    createdBy: "Super Admin",
   },
   {
     name: "John",
@@ -3675,7 +3677,7 @@ export const UsersData = [
     phoneNumber: "95684 79534",
     email: "ahgdkaj@gmail.com",
     status: "Active",
-    createdBy: "Super Admin"
+    createdBy: "Super Admin",
   },
   {
     name: "John",
@@ -3683,7 +3685,7 @@ export const UsersData = [
     phoneNumber: "95684 79534",
     email: "ahgdkaj@gmail.com",
     status: "Active",
-    createdBy: "Super Admin"
+    createdBy: "Super Admin",
   },
   {
     name: "John",
@@ -3691,7 +3693,7 @@ export const UsersData = [
     phoneNumber: "95684 79534",
     email: "ahgdkaj@gmail.com",
     status: "Active",
-    createdBy: "Super Admin"
+    createdBy: "Super Admin",
   },
   {
     name: "John",
@@ -3699,7 +3701,7 @@ export const UsersData = [
     phoneNumber: "95684 79534",
     email: "ahgdkaj@gmail.com",
     status: "Active",
-    createdBy: "Super Admin"
+    createdBy: "Super Admin",
   },
   {
     name: "John",
@@ -3707,7 +3709,7 @@ export const UsersData = [
     phoneNumber: "95684 79534",
     email: "ahgdkaj@gmail.com",
     status: "Active",
-    createdBy: "Super Admin"
+    createdBy: "Super Admin",
   },
   {
     name: "John",
@@ -3715,7 +3717,7 @@ export const UsersData = [
     phoneNumber: "95684 79534",
     email: "ahgdkaj@gmail.com",
     status: "Active",
-    createdBy: "Super Admin"
+    createdBy: "Super Admin",
   },
   {
     name: "John",
@@ -3723,8 +3725,8 @@ export const UsersData = [
     phoneNumber: "95684 79534",
     email: "ahgdkaj@gmail.com",
     status: "Active",
-    createdBy: "Super Admin"
-  }
+    createdBy: "Super Admin",
+  },
 ];
 
 export const RoleData = [
@@ -3739,8 +3741,8 @@ export const RoleData = [
   { name: "Ava", role: "Viewer", createdBy: "Admin" },
   { name: "James", role: "Admin", createdBy: "Super Admin" },
   { name: "Mia", role: "Editor", createdBy: "Manager" },
-  { name: "Ethan", role: "Viewer", createdBy: "Admin" }
-]
+  { name: "Ethan", role: "Viewer", createdBy: "Admin" },
+];
 
 export const securitydepositdata = [
   {
@@ -3987,16 +3989,14 @@ export const purchaseRequestdataview = [
 
 export const ViewPurchaseOrderdata = {
   id: 6859798,
-  project: 'Project',
-  due: '01.05.2025',
-  location: 'Chennai',
-  vendor: 'Name',
-  category: 'Category',
-  items: [
-    { material: 'Raw Material', qty: 4, unit: 'M3', unitPrice: 4537 },
-  ],
-  terms: 'Lorem ipsum dolor sit amet consectetur…',
-  requestedBy: 'Name',
+  project: "Project",
+  due: "01.05.2025",
+  location: "Chennai",
+  vendor: "Name",
+  category: "Category",
+  items: [{ material: "Raw Material", qty: 4, unit: "M3", unitPrice: 4537 }],
+  terms: "Lorem ipsum dolor sit amet consectetur…",
+  requestedBy: "Name",
 };
 
 export const sitedata = [
@@ -4042,43 +4042,39 @@ export const sitedata = [
   },
 ];
 
-
-
-
-
 export const newInletsite = [
-    {
-        itemdesc: "Concrete Block",
-        number: 100,
-        length: 40, // in cm
-        breadth: 20, // in cm
-        density: 2400, // in kg/m^3
-        content: "Used for building walls"
-    },
-    {
-        itemdesc: "Steel Beam",
-        number: 50,
-        length: 600, // in cm
-        breadth: 30, // in cm
-        density: 7850, // in kg/m^3
-        content: "Used for structural support"
-    },
-    {
-        itemdesc: "Wood Plank",
-        number: 200,
-        length: 200, // in cm
-        breadth: 10, // in cm
-        density: 600, // in kg/m^3
-        content: "Used for flooring and framing"
-    },
-    {
-        itemdesc: "Cement Bag",
-        number: 150,
-        length: 30, // in cm
-        breadth: 15, // in cm
-        density: 1440, // in kg/m^3
-        content: "Used for mixing concrete"
-    }
+  {
+    itemdesc: "Concrete Block",
+    number: 100,
+    length: 40, // in cm
+    breadth: 20, // in cm
+    density: 2400, // in kg/m^3
+    content: "Used for building walls",
+  },
+  {
+    itemdesc: "Steel Beam",
+    number: 50,
+    length: 600, // in cm
+    breadth: 30, // in cm
+    density: 7850, // in kg/m^3
+    content: "Used for structural support",
+  },
+  {
+    itemdesc: "Wood Plank",
+    number: 200,
+    length: 200, // in cm
+    breadth: 10, // in cm
+    density: 600, // in kg/m^3
+    content: "Used for flooring and framing",
+  },
+  {
+    itemdesc: "Cement Bag",
+    number: 150,
+    length: 30, // in cm
+    breadth: 15, // in cm
+    density: 1440, // in kg/m^3
+    content: "Used for mixing concrete",
+  },
 ];
 
 export const siteDrawing = [
@@ -4121,7 +4117,7 @@ export const workDoneData = [
     contractor: "ABC Constructions",
     unitPrice: 1500,
     units: 10,
-    total: 15000
+    total: 15000,
   },
   {
     woId: "WO-002",
@@ -4132,7 +4128,7 @@ export const workDoneData = [
     contractor: "XYZ Builders",
     unitPrice: 2000,
     units: 8,
-    total: 16000
+    total: 16000,
   },
   {
     woId: "WO-003",
@@ -4143,9 +4139,9 @@ export const workDoneData = [
     contractor: "LMN Infra",
     unitPrice: 1200,
     units: 15,
-    total: 18000
-  }
-]
+    total: 18000,
+  },
+];
 
 export const dailyLabourData = [
   {
@@ -4155,7 +4151,7 @@ export const dailyLabourData = [
     type: "Skilled",
     date: "2024-05-28",
     timeIn: "08:00",
-    timeOut: "17:00"
+    timeOut: "17:00",
   },
   {
     name: "Sunita Devi",
@@ -4164,7 +4160,7 @@ export const dailyLabourData = [
     type: "Unskilled",
     date: "2024-05-28",
     timeIn: "09:00",
-    timeOut: "18:00"
+    timeOut: "18:00",
   },
   {
     name: "Vikram Singh",
@@ -4173,9 +4169,9 @@ export const dailyLabourData = [
     type: "Skilled",
     date: "2024-05-28",
     timeIn: "08:30",
-    timeOut: "17:30"
-  }
-]
+    timeOut: "17:30",
+  },
+];
 
 export const materialRecievedData = [
   {
@@ -4185,7 +4181,7 @@ export const materialRecievedData = [
     recievedQty: 80,
     pending: 20,
     orderedDate: "2024-05-20",
-    amount: 32000
+    amount: 32000,
   },
   {
     material: "Steel Rods",
@@ -4194,7 +4190,7 @@ export const materialRecievedData = [
     recievedQty: 3,
     pending: 2,
     orderedDate: "2024-05-18",
-    amount: 250000
+    amount: 250000,
   },
   {
     material: "Sand",
@@ -4203,9 +4199,9 @@ export const materialRecievedData = [
     recievedQty: 50,
     pending: 0,
     orderedDate: "2024-05-15",
-    amount: 15000
-  }
-]
+    amount: 15000,
+  },
+];
 
 export const materialIssueData = [
   {
@@ -4215,7 +4211,7 @@ export const materialIssueData = [
     issuedQty: 50,
     workLocation: "Foundation",
     priorityLevel: "High",
-    requestedBy: "John Doe"
+    requestedBy: "John Doe",
   },
   {
     siteName: "Site B",
@@ -4224,7 +4220,7 @@ export const materialIssueData = [
     issuedQty: 2,
     workLocation: "Pillars",
     priorityLevel: "Medium",
-    requestedBy: "Jane Smith"
+    requestedBy: "Jane Smith",
   },
   {
     siteName: "Site C",
@@ -4233,10 +4229,9 @@ export const materialIssueData = [
     issuedQty: 30,
     workLocation: "Flooring",
     priorityLevel: "Low",
-    requestedBy: "Amit Kumar"
-  }
+    requestedBy: "Amit Kumar",
+  },
 ];
-
 
 export const stockRegisterData = [
   {
@@ -4246,7 +4241,7 @@ export const stockRegisterData = [
     received: 100,
     issued: 80,
     balance: 220,
-    status: "Sufficient"
+    status: "Sufficient",
   },
   {
     material: "Steel Rods",
@@ -4255,7 +4250,7 @@ export const stockRegisterData = [
     received: 5,
     issued: 7,
     balance: 8,
-    status: "Low"
+    status: "Low",
   },
   {
     material: "Sand",
@@ -4264,10 +4259,9 @@ export const stockRegisterData = [
     received: 30,
     issued: 40,
     balance: 40,
-    status: "Sufficient"
-  }
+    status: "Sufficient",
+  },
 ];
-
 
 export const purchaseRequestSiteData = [
   {
@@ -4277,7 +4271,7 @@ export const purchaseRequestSiteData = [
     quantity: 100,
     siteLocation: "Site A",
     requiredOn: "2024-06-10",
-    status: "Pending"
+    status: "Pending",
   },
   {
     requestId: "PR-002",
@@ -4286,7 +4280,7 @@ export const purchaseRequestSiteData = [
     quantity: 5,
     siteLocation: "Site B",
     requiredOn: "2024-06-12",
-    status: "Approved"
+    status: "Approved",
   },
   {
     requestId: "PR-003",
@@ -4295,10 +4289,9 @@ export const purchaseRequestSiteData = [
     quantity: 50,
     siteLocation: "Site C",
     requiredOn: "2024-06-15",
-    status: "Rejected"
-  }
+    status: "Rejected",
+  },
 ];
-
 
 export const siteAssetData = [
   {
@@ -4308,7 +4301,7 @@ export const siteAssetData = [
     allotedTo: "John Doe",
     siteLocation: "Site A",
     date: "2024-06-01",
-    status: "Active"
+    status: "Active",
   },
   {
     assetName: "Concrete Mixer",
@@ -4317,7 +4310,7 @@ export const siteAssetData = [
     allotedTo: "Jane Smith",
     siteLocation: "Site B",
     date: "2024-06-03",
-    status: "Under Maintenance"
+    status: "Under Maintenance",
   },
   {
     assetName: "Scaffolding",
@@ -4326,10 +4319,9 @@ export const siteAssetData = [
     allotedTo: "Amit Kumar",
     siteLocation: "Site C",
     date: "2024-06-05",
-    status: "Active"
-  }
+    status: "Active",
+  },
 ];
-
 
 export const weeklyBillingData = [
   {
@@ -4339,7 +4331,7 @@ export const weeklyBillingData = [
     startedDate: "2024-06-01",
     siteLocation: "Site A",
     billAmount: 50000,
-    status: "Pending"
+    status: "Pending",
   },
   {
     billName: "Bill #002",
@@ -4348,7 +4340,7 @@ export const weeklyBillingData = [
     startedDate: "2024-06-08",
     siteLocation: "Site B",
     billAmount: 75000,
-    status: "Approved"
+    status: "Approved",
   },
   {
     billName: "Bill #003",
@@ -4357,8 +4349,8 @@ export const weeklyBillingData = [
     startedDate: "2024-06-15",
     siteLocation: "Site C",
     billAmount: 62000,
-    status: "Rejected"
-  }
+    status: "Rejected",
+  },
 ];
 
 export const WPI = [
@@ -4368,7 +4360,7 @@ export const WPI = [
     startDate: "01.04.2025",
     endDate: "17.04.2025",
     amount: "₹675898",
-    status: "Active"
+    status: "Active",
   },
   {
     project: "Site Protection",
@@ -4376,7 +4368,7 @@ export const WPI = [
     startDate: "01.04.2025",
     endDate: "17.04.2025",
     amount: "₹675898",
-    status: "Active"
+    status: "Active",
   },
   {
     project: "Site Protection",
@@ -4384,7 +4376,7 @@ export const WPI = [
     startDate: "01.04.2025",
     endDate: "17.04.2025",
     amount: "₹675898",
-    status: "Active"
+    status: "Active",
   },
   {
     project: "Site Protection",
@@ -4392,7 +4384,7 @@ export const WPI = [
     startDate: "01.04.2025",
     endDate: "17.04.2025",
     amount: "₹675898",
-    status: "Active"
+    status: "Active",
   },
   {
     project: "Site Protection",
@@ -4400,7 +4392,7 @@ export const WPI = [
     startDate: "01.04.2025",
     endDate: "17.04.2025",
     amount: "₹675898",
-    status: "Active"
+    status: "Active",
   },
   {
     project: "Site Protection",
@@ -4408,7 +4400,7 @@ export const WPI = [
     startDate: "01.04.2025",
     endDate: "17.04.2025",
     amount: "₹675898",
-    status: "Active"
+    status: "Active",
   },
   {
     project: "Site Protection",
@@ -4416,7 +4408,7 @@ export const WPI = [
     startDate: "01.04.2025",
     endDate: "17.04.2025",
     amount: "₹675898",
-    status: "Active"
+    status: "Active",
   },
   {
     project: "Site Protection",
@@ -4424,7 +4416,7 @@ export const WPI = [
     startDate: "01.04.2025",
     endDate: "17.04.2025",
     amount: "₹675898",
-    status: "Active"
+    status: "Active",
   },
   {
     project: "Site Protection",
@@ -4432,9 +4424,9 @@ export const WPI = [
     startDate: "01.04.2025",
     endDate: "17.04.2025",
     amount: "₹675898",
-    status: "Active"
-  }
-]
+    status: "Active",
+  },
+];
 
 export const workanalysisData = [
   {
@@ -4609,7 +4601,7 @@ export const financialreportData = [
     projectValue: "₹75987",
     completedValue: "₹657598",
     currentProfit: "₹6586857",
-    predictedProfit: "65%"
+    predictedProfit: "65%",
   },
   {
     project: "Project Name",
@@ -4617,7 +4609,7 @@ export const financialreportData = [
     projectValue: "₹75987",
     completedValue: "₹657598",
     currentProfit: "₹6586857",
-    predictedProfit: "65%"
+    predictedProfit: "65%",
   },
   {
     project: "Project Name",
@@ -4625,7 +4617,7 @@ export const financialreportData = [
     projectValue: "₹75987",
     completedValue: "₹657598",
     currentProfit: "₹6586857",
-    predictedProfit: "65%"
+    predictedProfit: "65%",
   },
   {
     project: "Project Name",
@@ -4633,7 +4625,7 @@ export const financialreportData = [
     projectValue: "₹75987",
     completedValue: "₹657598",
     currentProfit: "₹6586857",
-    predictedProfit: "65%"
+    predictedProfit: "65%",
   },
   {
     project: "Project Name",
@@ -4641,7 +4633,7 @@ export const financialreportData = [
     projectValue: "₹75987",
     completedValue: "₹657598",
     currentProfit: "₹6586857",
-    predictedProfit: "65%"
+    predictedProfit: "65%",
   },
   {
     project: "Project Name",
@@ -4649,7 +4641,7 @@ export const financialreportData = [
     projectValue: "₹75987",
     completedValue: "₹657598",
     currentProfit: "₹6586857",
-    predictedProfit: "65%"
+    predictedProfit: "65%",
   },
   {
     project: "Project Name",
@@ -4657,7 +4649,7 @@ export const financialreportData = [
     projectValue: "₹75987",
     completedValue: "₹657598",
     currentProfit: "₹6586857",
-    predictedProfit: "65%"
+    predictedProfit: "65%",
   },
   {
     project: "Project Name",
@@ -4665,7 +4657,7 @@ export const financialreportData = [
     projectValue: "₹75987",
     completedValue: "₹657598",
     currentProfit: "₹6586857",
-    predictedProfit: "65%"
+    predictedProfit: "65%",
   },
   {
     project: "Project Name",
@@ -4673,7 +4665,7 @@ export const financialreportData = [
     projectValue: "₹75987",
     completedValue: "₹657598",
     currentProfit: "₹6586857",
-    predictedProfit: "65%"
+    predictedProfit: "65%",
   },
   {
     project: "Project Name",
@@ -4681,9 +4673,9 @@ export const financialreportData = [
     projectValue: "₹75987",
     completedValue: "₹657598",
     currentProfit: "₹6586857",
-    predictedProfit: "65%"
-  }
-]
+    predictedProfit: "65%",
+  },
+];
 
 export const p_lData = [
   {
@@ -4709,49 +4701,56 @@ export const p_lData = [
     totalExpenses: "₹657598",
     totalProfit: "₹6586857",
     profitPercentage: "65%",
-  }, {
+  },
+  {
     project: "Project Name",
     location: "location",
     totalValue: "₹75987",
     totalExpenses: "₹657598",
     totalProfit: "₹6586857",
     profitPercentage: "65%",
-  }, {
+  },
+  {
     project: "Project Name",
     location: "location",
     totalValue: "₹75987",
     totalExpenses: "₹657598",
     totalProfit: "₹6586857",
     profitPercentage: "65%",
-  }, {
+  },
+  {
     project: "Project Name",
     location: "location",
     totalValue: "₹75987",
     totalExpenses: "₹657598",
     totalProfit: "₹6586857",
     profitPercentage: "65%",
-  }, {
+  },
+  {
     project: "Project Name",
     location: "location",
     totalValue: "₹75987",
     totalExpenses: "₹657598",
     totalProfit: "₹6586857",
     profitPercentage: "65%",
-  }, {
+  },
+  {
     project: "Project Name",
     location: "location",
     totalValue: "₹75987",
     totalExpenses: "₹657598",
     totalProfit: "₹6586857",
     profitPercentage: "65%",
-  }, {
+  },
+  {
     project: "Project Name",
     location: "location",
     totalValue: "₹75987",
     totalExpenses: "₹657598",
     totalProfit: "₹6586857",
     profitPercentage: "65%",
-  }, {
+  },
+  {
     project: "Project Name",
     location: "location",
     totalValue: "₹75987",
@@ -5362,7 +5361,7 @@ export const tableData = [
     projectPlanned: "100 Cubic's",
     pendingWork: "56%",
     variance: "44%",
-  }
+  },
 ];
 
 export const laborproductivityData = [
@@ -5428,7 +5427,7 @@ export const laborproductivityData = [
     laborPlanned: 400,
     laborAttended: 300,
     variance: 100,
-  }
+  },
 ];
 
 export const machineproductivityData = [
@@ -5437,74 +5436,74 @@ export const machineproductivityData = [
     project: "Name",
     plannedHours: 160,
     actualHours: 60,
-    utilization: "90%"
+    utilization: "90%",
   },
   {
     machineName: "Truck",
     project: "Name",
     plannedHours: 160,
     actualHours: 60,
-    utilization: "90%"
+    utilization: "90%",
   },
   {
     machineName: "Truck",
     project: "Name",
     plannedHours: 160,
     actualHours: 60,
-    utilization: "90%"
+    utilization: "90%",
   },
   {
     machineName: "Truck",
     project: "Name",
     plannedHours: 160,
     actualHours: 60,
-    utilization: "90%"
+    utilization: "90%",
   },
   {
     machineName: "Truck",
     project: "Name",
     plannedHours: 160,
     actualHours: 60,
-    utilization: "90%"
+    utilization: "90%",
   },
   {
     machineName: "Truck",
     project: "Name",
     plannedHours: 160,
     actualHours: 60,
-    utilization: "90%"
+    utilization: "90%",
   },
   {
     machineName: "Truck",
     project: "Name",
     plannedHours: 160,
     actualHours: 60,
-    utilization: "90%"
+    utilization: "90%",
   },
   {
     machineName: "Truck",
     project: "Name",
     plannedHours: 160,
     actualHours: 60,
-    utilization: "90%"
+    utilization: "90%",
   },
   {
     machineName: "Truck",
     project: "Name",
     plannedHours: 160,
     actualHours: 60,
-    utilization: "90%"
-  }
+    utilization: "90%",
+  },
 ];
 
 export const scheduleData = [
-  { name: '1', value: 35 },
-  { name: '2', value: 58 },
-  { name: '3', value: 72 },
-  { name: '4', value: 90 },
-  { name: '5', value: 105 },
-  { name: '6', value: 58 },
-  { name: '7', value: 105 },
+  { name: "1", value: 35 },
+  { name: "2", value: 58 },
+  { name: "3", value: 72 },
+  { name: "4", value: 90 },
+  { name: "5", value: 105 },
+  { name: "6", value: 58 },
+  { name: "7", value: 105 },
 ];
 
 export const piechartData = [
@@ -5600,31 +5599,31 @@ export const ticketsData = [
   },
 ];
 
- export const profiledetailsData = {
-    employeeId: "EMP001",
-    name: "Name",
-    designation: "Engineer",
-    gender: "Female",
-    dateOfBirth: "11.06.2000",
-    mobileNumber: "00000 00000",
-    emailId: "hdjhshhfhj@gmail.com",
-    joiningDate: "11.06.2024",
-    language: "English",
-    reportingPerson: "Name",
-    address: "Location",
-  };
+export const profiledetailsData = {
+  employeeId: "EMP001",
+  name: "Name",
+  designation: "Engineer",
+  gender: "Female",
+  dateOfBirth: "11.06.2000",
+  mobileNumber: "00000 00000",
+  emailId: "hdjhshhfhj@gmail.com",
+  joiningDate: "11.06.2024",
+  language: "English",
+  reportingPerson: "Name",
+  address: "Location",
+};
 
-  export const sitecompleted = [
+export const sitecompleted = [
   { name: "Completed", value: 25 },
   { name: "In Progress", value: 25 },
   { name: "Failed", value: 50 },
-]; 
- export const leave = [
+];
+export const leave = [
   { name: "Paid Leave", value: 50 },
   { name: "Sick", value: 50 },
 ];
 
-export  const contractorbillData = [
+export const contractorbillData = [
   {
     invoiceNo: "#48391",
     particles: "Electrical installation",
@@ -5886,7 +5885,7 @@ export const viewledgerData = [
     particulars: "Labor Charges",
     debitAmount: "₹674898",
     creditAmount: "₹1,03,733.00",
-    balance: "₹1,03,733.00"
+    balance: "₹1,03,733.00",
   },
   {
     sNo: 2,
@@ -5896,7 +5895,7 @@ export const viewledgerData = [
     particulars: "Labor Charges",
     debitAmount: "₹674898",
     creditAmount: "₹1,03,733.00",
-    balance: "₹1,03,733.00"
+    balance: "₹1,03,733.00",
   },
   {
     sNo: 3,
@@ -5906,7 +5905,7 @@ export const viewledgerData = [
     particulars: "Labor Charges",
     debitAmount: "₹674898",
     creditAmount: "₹1,03,733.00",
-    balance: "₹1,03,733.00"
+    balance: "₹1,03,733.00",
   },
   {
     sNo: 4,
@@ -5916,7 +5915,7 @@ export const viewledgerData = [
     particulars: "Labor Charges",
     debitAmount: "₹674898",
     creditAmount: "₹1,03,733.00",
-    balance: "₹1,03,733.00"
+    balance: "₹1,03,733.00",
   },
   {
     sNo: 5,
@@ -5926,7 +5925,7 @@ export const viewledgerData = [
     particulars: "Labor Charges",
     debitAmount: "₹674898",
     creditAmount: "₹1,03,733.00",
-    balance: "₹1,03,733.00"
+    balance: "₹1,03,733.00",
   },
   {
     sNo: 6,
@@ -5936,7 +5935,7 @@ export const viewledgerData = [
     particulars: "Labor Charges",
     debitAmount: "₹674898",
     creditAmount: "₹1,03,733.00",
-    balance: "₹1,03,733.00"
+    balance: "₹1,03,733.00",
   },
   {
     sNo: 7,
@@ -5946,7 +5945,7 @@ export const viewledgerData = [
     particulars: "Labor Charges",
     debitAmount: "₹674898",
     creditAmount: "₹1,03,733.00",
-    balance: "₹1,03,733.00"
+    balance: "₹1,03,733.00",
   },
   {
     sNo: 8,
@@ -5956,7 +5955,7 @@ export const viewledgerData = [
     particulars: "Labor Charges",
     debitAmount: "₹674898",
     creditAmount: "₹1,03,733.00",
-    balance: "₹1,03,733.00"
+    balance: "₹1,03,733.00",
   },
   {
     sNo: 9,
@@ -5966,7 +5965,7 @@ export const viewledgerData = [
     particulars: "Labor Charges",
     debitAmount: "₹674898",
     creditAmount: "₹1,03,733.00",
-    balance: "₹1,03,733.00"
+    balance: "₹1,03,733.00",
   },
   {
     sNo: 10,
@@ -5976,8 +5975,8 @@ export const viewledgerData = [
     particulars: "Labor Charges",
     debitAmount: "₹674898",
     creditAmount: "₹1,03,733.00",
-    balance: "₹1,03,733.00"
-  }
+    balance: "₹1,03,733.00",
+  },
 ];
 
 export const OverallProjectData = [
@@ -5988,7 +5987,7 @@ export const OverallProjectData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ002",
@@ -5997,7 +5996,7 @@ export const OverallProjectData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ003",
@@ -6006,7 +6005,7 @@ export const OverallProjectData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ004",
@@ -6015,7 +6014,7 @@ export const OverallProjectData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ005",
@@ -6024,7 +6023,7 @@ export const OverallProjectData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ006",
@@ -6033,7 +6032,7 @@ export const OverallProjectData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ007",
@@ -6042,7 +6041,7 @@ export const OverallProjectData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ008",
@@ -6051,7 +6050,7 @@ export const OverallProjectData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ009",
@@ -6060,7 +6059,7 @@ export const OverallProjectData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ010",
@@ -6069,8 +6068,8 @@ export const OverallProjectData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
-  }
+    status: "Paid",
+  },
 ];
 
 export const vendoroverallData = [
@@ -6082,7 +6081,7 @@ export const vendoroverallData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ002",
@@ -6092,7 +6091,7 @@ export const vendoroverallData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ003",
@@ -6102,7 +6101,7 @@ export const vendoroverallData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ004",
@@ -6112,7 +6111,7 @@ export const vendoroverallData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ005",
@@ -6122,7 +6121,7 @@ export const vendoroverallData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ006",
@@ -6132,7 +6131,7 @@ export const vendoroverallData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ007",
@@ -6142,7 +6141,7 @@ export const vendoroverallData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ008",
@@ -6152,7 +6151,7 @@ export const vendoroverallData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ009",
@@ -6162,7 +6161,7 @@ export const vendoroverallData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
+    status: "Paid",
   },
   {
     id: "PRJ010",
@@ -6172,8 +6171,8 @@ export const vendoroverallData = [
     tax: "34%",
     amount: "₹635767",
     date: "01.05.2025",
-    status: "Paid"
-  }
+    status: "Paid",
+  },
 ];
 
 export const NMRData = [
@@ -6301,16 +6300,16 @@ export const planedtableData = [
         helper: "6",
         barbender: "6578",
         helper2: "7",
-        amountpaid: "₹65789"
+        amountpaid: "₹65789",
       },
       {
         carpenter: "8.00",
         helper: "6",
         barbender: "6578",
         helper2: "7",
-        amountpaid: "₹65789"
-      }
-    ]
+        amountpaid: "₹65789",
+      },
+    ],
   },
   {
     sno: 2,
@@ -6325,16 +6324,16 @@ export const planedtableData = [
         helper: "5",
         barbender: "6000",
         helper2: "6",
-        amountpaid: "₹60000"
+        amountpaid: "₹60000",
       },
       {
         carpenter: "7.50",
         helper: "5",
         barbender: "6000",
         helper2: "6",
-        amountpaid: "₹60000"
-      }
-    ]
+        amountpaid: "₹60000",
+      },
+    ],
   },
   {
     sno: 3,
@@ -6349,16 +6348,16 @@ export const planedtableData = [
         helper: "4",
         barbender: "5800",
         helper2: "5",
-        amountpaid: "₹50000"
+        amountpaid: "₹50000",
       },
       {
         carpenter: "6.00",
         helper: "4",
         barbender: "5800",
         helper2: "5",
-        amountpaid: "₹50000"
-      }
-    ]
+        amountpaid: "₹50000",
+      },
+    ],
   },
   {
     sno: 4,
@@ -6373,84 +6372,84 @@ export const planedtableData = [
         helper: "6",
         barbender: "6578",
         helper2: "7",
-        amountpaid: "₹65789"
+        amountpaid: "₹65789",
       },
       {
         carpenter: "8.00",
         helper: "6",
         barbender: "6578",
         helper2: "7",
-        amountpaid: "₹65789"
-      }
-    ]
-  }
+        amountpaid: "₹65789",
+      },
+    ],
+  },
 ];
 
-export const collectionprojectionData =[
+export const collectionprojectionData = [
   {
-    "projectName": "Name",
-    "projectionAmount": "₹547687",
-    "firstProjectionDate": "01.02.2025",
-    "projectionDate": "06.06.2025",
-    "receivedAmount": "₹4567657"
+    projectName: "Name",
+    projectionAmount: "₹547687",
+    firstProjectionDate: "01.02.2025",
+    projectionDate: "06.06.2025",
+    receivedAmount: "₹4567657",
   },
   {
-    "projectName": "Name",
-    "projectionAmount": "₹547687",
-    "firstProjectionDate": "01.02.2025",
-    "projectionDate": "06.06.2025",
-    "receivedAmount": "₹4567657"
+    projectName: "Name",
+    projectionAmount: "₹547687",
+    firstProjectionDate: "01.02.2025",
+    projectionDate: "06.06.2025",
+    receivedAmount: "₹4567657",
   },
   {
-    "projectName": "Name",
-    "projectionAmount": "₹547687",
-    "firstProjectionDate": "01.02.2025",
-    "projectionDate": "06.06.2025",
-    "receivedAmount": "₹4567657"
+    projectName: "Name",
+    projectionAmount: "₹547687",
+    firstProjectionDate: "01.02.2025",
+    projectionDate: "06.06.2025",
+    receivedAmount: "₹4567657",
   },
   {
-    "projectName": "Name",
-    "projectionAmount": "₹547687",
-    "firstProjectionDate": "01.02.2025",
-    "projectionDate": "06.06.2025",
-    "receivedAmount": "₹4567657"
+    projectName: "Name",
+    projectionAmount: "₹547687",
+    firstProjectionDate: "01.02.2025",
+    projectionDate: "06.06.2025",
+    receivedAmount: "₹4567657",
   },
   {
-    "projectName": "Name",
-    "projectionAmount": "₹547687",
-    "firstProjectionDate": "01.02.2025",
-    "projectionDate": "06.06.2025",
-    "receivedAmount": "₹4567657"
+    projectName: "Name",
+    projectionAmount: "₹547687",
+    firstProjectionDate: "01.02.2025",
+    projectionDate: "06.06.2025",
+    receivedAmount: "₹4567657",
   },
   {
-    "projectName": "Name",
-    "projectionAmount": "₹547687",
-    "firstProjectionDate": "01.02.2025",
-    "projectionDate": "06.06.2025",
-    "receivedAmount": "₹4567657"
+    projectName: "Name",
+    projectionAmount: "₹547687",
+    firstProjectionDate: "01.02.2025",
+    projectionDate: "06.06.2025",
+    receivedAmount: "₹4567657",
   },
   {
-    "projectName": "Name",
-    "projectionAmount": "₹547687",
-    "firstProjectionDate": "01.02.2025",
-    "projectionDate": "06.06.2025",
-    "receivedAmount": "₹4567657"
+    projectName: "Name",
+    projectionAmount: "₹547687",
+    firstProjectionDate: "01.02.2025",
+    projectionDate: "06.06.2025",
+    receivedAmount: "₹4567657",
   },
   {
-    "projectName": "Name",
-    "projectionAmount": "₹547687",
-    "firstProjectionDate": "01.02.2025",
-    "projectionDate": "06.06.2025",
-    "receivedAmount": "₹4567657"
+    projectName: "Name",
+    projectionAmount: "₹547687",
+    firstProjectionDate: "01.02.2025",
+    projectionDate: "06.06.2025",
+    receivedAmount: "₹4567657",
   },
   {
-    "projectName": "Name",
-    "projectionAmount": "₹547687",
-    "firstProjectionDate": "01.02.2025",
-    "projectionDate": "06.06.2025",
-    "receivedAmount": "₹4567657"
-  }
-]
+    projectName: "Name",
+    projectionAmount: "₹547687",
+    firstProjectionDate: "01.02.2025",
+    projectionDate: "06.06.2025",
+    receivedAmount: "₹4567657",
+  },
+];
 
 export const WORequestData = [
   {
@@ -6783,137 +6782,137 @@ export const roaddetailsData = [
     number: "1*8*1",
     length: 0.67,
     breadth: 0.78,
-    density: 0.465
+    density: 0.465,
   },
   {
     item_description: "Dismantling clearing away and",
     number: "1*8*1",
     length: 0.67,
     breadth: 0.78,
-    density: 0.465
+    density: 0.465,
   },
   {
     item_description: "Dismantling clearing away and",
     number: "1*8*1",
     length: 0.67,
     breadth: 0.78,
-    density: 0.465
+    density: 0.465,
   },
   {
     item_description: "Dismantling clearing away and",
     number: "1*8*1",
     length: 0.67,
     breadth: 0.78,
-    density: 0.465
+    density: 0.465,
   },
   {
     item_description: "Dismantling clearing away and",
     number: "1*8*1",
     length: 0.67,
     breadth: 0.78,
-    density: 0.465
+    density: 0.465,
   },
   {
     item_description: "Dismantling clearing away and",
     number: "1*8*1",
     length: 0.67,
     breadth: 0.78,
-    density: 0.465
+    density: 0.465,
   },
   {
     item_description: "Dismantling clearing away and",
     number: "1*8*1",
     length: 0.67,
     breadth: 0.78,
-    density: 0.465
+    density: 0.465,
   },
   {
     item_description: "Dismantling clearing away and",
     number: "1*8*1",
     length: 0.67,
     breadth: 0.78,
-    density: 0.465
+    density: 0.465,
   },
   {
     item_description: "Dismantling clearing away and",
     number: "1*8*1",
     length: 0.67,
     breadth: 0.78,
-    density: 0.465
-  }
-]
+    density: 0.465,
+  },
+];
 
-export const roadabstractData= [
+export const roadabstractData = [
   {
     ItemDescription: "Dismantling clearing away and",
     Quantity: 5568.75,
     Unit: "M3",
     Rate: 0.78,
-    Amount: "₹537786"
+    Amount: "₹537786",
   },
   {
     ItemDescription: "Dismantling clearing away and",
     Quantity: 5568.75,
     Unit: "M3",
     Rate: 0.78,
-    Amount: "₹537786"
+    Amount: "₹537786",
   },
   {
     ItemDescription: "Dismantling clearing away and",
     Quantity: 5568.75,
     Unit: "M3",
     Rate: 0.78,
-    Amount: "₹537786"
+    Amount: "₹537786",
   },
   {
     ItemDescription: "Dismantling clearing away and",
     Quantity: 5568.75,
     Unit: "M3",
     Rate: 0.78,
-    Amount: "₹537786"
+    Amount: "₹537786",
   },
   {
     ItemDescription: "Dismantling clearing away and",
     Quantity: 5568.75,
     Unit: "M3",
     Rate: 0.78,
-    Amount: "₹537786"
+    Amount: "₹537786",
   },
   {
     ItemDescription: "Dismantling clearing away and",
     Quantity: 5568.75,
     Unit: "M3",
     Rate: 0.78,
-    Amount: "₹537786"
+    Amount: "₹537786",
   },
   {
     ItemDescription: "Dismantling clearing away and",
     Quantity: 5568.75,
     Unit: "M3",
     Rate: 0.78,
-    Amount: "₹537786"
+    Amount: "₹537786",
   },
   {
     ItemDescription: "Dismantling clearing away and",
     Quantity: 5568.75,
     Unit: "M3",
     Rate: 0.78,
-    Amount: "₹537786"
+    Amount: "₹537786",
   },
   {
     ItemDescription: "Dismantling clearing away and",
     Quantity: 5568.75,
     Unit: "M3",
     Rate: 0.78,
-    Amount: "₹537786"
+    Amount: "₹537786",
   },
   {
     ItemDescription: "Dismantling clearing away and",
     Quantity: 5568.75,
     Unit: "M3",
     Rate: 0.78,
-    Amount: "₹537786"
-  }
+    Amount: "₹537786",
+  },
 ];
 
 export const TableReportSiteData = [
@@ -6923,7 +6922,7 @@ export const TableReportSiteData = [
     PlannedDate: "06.01.2025",
     AchievedDate: "08.05.2025",
     AssignedTo: "Tamil",
-    Status: "Completed"
+    Status: "Completed",
   },
   {
     Site: "Site Name",
@@ -6931,7 +6930,7 @@ export const TableReportSiteData = [
     PlannedDate: "06.01.2025",
     AchievedDate: "08.05.2025",
     AssignedTo: "Tamil",
-    Status: "Completed"
+    Status: "Completed",
   },
   {
     Site: "Site Name",
@@ -6939,7 +6938,7 @@ export const TableReportSiteData = [
     PlannedDate: "06.01.2025",
     AchievedDate: "08.05.2025",
     AssignedTo: "Tamil",
-    Status: "Completed"
+    Status: "Completed",
   },
   {
     Site: "Site Name",
@@ -6947,7 +6946,7 @@ export const TableReportSiteData = [
     PlannedDate: "06.01.2025",
     AchievedDate: "08.05.2025",
     AssignedTo: "Tamil",
-    Status: "Completed"
+    Status: "Completed",
   },
   {
     Site: "Site Name",
@@ -6955,7 +6954,7 @@ export const TableReportSiteData = [
     PlannedDate: "06.01.2025",
     AchievedDate: "08.05.2025",
     AssignedTo: "Tamil",
-    Status: "Completed"
+    Status: "Completed",
   },
   {
     Site: "Site Name",
@@ -6963,7 +6962,7 @@ export const TableReportSiteData = [
     PlannedDate: "06.01.2025",
     AchievedDate: "08.05.2025",
     AssignedTo: "Tamil",
-    Status: "Completed"
+    Status: "Completed",
   },
   {
     Site: "Site Name",
@@ -6971,7 +6970,7 @@ export const TableReportSiteData = [
     PlannedDate: "06.01.2025",
     AchievedDate: "08.05.2025",
     AssignedTo: "Tamil",
-    Status: "Completed"
+    Status: "Completed",
   },
   {
     Site: "Site Name",
@@ -6979,8 +6978,8 @@ export const TableReportSiteData = [
     PlannedDate: "06.01.2025",
     AchievedDate: "08.05.2025",
     AssignedTo: "Tamil",
-    Status: "Completed"
-  }
+    Status: "Completed",
+  },
 ];
 
 export const MachineryEntryData = [
@@ -6990,7 +6989,7 @@ export const MachineryEntryData = [
     StartReading: 4563,
     EndReading: 4563,
     Attachments: "Links",
-    ActionBy: "Name"
+    ActionBy: "Name",
   },
   {
     Date: "06.01.2025",
@@ -6998,7 +6997,7 @@ export const MachineryEntryData = [
     StartReading: 4563,
     EndReading: 4563,
     Attachments: "Links",
-    ActionBy: "Name"
+    ActionBy: "Name",
   },
   {
     Date: "06.01.2025",
@@ -7006,7 +7005,7 @@ export const MachineryEntryData = [
     StartReading: 4563,
     EndReading: 4563,
     Attachments: "Links",
-    ActionBy: "Name"
+    ActionBy: "Name",
   },
   {
     Date: "06.01.2025",
@@ -7014,7 +7013,7 @@ export const MachineryEntryData = [
     StartReading: 4563,
     EndReading: 4563,
     Attachments: "Links",
-    ActionBy: "Name"
+    ActionBy: "Name",
   },
   {
     Date: "06.01.2025",
@@ -7022,7 +7021,7 @@ export const MachineryEntryData = [
     StartReading: 4563,
     EndReading: 4563,
     Attachments: "Links",
-    ActionBy: "Name"
+    ActionBy: "Name",
   },
   {
     Date: "06.01.2025",
@@ -7030,7 +7029,7 @@ export const MachineryEntryData = [
     StartReading: 4563,
     EndReading: 4563,
     Attachments: "Links",
-    ActionBy: "Name"
+    ActionBy: "Name",
   },
   {
     Date: "06.01.2025",
@@ -7038,7 +7037,7 @@ export const MachineryEntryData = [
     StartReading: 4563,
     EndReading: 4563,
     Attachments: "Links",
-    ActionBy: "Name"
+    ActionBy: "Name",
   },
   {
     Date: "06.01.2025",
@@ -7046,8 +7045,8 @@ export const MachineryEntryData = [
     StartReading: 4563,
     EndReading: 4563,
     Attachments: "Links",
-    ActionBy: "Name"
-  }
+    ActionBy: "Name",
+  },
 ];
 
 export const RetainingWallReportData = [
@@ -7059,9 +7058,19 @@ export const RetainingWallReportData = [
     depth: "",
     contents: "",
     details: [
-      { item: "a) Manual Excavation", output: "100 cft", trademen: "2 labors", remarks: "" },
-      { item: "b) Excavation", output: "100 cft", trademen: "2 labors", remarks: "" }
-    ]
+      {
+        item: "a) Manual Excavation",
+        output: "100 cft",
+        trademen: "2 labors",
+        remarks: "",
+      },
+      {
+        item: "b) Excavation",
+        output: "100 cft",
+        trademen: "2 labors",
+        remarks: "",
+      },
+    ],
   },
   {
     description: "Concreting - RMC",
@@ -7071,8 +7080,8 @@ export const RetainingWallReportData = [
     depth: "",
     contents: "",
     details: [
-      { item: "", output: "100 cft", trademen: "2 labors", remarks: "" }
-    ]
+      { item: "", output: "100 cft", trademen: "2 labors", remarks: "" },
+    ],
   },
   {
     description: "Reinforcement",
@@ -7082,10 +7091,20 @@ export const RetainingWallReportData = [
     depth: "",
     contents: "",
     details: [
-      { item: "a) For Slab", output: "100 cft", trademen: "2 labors", remarks: "" },
-      { item: "b) For Footing", output: "100 cft", trademen: "2 labors", remarks: "" }
-    ]
-  }
+      {
+        item: "a) For Slab",
+        output: "100 cft",
+        trademen: "2 labors",
+        remarks: "",
+      },
+      {
+        item: "b) For Footing",
+        output: "100 cft",
+        trademen: "2 labors",
+        remarks: "",
+      },
+    ],
+  },
 ];
 
 export const purchaseEnquireData = [
@@ -7141,5 +7160,105 @@ export const purchaseEnquireData = [
   {
     description: "Retaining Wall",
     details: [],
+  },
+];
+
+export const DailyProjectData = [
+  {
+    description: "Concrete Pouring for Foundation",
+    details: [
+      {
+        contractor: "ABC Constructions",
+        quantity: 100,
+        unit: "Cubic Meters",
+        manPower: 12,
+        startDate: "2025-07-01",
+        daysRemaining: 3,
+        status: "planned",
+      },
+      {
+       contractor: "ABC Constructions", 
+        quantity: 120,
+        unit: "Cubic Meters",
+        manPower: 10,
+        startDate: "2025-07-02",
+        daysRemaining: 2,
+        status: "ongoing",
+      },
+    ],
+  },
+  {
+    description: "Steel Reinforcement",
+    details: [
+      {
+        contractor: "ABC Constructions",
+        quantity: 50,
+        unit: "Tons",
+        manPower: 8,
+        startDate: "2025-07-03",
+        daysRemaining: 5,
+        status: "ongoing",
+      },
+    ],
+  },
+  {
+    description: "Brick Masonry",
+    details: [
+      {
+        contractor: "ABC Constructions",
+        quantity: 20000,
+        unit: "Nos",
+        manPower: 10,
+        startDate: "2025-07-05",
+        daysRemaining: 7,
+        status: "completed",
+      },
+    ],
+  },
+];
+
+export const WeeklyProjectData = [
+  {
+    description: "Concrete Pouring",
+    details: [
+      {
+        contractor: "ABC Constructions",
+        quantity: 100,
+        unit: "Cubic Meters",
+        planned: 20,
+        acheived: 18,
+      },
+      {
+        contractor: "XYZ Builders",
+        quantity: 120,
+        unit: "Cubic Meters",
+        planned: 25,
+        acheived: 25,
+      },
+    ],
+  },
+  {
+    description: "Steel Reinforcement",
+    details: [
+      {
+        contractor: "SteelWorks Ltd.",
+        quantity: 50,
+        unit: "Tons",
+        planned: 10,
+        acheived: 9,
+      },
+    ],
+  },
+  {
+    description: "Brick Masonry",
+    details: [
+      {
+        contractor: "Brick Masters",
+        quantity: 20000,
+        unit: "Nos",
+        planned: 4000,
+        acheived: 4000,
+      },
+    ],
   },
 ];

@@ -146,6 +146,9 @@ import ViewPayroll from "../pages/Hr/payroll/ViewPayroll";
 import ViewGoodRecipt from "../pages/purchase/goods receipt/ViewGoodRecipt";
 import ViewPurchaseBill from "../pages/purchase/purchase bill/ViewPurchaseBill";
 import ViewPurchaseEnquiry from "../pages/purchase/purchase enquiry/ViewPurchaseEnquiry";
+import PurchaseStocks from "../pages/purchase/purchase stocks/PurchaseStocks";
+import PurchaseAssets from "../pages/purchase/purchase assets/PurchaseAssets";
+import ScheduleProjects from "../pages/projects/schedule/ScheduleProjects";
 
 const AppRoutes = () => {
   return (
@@ -221,6 +224,11 @@ const AppRoutes = () => {
                 <Route index element={<WBS />} />
                 <Route path="viewwbs" element={<ViewWbs />} />
               </Route>
+              <Route path="projectschedule">
+                <Route index element={<ScheduleProjects />} />
+              
+              </Route>
+
               <Route path="woissuance">
                 <Route index element={<WoIssuance />} />
                 <Route path="viewworequest" element={<ViewWORequest />} />
@@ -286,6 +294,8 @@ const AppRoutes = () => {
                 <Route path="viewpurchasebill" element={<ViewPurchaseBill />} />
               </Route>
               <Route path="machinerytracking" element={<MachineryTracking />} />
+               <Route path="purchasestocks" element={<PurchaseStocks />} />
+               <Route path="purchaseassets" element={<PurchaseAssets />} />
             </Route>
             <Route path="/site">
               <Route index element={<Site />} />

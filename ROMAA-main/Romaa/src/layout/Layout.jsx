@@ -141,7 +141,7 @@ const LayOut = () => {
         {
           title: "Schedule",
           icon: <TbCalendarStats size={23} />,
-          // to: "/projects/schedule",
+          to: "/projects/projectschedule",
         },
         {
           title: "WOR / WO issuance",
@@ -216,6 +216,16 @@ const LayOut = () => {
           icon: <MdContentPasteSearch size={23} />,
           to: "/purchase/machinerytracking",
         },
+        {
+          title: "Stocks",
+          icon: <LuFileBox size={23} />,
+          to: "/purchase/purchasestocks",
+        },
+        {
+          title: "Assets",
+          icon: <TbAssembly size={23} />,
+          to: "/purchase/purchaseassets",
+        },
       ],
     },
     {
@@ -238,11 +248,11 @@ const LayOut = () => {
           icon: <RiDiscountPercentLine size={23} />,
           to: "/site/sitedrawing",
         },
-         {
-          title: "Schedule",
-          icon: <RiCalendarScheduleLine size={23} />,
-          //to: "/site/sitedrawing",
-        },
+        //  {
+        //   title: "Schedule",
+        //   icon: <RiCalendarScheduleLine size={23} />,
+        //   //to: "/site/sitedrawing",
+        // },
          {
           title: "Work Done",
           icon: <RiDiscountPercentLine size={23} />,

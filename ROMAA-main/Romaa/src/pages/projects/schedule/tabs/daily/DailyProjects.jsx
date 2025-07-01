@@ -1,53 +1,20 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { HiArrowsUpDown } from "react-icons/hi2";
-import { purchaseEnquireData } from "../../../components/Data";
 import { FiEye } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { PiLinkBold } from "react-icons/pi";
-import Title from "../../../components/Title";
-import Button from "../../../components/Button";
-import { TbFileExport } from "react-icons/tb";
-import { BiFilterAlt } from "react-icons/bi";
-import CreateEnquiry from "./CreateEnquiry";
-import { IoReorderThree } from "react-icons/io5";
+import { DailyProjectData } from "../../../../../components/Data";
 
-const PurchaseEnquiry = () => {
+const DailyProjects = () => {
   const navigate = useNavigate();
   const [expandedRow, setExpandedRow] = useState(false);
-  const [createEnquiry, setCreateEnquiry] = useState(false);
   const toggleRow = (index) => {
     setExpandedRow(expandedRow === index ? null : index);
   };
 
   return (
     <div className="font-roboto-flex flex flex-col h-full">
-      <div className="flex justify-between ">
-        <Title title="Purchase Management"
-        sub_title="Purchase Enquiry" 
-        page_title="Purchase Enquiry"/>
-        <div className=" flex items-center gap-3">
-            <Button
-              button_name={"Create Enquiry"}
-            button_icon={<IoReorderThree size={22} />}
-              onClick={()=>setCreateEnquiry(true)}
-            />
-            <Button
-              button_icon={<TbFileExport size={22} />}
-              button_name="Export"
-              bgColor="bg-white"
-              textColor="text-darkest-blue"
-              // onClick={onExport}
-            />
-            <Button
-              button_icon={<BiFilterAlt size={22} />}
-              button_name="Filter"
-              bgColor="bg-white"
-              textColor="text-darkest-blue"
-             
-            />
-        </div>
-      </div>
       <div className="mt-4 overflow-y-auto no-scrollbar ">
         <div className="overflow-auto no-scrollbar">
           <table className="w-full whitespace-nowrap">
@@ -55,13 +22,13 @@ const PurchaseEnquiry = () => {
               <tr className="font-semibold  text-sm bg-white border-b-4 border-light-blue">
                 <th className="p-3.5 rounded-l-lg">S.no</th>
                 {[
-                  "Contractor",
-                  "Unit Cost",
+                  "Description",
+                  "Quantity ",
                   "Unit ",
-                  "Date",
-                  "Total",
-                  "Level",
-                  "Credit Days",
+                  "Man Power",
+                  " Start Date",
+                  "Days Remaining",
+                  "Status",
                 ].map((heading) => (
                   <th key={heading} className="p-3">
                     <h1 className="flex items-center justify-center  gap-2">
@@ -74,8 +41,8 @@ const PurchaseEnquiry = () => {
             </thead>
 
             <tbody className="text-greyish  text-sm font-light">
-              {purchaseEnquireData.length > 0
-                ? purchaseEnquireData.map((data, index) => {
+              {DailyProjectData.length > 0
+                ? DailyProjectData.map((data, index) => {
                     return (
                       <React.Fragment key={index}>
                         <tr className="border-b-[3px] bg-white border-light-blue text-center">
@@ -89,25 +56,18 @@ const PurchaseEnquiry = () => {
                           <td></td>
                           <td className="rounded-r-lg flex items-center justify-center gap-2 mt-2">
                             <p
-                              onClick={() =>
-                                navigate("viewpurchaseenquire", {
-                                  state: { item: data },
-                                })
-                              }
+                            
                               className="cursor-pointer bg-green-200  rounded-sm  p-1.5  text-green-600"
                             >
                               <FiEye />
                             </p>
-                            <p
-                              onClick={() =>
-                                navigate("viewworequest", {
-                                  state: { item: data },
-                                })
-                              }
+                            {/* <p
+                             
+                              
                               className="cursor-pointer bg-cyan-200 p-1.5  rounded  text-cyan-700"
                             >
-                              <PiLinkBold   />
-                            </p>
+                              <PiLinkBold />
+                            </p> */}
                             <p
                               onClick={() => toggleRow(index)}
                               className="cursor-pointer bg-blue-200  rounded p-0.5 text-blue-600"
@@ -125,7 +85,7 @@ const PurchaseEnquiry = () => {
                           <tr>
                             <td colSpan="9" className="px-6 py-1  ">
                               <div className=" bg-white px-4 py-4 rounded-md ">
-                                <table className="w-full text-end  text-sm table-fixed ">
+                                <table className="w-full table-fixed text-center text-sm  ">
                                   <tbody className="bg-gray-200">
                                     {data.details && data.details.length > 0 ? (
                                       <>
@@ -138,13 +98,32 @@ const PurchaseEnquiry = () => {
                                               {String.fromCharCode(97 + i)}){" "}
                                               {detail.contractor}
                                             </td>
-                                            <td>{`₹ ${detail.unitCost}`}</td>
+                                            <td className="py-1.5 text-start px-8">
+                                              {detail.quantity}
+                                            </td>
                                             <td>{detail.unit}</td>
-                                            <td>{detail.date}</td>
-                                            <td>{detail.total}</td>
-                                            <td>{detail.level}</td>
-                                            <td>{detail.creditDays}</td>
-                                            <td><div className="flex gap-4 px-4 items-center"><p className="text-green-800 underline  decoration-2 underline-offset-4 text-sm font-medium "> Accept</p><p className="text-red-500 underline  decoration-2 underline-offset-4 text-sm font-medium ">Reject</p></div></td>
+                                            <td>{detail.manPower}</td>
+                                            <td>{detail.startDate}</td>
+                                            <td>{detail.daysRemaining}</td>
+                                            <td
+                                              className={
+                                                detail.status === "planned"
+                                                  ? "text-orange-500 font-semibold"
+                                                  : detail.status === "ongoing"
+                                                  ? "text-blue-600 font-semibold"
+                                                  : detail.status ===
+                                                    "completed"
+                                                  ? "text-green-600 font-semibold"
+                                                  : ""
+                                              }
+                                            >
+                                              {detail.status
+                                                ? detail.status
+                                                    .charAt(0)
+                                                    .toUpperCase() +
+                                                  detail.status.slice(1)
+                                                : ""}
+                                            </td>
                                           </tr>
                                         ))}
                                       </>
@@ -172,13 +151,8 @@ const PurchaseEnquiry = () => {
           </table>
         </div>
       </div>
-      {createEnquiry && (
-        <CreateEnquiry
-     onclose={() => setCreateEnquiry(false)}
-        />
-      )}
     </div>
   );
 };
 
-export default PurchaseEnquiry;
+export default DailyProjects;
