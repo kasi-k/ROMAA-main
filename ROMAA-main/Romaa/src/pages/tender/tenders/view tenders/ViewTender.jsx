@@ -5,7 +5,7 @@ import { LuFileCheck } from "react-icons/lu";
 import { MdArrowBackIosNew } from "react-icons/md";
 import TenderOverView from "./tender overview/TenderOverView";
 import ApproveTender from "./tender overview/ApproveTender";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import CustomerDetails from "./customer/CustomerDetails";
 import Plan from "./plans/Plan";
 import BOQ from "./Boq/BOQ";
@@ -17,6 +17,7 @@ import Preliminary from "./preliminary/Preliminary";
 import AddZeroCost from "./zero cost/AddZeroCost";
 import AddBoq from "./Boq/AddBoq";
 import EMD from "./Emd/EMD";
+import UploadModal from "./project documents/UploadModal";
 
 const tabs = [
   {
@@ -168,8 +169,14 @@ const tabs = [
 
 const ViewTender = () => {
   const navigate = useNavigate();
-  const [openModal, setOpenModal] = useState(null);
-  const [activeTab, setActiveTab] = useState(tabs[0].id);
+  const [openModal, setOpenModal] = useState({ action: null, tab: null });
+const [searchParams, setSearchParams] = useSearchParams();
+const defaultTab = tabs[0].id;
+const activeTab = searchParams.get("tab") || defaultTab;
+
+const handleTabChange = (id) => {
+  setSearchParams({ tab: id });
+};
 
   const activeTabData = tabs.find((tab) => tab.id === activeTab);
   const buttonsWithHandlers = activeTabData.buttons.map((button) => {
@@ -177,6 +184,7 @@ const ViewTender = () => {
       "Approve Tender": "approveTender",
       "Add BOQ": "addBoq",
       "Add Zero Cost": "zeroCost",
+      "Upload Documents":"uploadDocuments",
     };
 
     if (modalMap[button.label]) {
@@ -219,7 +227,7 @@ const ViewTender = () => {
                     ? "bg-darkest-blue text-white"
                     : "bg-white text-darkest-blue "
                 }`}
-                onClick={() => setActiveTab(id)}
+                 onClick={() => handleTabChange(id)}
               >
                 {label}
               </p>
@@ -247,6 +255,9 @@ const ViewTender = () => {
         )}
            {openModal === "addBoq" && (
           <AddBoq onclose={() => setOpenModal(null)} />
+        )}
+           {openModal === "uploadDocuments" && (
+          <UploadModal onclose={() => setOpenModal(null)} />
         )}
       </div>
     </>

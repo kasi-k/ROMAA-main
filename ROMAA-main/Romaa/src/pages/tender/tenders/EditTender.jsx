@@ -28,6 +28,7 @@ const schema = yup.object().shape({
     .positive("Proposal Cost must be a positive number")
     .required("Proposal Cost is required"),
   duedate: yup.date().required("Due Date is required"),
+  emd: yup.string().required("EMD is required"),
   description: yup
     .string()
     .max(500, "Description cannot exceed 500 characters")
@@ -48,7 +49,7 @@ const InputField = ({
 
     {type === "select" ? (
       <select
-      defaultValue=""
+        defaultValue=""
         {...register(name)}
         className={`col-span-5 border border-input-bordergrey rounded-lg outline-none py-2 px-2 text-xs font-light 
         ${errors[name] ? "border-red-500" : ""}`}
@@ -112,9 +113,7 @@ const EditTender = ({ onclose }) => {
           >
             <IoClose className="size-[24px]" />
           </button>
-          <h1 className="text-center font-medium text-2xl py-2">
-            Edit Tender
-          </h1>
+          <h1 className="text-center font-medium text-2xl py-2">Edit Tender</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 px-6 py-6">
               <div className="lg:space-y-6  space-y-3">
@@ -140,7 +139,6 @@ const EditTender = ({ onclose }) => {
                   register={register}
                   errors={errors}
                   options={[
-              
                     {
                       value: "item rate contarct",
                       label: "Item Rate contract",
@@ -199,6 +197,13 @@ const EditTender = ({ onclose }) => {
                   type="date"
                   register={register}
                   errors={errors}
+                />
+                <InputField
+                  label="EMD"
+                  name="emd"
+                  register={register}
+                  errors={errors}
+                  placeholder="Enter emd"
                 />
                 <InputField
                   label="Description"

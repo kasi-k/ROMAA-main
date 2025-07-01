@@ -129,6 +129,10 @@ import ViewClBillProjects from "../pages/projects/client billing/ViewClBillProje
 import ProjectWorkProgress from "../pages/projects/work progress/ProjectWorkProgress";
 import ViewProjectWorkProgress from "../pages/projects/work progress/ViewProjectWorkProgress";
 import ProjectMaterailQty from "../pages/projects/Project Material quantity/ProjectMaterailQty";
+import StockProject from "../pages/projects/project stocks/StockProject";
+import ProjectAsset from "../pages/projects/project assets/ProjectAsset";
+import ViewTableWOBoq from "../pages/tender/work order/view work order/Work order Boq/ViewTableWOBoq";
+import EmployeeDashboard from "../pages/dashboard/employee dashboard/EmployeeDashboard";
 
 
 const AppRoutes = () => {
@@ -146,6 +150,8 @@ const AppRoutes = () => {
               <Route path="viewcalendar" element={<ViewCalendar />} />
               <Route path="tickets" element={<Tickets />} />
               <Route path="profile" element={<Profile />} />
+              <Route path="employeedashboard" element={<EmployeeDashboard />} />
+
             </Route>
            <Route path="/tender">
               <Route path="customers" element={<Customer />} />
@@ -155,7 +161,11 @@ const AppRoutes = () => {
               </Route>
               <Route path="workorders">
                 <Route index element={<WorkOrder />} />
-                <Route path="viewworkorder" element = {<ViewWorkOrder/>}/>
+                <Route path="viewworkorder" >
+                <Route index element = {<ViewWorkOrder/>}/>
+                <Route path="viewworkordertable" element = {<ViewTableWOBoq/>}/>
+                </Route>
+
               </Route>
               <Route path="emd" element={<EMD />} />
               <Route path="dlp" element={<DLP />} />
@@ -213,6 +223,8 @@ const AppRoutes = () => {
              <Route path="viewprojectworkprogress" element={<ViewProjectWorkProgress/>}/>
               </Route>
                 <Route path="projectsmaterialquantity" element={<ProjectMaterailQty/>}/>
+                <Route path="projectsstocks" element={<StockProject />} />
+                <Route path="projectsassets" element={<ProjectAsset />} />
             </Route>
            <Route path="/purchase">
               <Route path="vendorsupplier"  >

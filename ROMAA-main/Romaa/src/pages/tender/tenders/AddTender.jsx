@@ -28,6 +28,7 @@ const schema = yup.object().shape({
     .positive("Proposal Cost must be a positive number")
     .required("Proposal Cost is required"),
   duedate: yup.date().required("Due Date is required"),
+  emd: yup.string().required("EMD is required"),
   description: yup
     .string()
     .max(500, "Description cannot exceed 500 characters")
@@ -199,6 +200,13 @@ const AddTender = ({ onclose }) => {
                   type="date"
                   register={register}
                   errors={errors}
+                />
+                   <InputField
+                  label="EMD"
+                  name="emd"
+                  register={register}
+                  errors={errors}
+                  placeholder="Enter emd"
                 />
                 <InputField
                   label="Description"

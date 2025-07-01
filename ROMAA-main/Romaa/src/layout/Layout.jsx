@@ -166,12 +166,12 @@ const LayOut = () => {
         {
           title: "Stocks",
           icon: <LuFileBox size={23} />,
-          // to: "/projects/workprogress",
+          to: "/projects/projectsstocks",
         },
         {
           title: "Assets",
           icon: <TbAssembly size={23} />,
-          // to: "/projects/workprogress",
+          to: "/projects/projectsassets",
         },
      
       ],

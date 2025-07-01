@@ -22,7 +22,7 @@ const Columns = [
 const ProjectMaterailQty = () => {
   return (
     <Table
-      title={"Projects Managemnet"}
+      title={"Projects Management"}
       subtitle={"Basic Material Quantity"}
       pagetitle={" Material Quantity"}
       endpoint={BOQSplitData}

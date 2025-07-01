@@ -1,5 +1,5 @@
 import Table from "../../../components/Table";
-import { BOQSplitData } from "../../../components/Data";
+import { StockProjectData } from "../../../components/Data";
 import Filters from "../../../components/Filters";
 const Columns = [
   { label: "Materail Name ", key: "materialname" },
@@ -11,21 +11,33 @@ const Columns = [
   {
     label: "Status",
     key: "status",
-    render: (item) => <span>{` ${item.status}`}</span>,
+    render: (item) => (
+      <span
+        className={`font-medium ${
+          item.status === "in stock"
+            ? " text-green-600"
+            : item.status === "low"
+            ? "text-orange-500 "
+            : ""
+        }`}
+      >
+        {item.status.charAt(0).toUpperCase() + item.status.slice(1)}
+      </span>
+    ),
   },
 ];
 
-const ProjectAssets = () => {
+const StockProject = () => {
   return (
     <Table
       title={"Projects Managemnet"}
-      subtitle={"Assets"}
-      pagetitle={" Assets"}
-      endpoint={BOQSplitData}
+      subtitle={"Stocks"}
+      pagetitle={" Stocks"}
+      endpoint={StockProjectData}
       columns={Columns}
       FilterModal={Filters}
     />
   );
 };
 
-export default ProjectAssets;
+export default StockProject;

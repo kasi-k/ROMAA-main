@@ -1,4 +1,17 @@
 import React from "react";
+import Table from "../../../../../components/Table";
+import { EMDTableData } from "../../../../../components/Data";
+import ViewEmdTender from "./ViewEmdTender";
+
+const Columns = [
+  { label: "Date  ", key: "date" },
+  { label: "Company", key: "company" },
+  { label: "Proposed Value", key: "proposedvalue" },
+  { label: "EMD Amount", key: "emdamount" },
+  { label: "Bank Name", key: "bankname" },
+  { label: "Level", key: "level" },
+  { label: "Status", key: "status" },
+];
 
 const EMD = () => {
   return (
@@ -25,6 +38,13 @@ const EMD = () => {
           <p className="text-sm col-span-1 text-gray-600">7</p>
         </div>
       </div>
+      <Table
+        contentMarginTop="mt-0"
+        endpoint={EMDTableData}
+        columns={Columns}
+        ViewModal={ViewEmdTender}
+        exportModal={false}
+      />
     </div>
   );
 };

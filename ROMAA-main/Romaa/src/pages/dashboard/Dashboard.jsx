@@ -38,6 +38,7 @@ const Dashboard = () => {
           page_title="Main Dashboard"
         />
         <div className="flex gap-2 items-center">
+          <Button onClick={()=>navigate("employeedashboard")} button_name="Employee"  paddingY="py-2.5"/>
           <Button onClick={()=>navigate("viewcalendar")} button_name="Calendar" bgColor="bg-white" textColor="text-darkest-blue" button_icon={<TbCalendarDue size={23} />}  paddingY="py-2.5"/>
           <Button onClick={()=>setViewWorkOrderModal(true)} button_name="View Work Orders" bgColor="bg-white" textColor="text-darkest-blue" button_icon={<LuClipboardList size={23} />} paddingY="py-2.5"/>
         </div>

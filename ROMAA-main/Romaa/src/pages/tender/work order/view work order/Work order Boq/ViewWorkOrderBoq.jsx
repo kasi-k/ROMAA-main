@@ -1,5 +1,6 @@
-import React from "react";
+import React, { use } from "react";
 import Modal from "../../../../../components/Modal";
+import { useNavigate } from "react-router-dom";
 
 const BOQ_FIELDS = [
   { label: "Ref no", key: "refno" },
@@ -13,6 +14,8 @@ const BOQ_FIELDS = [
 ];
 
 const ViewWorkOrderBoq = ({ onclose, boq }) => {
+
+  const navigate = useNavigate();
   const data = boq || {
     refno: "#2345",
     unit: "33ABCDE4567F8Z9",
@@ -47,6 +50,7 @@ const ViewWorkOrderBoq = ({ onclose, boq }) => {
               Cancel
             </p>
             <p
+            onClick={()=>navigate("viewworkordertable")}
               className="cursor-pointer bg-darkest-blue text-white px-6 py-1.5 rounded-sm"
            
             >
