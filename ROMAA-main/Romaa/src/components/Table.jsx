@@ -112,8 +112,8 @@ const Table = ({
             <Button
               button_icon={<TbFileExport size={22} />}
               button_name="Export"
-              bgColor="bg-white"
-              textColor="text-darkest-blue"
+              bgColor="dark:bg-layout-dark bg-white"
+              textColor="dark:text-white text-darkest-blue"
               onClick={onExport}
             />
           )}
@@ -121,8 +121,8 @@ const Table = ({
             <Button
               button_icon={<BiFilterAlt size={22} />}
               button_name="Filter"
-              bgColor="bg-white"
-              textColor="text-darkest-blue"
+              bgColor="dark:bg-layout-dark bg-white"
+              textColor="dark:text-white text-darkest-blue"
               onClick={() => setShowFilter(true)}
             />
           )}
@@ -135,7 +135,7 @@ const Table = ({
         <div className="overflow-auto no-scrollbar">
           <table className="w-full whitespace-nowrap">
             <thead>
-              <tr className="font-semibold text-sm bg-white border-b-4 border-light-blue">
+              <tr className="font-semibold text-sm dark:bg-layout-dark dark:text-white bg-white border-b-4 dark:border-overall_bg-dark border-light-blue">
                 <th className="p-3.5 rounded-l-lg">S.no</th>
                 {columns.map((col, index) => {
                   const isLastColumn = index === columns.length - 1;
@@ -190,12 +190,12 @@ const Table = ({
               </tr>
             </thead>
 
-            <tbody className="text-greyish bg-white text-sm font-light">
+            <tbody className=" dark:text-white text-greyish dark:bg-layout-dark bg-white text-sm font-light">
               {sortedItems.length > 0 ? (
                 sortedItems.map((item, index) => (
                   <tr
                     key={index}
-                    className="border-b-[3px] border-light-blue text-center"
+                    className="border-b-[3px] dark:border-overall_bg-dark border-light-blue text-center"
                   >
                     <td className="p-2 rounded-l-lg">{index + 1}</td>
                     {columns.map((col, colIndex) => {
@@ -251,9 +251,9 @@ const Table = ({
                                 setShowEdit(true);
                               }
                             }}
-                            className="cursor-pointer bg-[#C9E0FF] p-1.5 rounded"
+                            className="cursor-pointer dark:bg-icon-dark-blue bg-[#C9E0FF] p-1.5 rounded"
                           >
-                            <Pencil size={14} className="text-blue-500" />
+                            <Pencil size={14} className="dark:text-white text-blue-500" />
                           </button>
                         )}
                         {(ViewModal || routepoint) && (
@@ -271,9 +271,9 @@ const Table = ({
                                 setShowView(true);
                               }
                             }}
-                            className="cursor-pointer bg-[#BAFFBA] p-1.5 rounded"
+                            className="cursor-pointer dark:bg-icon-dark-green bg-[#BAFFBA] p-1.5 rounded"
                           >
-                            <LuEye size={14} className="text-[#008000]" />
+                            <LuEye size={14} className="text-[#008000] dark:text-[#BAFFBA]" />
                           </button>
                         )}
                         {DeleteModal && (
@@ -298,7 +298,7 @@ const Table = ({
                 <tr>
                   <td
                     colSpan={columns.length + 2}
-                    className="text-center py-10 text-gray-500"
+                    className="text-center py-10 dark:text-white text-gray-500"
                   >
                     No matching results found.
                   </td>

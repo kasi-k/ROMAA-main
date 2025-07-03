@@ -8,12 +8,12 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={() => setIsDark((prev) => !prev)}
-      className="p-2 w-9 h-9 rounded-full bg-light-blue transition"
+      className="p-2 w-9 h-9 rounded-full dark:bg-overall_bg-dark bg-light-blue transition"
     >
       {isDark ? (
-        <TbMoonStars className="h-5 w-5 text-darkest-blue" />
+        <TbMoonStars className="h-5 w-5 dark:text-white text-darkest-blue" />
       ) : (
-        <Sun className="h-5 w-5 text-darkest-blue" />
+        <Sun className="h-5 w-5  dark:text-white text-darkest-blue" />
       )}
     </button>
   );

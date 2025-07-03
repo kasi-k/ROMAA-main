@@ -61,6 +61,12 @@ import { RiShareBoxLine } from "react-icons/ri";
 import { HiOutlineCash } from "react-icons/hi";
 import { TfiLayoutListThumb } from "react-icons/tfi";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
+
+import { BiShapeSquare } from "react-icons/bi";
+import { BsBoxSeam } from "react-icons/bs";
+import { RiBox3Line } from "react-icons/ri";
+import { CiBoxList } from "react-icons/ci";
+import { TbFolderQuestion } from "react-icons/tb";
 const LayOut = () => {
   const location = useLocation();
 
@@ -235,7 +241,7 @@ const LayOut = () => {
       nested: [
         {
           title: "BOQ Site",
-          icon: <RiDiscountPercentLine size={23} />,
+          icon: <ScrollText size={23} />,
           to: "/site/boqsite",
         },
          {
@@ -245,52 +251,52 @@ const LayOut = () => {
         },
          {
           title: "Site Drawing",
-          icon: <RiDiscountPercentLine size={23} />,
+          icon: <BiShapeSquare size={23} />,
           to: "/site/sitedrawing",
         },
         //  {
         //   title: "Schedule",
-        //   icon: <RiCalendarScheduleLine size={23} />,
+        //   icon: <TbCalendarStats size={23} />,
         //   //to: "/site/sitedrawing",
         // },
          {
           title: "Work Done",
-          icon: <RiDiscountPercentLine size={23} />,
+          icon: <TbReceipt2 size={23} />,
           to: "/site/workDoneSite",
         },
          {
           title: "Daily Labour Report",
-          icon: <RiDiscountPercentLine size={23} />,
+          icon: <TbReportAnalytics size={23} />,
           to: "/site/dialylabourreport",
         },
          {
           title: "Material Received",
-          icon: <RiDiscountPercentLine size={23} />,
+          icon: <BsBoxSeam size={23} />,
           to: "/site/materialrecievedsite",
         },
          {
           title: "Material Issued",
-          icon: <RiDiscountPercentLine size={23} />,
+          icon: <RiBox3Line size={23} />,
           to: "/site/materialissuedsite",
         },
          {
           title: "Stock Register",
-          icon: <RiDiscountPercentLine size={23} />,
+          icon: <CiBoxList size={23} />,
           to: "/site/stockregistersite",
         },
          {
           title: "Purchase Request",
-          icon: <RiDiscountPercentLine size={23} />,
+          icon: <TbFolderQuestion size={23} />,
           to: "/site/purchaserequestsite",
         },
         {
           title: "Site Assets",
-          icon: <RiDiscountPercentLine size={23} />,  
+          icon: <TbAssembly size={23} />,  
           to: "/site/siteassets",
         },
         {
           title: "Weekly Billing",
-          icon: <RiDiscountPercentLine size={23} />,  
+          icon: <TbReceipt2 size={23} />,  
           to: "/site/weeklybillingsite",
         },
         {
@@ -550,17 +556,17 @@ const LayOut = () => {
   return (
     <div className=" font-roboto-flex w-full fixed h-screen ">
       <Headers />
-      <div className="flex  bg-light-blue h-11/12 ">
-        <div className="px-6 bg-light-blue overflow-auto no-scrollbar ">
+      <div className="flex dark:bg-overall_bg-dark bg-light-blue dark:text-white h-11/12 ">
+        <div className="px-6 dark:bg-overall_bg-dark bg-light-blue overflow-auto no-scrollbar ">
           <ul>
             {Menus.map((menu, index) => (
               <React.Fragment key={index}>
                 <NavLink to={menu.to}>
                   <li
-                    className={`w-[80px] text-sm font-extralight flex flex-col items-center gap-1 px-3 py-3 my-4 border border-border-sidebar rounded-xl ${
+                    className={`w-[80px] text-sm font-extralight flex flex-col items-center gap-1 px-3 py-3 my-4 border dark:border-border-dark-grey border-border-sidebar rounded-xl ${
                       isMenuActive(menu)
                         ? " text-white  bg-darkest-blue "
-                        : " text-darkest-blue  "
+                        : " dark:text-white text-darkest-blue  "
                     }`}
                   >
                     <span>{menu.icon}</span>
@@ -595,7 +601,7 @@ const LayOut = () => {
             isMenuActive(menu) && (
               <div
                 key={index}
-                className="mx-2 w-56 text-sm  my-4 rounded-lg bg-white overflow-auto no-scrollbar py-6"
+                className="mx-2 w-56 text-sm  my-4 rounded-lg dark:bg-layout-dark bg-white  overflow-auto no-scrollbar py-6"
               >
                 <ul>
                   {menu.nested.map((item, index) => (
@@ -604,8 +610,8 @@ const LayOut = () => {
                         <div
                           className={`w-full   flex  items-center gap-2 py-3 px-3 cursor-pointer ${
                             location.pathname.startsWith(item.to)
-                              ? "bg-select-subbar text-darkest-blue border-r-4 "
-                              : "text-darkest-blue"
+                              ? "dark:bg-overall_bg-dark bg-select-subbar dark:text-white  text-darkest-blue border-r-4 border-r-darkest-blue "
+                              : "dark:text-white text-darkest-blue"
                           }`}
                         >
                           <span>{item.icon}</span>

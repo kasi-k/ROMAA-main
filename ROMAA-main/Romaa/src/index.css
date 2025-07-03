@@ -11,6 +11,15 @@
 
 @theme {
   /* dark-theme */
+    /* dark-theme */
+  --color-layout-dark: #0D0D0D;
+  --color-overall_bg-dark: #1B1B1B;
+  --color-icon-dark-blue: #002350;
+  --color-icon-dark-green: #005E00;
+  --color-border-dark-grey: #353535;
+
+
+
   --color-light-blue: #e3ecff;
   --color-darkest-blue: #314165;
   --color-border-sidebar: #d0d6ff;

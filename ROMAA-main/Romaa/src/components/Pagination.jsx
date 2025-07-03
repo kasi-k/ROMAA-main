@@ -48,7 +48,7 @@ const Pagination = ({
 
   return (
     <div className="flex justify-between items-center h-1/12 px-3 whitespace-nowrap overflow-auto no-scrollbar ">
-      <div className="text-sm font-normal text-darkest-blue">
+      <div className="text-sm font-normal dark:text-white text-darkest-blue">
         <p className="">{displayText}</p>
       </div>
 
@@ -56,7 +56,7 @@ const Pagination = ({
         <button
           className={` ${
             currentPage === 1
-              ? "text-darkest-blue opacity-70 cursor-not-allowed "
+              ? "dark:text-white text-darkest-blue opacity-70 cursor-not-allowed "
               : "text-darkest-blue"
           }`}
           onClick={() => paginate(1)}
@@ -68,7 +68,7 @@ const Pagination = ({
         <button
           className={` ${
             currentPage === 1
-              ? "text-darkest-blue opacity-70 cursor-not-allowed "
+              ? "dark:text-white text-darkest-blue opacity-70 cursor-not-allowed "
               : "text-darkest-blue"
           }`}
           onClick={() => paginate(currentPage - 1)}
@@ -87,7 +87,7 @@ const Pagination = ({
               key={index}
               className={`px-2.5 py-1 text-sm rounded-md ${
                 currentPage === page
-                  ? " bg-darkest-blue  px-2 py-1 font-medium text-white "
+                  ? "dark:bg-white bg-darkest-blue  px-2 py-1 font-medium dark:text-black text-white "
                   : "text-darkest-blue "
               }`}
               onClick={() => paginate(page)}
@@ -100,7 +100,7 @@ const Pagination = ({
         <button
           className={` ${
             currentPage === totalPages
-              ? "text-darkest-blue opacity-70 cursor-not-allowed"
+              ? " dark:text-white text-darkest-blue opacity-70 cursor-not-allowed"
               : "text-darkest-blue "
           }`}
           onClick={() => paginate(currentPage + 1)}
@@ -111,7 +111,7 @@ const Pagination = ({
         <button
           className={` ${
             currentPage === totalPages
-              ? "text-darkest-blue opacity-70 cursor-not-allowed"
+              ? " dark:text-white text-darkest-blue opacity-70 cursor-not-allowed"
               : "text-darkest-blue "
           }`}
           onClick={() => paginate(totalPages)}
