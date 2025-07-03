@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import LOGO from "../../assets/images/romaa logo.png";
 import { IoEyeOff, IoEye } from "react-icons/io5";
 import ThemeToggle from "../../components/ThemeToggle";
+import LOGO_D from "../../assets/images/romaadark.png";
 
 
 const Login = () => {
@@ -11,14 +12,20 @@ const Login = () => {
 
   return (
     <>
-      <div className="relative font-layout-font flex flex-col justify-center items-center gap-6 bg-[#E3ECFF]  h-screen ">
+      <div className="relative font-layout-font flex flex-col justify-center items-center gap-6  dark:bg-overall_bg-dark bg-[#E3ECFF]  h-screen ">
         <div className=" right-8 absolute top-6  p-1 rounded-full">
           <ThemeToggle />
         </div>
-        <div className="w-full max-w-lg  bg-white  p-8 rounded-xl shadow-lg">
+        <div className="w-full max-w-lg  dark:bg-layout-dark dark:text-white bg-white  p-8 rounded-xl shadow-lg">
           <div className="flex justify-between items-center py-4">
             <div>
-              <img src={LOGO} alt="Logo" className="w-44 " />
+            <img src={LOGO} alt="logo" className="w-36 ml-8 -mt-1 dark:hidden " />
+                    <img
+                      src={LOGO_D}
+                      alt="logo"
+                      className="hidden w-36 ml-8 -mt-1 dark:block "
+                    />
+            
             </div>
             <p className="text-3xl font-bold text-center my-4">Login</p>
           </div>
@@ -27,7 +34,7 @@ const Login = () => {
               Email / Phone Number
               <input
                 type="text"
-                className=" border-2  border-input-bordergrey outline-none rounded-md py-2 px-2 my-1"
+                className=" border-2  dark:border-border-dark-grey border-input-bordergrey outline-none rounded-md py-2 px-2 my-1"
                 placeholder="Enter email or phone number"
               />
             </label>
@@ -36,7 +43,7 @@ const Login = () => {
               Password
               <input
                 type={showPassword ? "text" : "password"}
-                className=" border-2  border-input-bordergrey outline-none rounded-md py-2 px-2  pr-10"
+                className=" border-2 dark:border-border-dark-grey border-input-bordergrey outline-none rounded-md py-2 px-2  pr-10"
                 placeholder="Enter password"
               />
               <span

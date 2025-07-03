@@ -78,10 +78,10 @@ const onSubmit = async (data) => {
   return (
     <div className="font-roboto-flex fixed inset-0 grid justify-center items-center backdrop-blur-xs backdrop-grayscale-50  drop-shadow-lg z-20">
       <div className="mx-2 shadow-lg py-2  bg-white  rounded-md lg:w-[900px] md:w-[500px] w-96">
-        <div className="grid">
+        <div   onClick={onclose} className="grid cursor-pointer">
           <button
-            onClick={onclose}
-            className=" place-self-end   cursor-pointer bg-white  rounded-full lg:-mx-4 md:-mx-4 -mx-2 lg:-my-6 md:-my-5  -my-3 lg:shadow-md md:shadow-md shadow-none lg:py-2.5 md:py-2.5 py-0 lg:px-2.5 md:px-2.5 px-0 "
+          
+            className=" place-self-end    bg-white  rounded-full lg:-mx-4 md:-mx-4 -mx-2 lg:-my-6 md:-my-5  -my-3 lg:shadow-md md:shadow-md shadow-none lg:py-2.5 md:py-2.5 py-0 lg:px-2.5 md:px-2.5 px-0 "
           >
             <IoClose className="size-[24px]" />
           </button>

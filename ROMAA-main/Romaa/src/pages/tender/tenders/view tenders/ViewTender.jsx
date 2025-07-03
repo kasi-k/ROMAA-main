@@ -40,7 +40,7 @@ const tabs = [
   {
     id: "2",
     label: "Customer Details",
-    component : <CustomerDetails/>,
+    component: <CustomerDetails />,
     buttons: [
       {
         label: "Export",
@@ -52,7 +52,7 @@ const tabs = [
   {
     id: "3",
     label: "Plan",
-    component:<Plan/>,
+    component: <Plan />,
     buttons: [
       {
         label: "Export",
@@ -64,7 +64,7 @@ const tabs = [
   {
     id: "4",
     label: "BOQ",
-    component:<BOQ/>,
+    component: <BOQ />,
     buttons: [
       {
         label: "Add BOQ",
@@ -84,7 +84,7 @@ const tabs = [
   {
     id: "5",
     label: "Zero Cost",
-    component:<ZeroCost/>,
+    component: <ZeroCost />,
     buttons: [
       {
         label: "Add Zero Cost",
@@ -104,7 +104,7 @@ const tabs = [
   {
     id: "6",
     label: "Project Documents",
-    component:<ProjectDocuments/>,
+    component: <ProjectDocuments />,
     buttons: [
       {
         label: "Upload Documents",
@@ -120,7 +120,7 @@ const tabs = [
   {
     id: "7",
     label: "EMD",
-    component:<EMD/>,
+    component: <EMD />,
     buttons: [
       {
         label: "Export",
@@ -132,7 +132,7 @@ const tabs = [
   {
     id: "8",
     label: "Contract",
-    component:<Contract/>,
+    component: <Contract />,
     buttons: [
       {
         label: "Export",
@@ -144,7 +144,7 @@ const tabs = [
   {
     id: "9",
     label: "Vendor",
-    component:<Vendor/>,
+    component: <Vendor />,
     buttons: [
       {
         label: "Export",
@@ -156,7 +156,7 @@ const tabs = [
   {
     id: "10",
     label: "Preliminary",
-    component:<Preliminary/>,
+    component: <Preliminary />,
     buttons: [
       {
         label: "Export",
@@ -166,17 +166,30 @@ const tabs = [
     ],
   },
 ];
+const tenderBreadcrumb = [{ label: "Tender", to: ".." }];
+const tabBreadcrumbs = {
+  "Tender Overview": [...tenderBreadcrumb, { label: "Tender Overview" }],
+  "Customer Details": [...tenderBreadcrumb, { label: "Customer Details" }],
+  Plan: [...tenderBreadcrumb, { label: "Plan" }],
+  BOQ: [...tenderBreadcrumb, { label: "BOQ" }],
+  "Zero Cost": [...tenderBreadcrumb, { label: "Zero Cost" }],
+  "Project Documents": [...tenderBreadcrumb, { label: "Project Documents" }],
+  EMD: [...tenderBreadcrumb, { label: "EMD" }],
+  Contract: [...tenderBreadcrumb, { label: "Contract" }],
+  Vendor: [...tenderBreadcrumb, { label: "Vendor" }],
+  Preliminary: [...tenderBreadcrumb, { label: "Preliminary" }],
+};
 
 const ViewTender = () => {
   const navigate = useNavigate();
   const [openModal, setOpenModal] = useState({ action: null, tab: null });
-const [searchParams, setSearchParams] = useSearchParams();
-const defaultTab = tabs[0].id;
-const activeTab = searchParams.get("tab") || defaultTab;
+  const [searchParams, setSearchParams] = useSearchParams();
+  const defaultTab = tabs[0].id;
+  const activeTab = searchParams.get("tab") || defaultTab;
 
-const handleTabChange = (id) => {
-  setSearchParams({ tab: id });
-};
+  const handleTabChange = (id) => {
+    setSearchParams({ tab: id });
+  };
 
   const activeTabData = tabs.find((tab) => tab.id === activeTab);
   const buttonsWithHandlers = activeTabData.buttons.map((button) => {
@@ -184,7 +197,7 @@ const handleTabChange = (id) => {
       "Approve Tender": "approveTender",
       "Add BOQ": "addBoq",
       "Add Zero Cost": "zeroCost",
-      "Upload Documents":"uploadDocuments",
+      "Upload Documents": "uploadDocuments",
     };
 
     if (modalMap[button.label]) {
@@ -202,7 +215,7 @@ const handleTabChange = (id) => {
         <div className="font-roboto-flex flex justify-between items-center ">
           <Title
             title="Tender Management"
-            sub_title="Tender"
+            sub_title={tabBreadcrumbs[activeTabData?.label] || tenderBreadcrumb}
             active_title={activeTabData?.label}
           />
           <div className="flex gap-2">
@@ -227,7 +240,7 @@ const handleTabChange = (id) => {
                     ? "bg-darkest-blue text-white"
                     : "bg-white text-darkest-blue "
                 }`}
-                 onClick={() => handleTabChange(id)}
+                onClick={() => handleTabChange(id)}
               >
                 {label}
               </p>
@@ -235,7 +248,7 @@ const handleTabChange = (id) => {
           </div>
         </div>
         <div className=" h-full overflow-y-auto  no-scrollbar">
-        {activeTabData?.component}
+          {activeTabData?.component}
           <div className=" cursor-pointer place-self-end  items-center  flex justify-end ">
             <p
               onClick={() => navigate("..")}
@@ -250,13 +263,13 @@ const handleTabChange = (id) => {
         {openModal === "approveTender" && (
           <ApproveTender onclose={() => setOpenModal(null)} />
         )}
-           {openModal === "zeroCost" && (
+        {openModal === "zeroCost" && (
           <AddZeroCost onclose={() => setOpenModal(null)} />
         )}
-           {openModal === "addBoq" && (
+        {openModal === "addBoq" && (
           <AddBoq onclose={() => setOpenModal(null)} />
         )}
-           {openModal === "uploadDocuments" && (
+        {openModal === "uploadDocuments" && (
           <UploadModal onclose={() => setOpenModal(null)} />
         )}
       </div>

@@ -15,7 +15,7 @@ const DonutChart = ({
   const options = ["Month", "Quarter", "Year"];
 
   return (
-    <div className="bg-white p-4 rounded-xl">
+    <div className="dark:bg-layout-dark bg-white p-4 rounded-xl">
       <div className="flex justify-between items-center">
         <h3 className="font-semibold">{title}</h3>
 
@@ -23,10 +23,10 @@ const DonutChart = ({
         <div className="relative w-36 text-sm">
           <button
             onClick={() => setIsOpen((prev) => !prev)}
-            className="w-full h-10 flex justify-between items-center pl-3 border border-[#cdd3ff] rounded-md  text-gray-600"
+            className="w-full h-10 flex justify-between items-center pl-3 border dark:border-border-dark-grey border-[#cdd3ff] rounded-md   dark:text-white text-gray-600"
           >
             {selected}
-            <span className=" flex items-center justify-center rounded-md bg-[#D0D6FF] w-10 h-10">
+            <span className=" flex items-center justify-center rounded-md dark:bg-overall_bg-dark bg-[#D0D6FF] w-10 h-10">
               <HiChevronDown
                 className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
                 size={18}
@@ -34,7 +34,7 @@ const DonutChart = ({
             </span>
           </button>
           {isOpen && (
-            <ul className="absolute z-10 mt-1 w-full bg-white border border-[#cdd3ff] rounded-md shadow text-gray-700">
+            <ul className="absolute z-10 mt-1 w-full dark:bg-layout-dark bg-white border dark:border-border-dark-grey border-[#cdd3ff] rounded-md shadow dark:text-white text-gray-700">
               {options.map((option) => (
                 <li
                   key={option}
@@ -42,7 +42,7 @@ const DonutChart = ({
                     setSelected(option);
                     setIsOpen(false);
                   }}
-                  className={`px-3 py-2 hover:bg-[#eef0ff] cursor-pointer ${
+                  className={`px-3 py-2 dark:hover:bg-overall_bg-dark hover:bg-[#eef0ff] cursor-pointer ${
                     option === selected ? "font-semibold text-[#4c52ff]" : ""
                   }`}
                 >

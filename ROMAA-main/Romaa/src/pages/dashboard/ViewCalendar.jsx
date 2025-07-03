@@ -86,21 +86,21 @@ const ViewCalendar = () => {
         <div className="flex gap-2 items-center">
           <Button
             button_name="Add Events"
-            bgColor="bg-white"
-            textColor="text-darkest-blue"
+            bgColor="dark:bg-layout-dark bg-white"
+            textColor="dark:text-white text-darkest-blue"
             button_icon={<TbCalendarDue size={23} />}
             onClick={()=>{setAddEvents(true)}}
           />
         </div>
       </div>
-      <div className="flex   text-black  ">
+      <div className="flex   dark:text-white text-black  ">
         <div className="w-2/3 px-1 ">
-          <div className="flex justify-between my-1 bg-white  rounded-md px-2 py-2 items-center ">
+          <div className="flex justify-between my-1 dark:bg-layout-dark bg-white  rounded-md px-2 py-2 items-center ">
             <div className="space-x-2">
               <select
                 value={selectedMonth}
                 onChange={(e) => setSelectedMonth(Number(e.target.value))}
-                className="  text-black  outline-none p-2 rounded"
+                className="  dark:text-white text-black dark:bg-layout-dark  outline-none p-2 rounded"
               >
                 {months.map((month, idx) => (
                   <option key={idx} value={idx}>
@@ -112,7 +112,7 @@ const ViewCalendar = () => {
               <select
                 value={selectedYear}
                 onChange={(e) => setSelectedYear(Number(e.target.value))}
-                className="  text-black  outline-none p-2 rounded"
+                className=" dark:text-white text-black dark:bg-layout-dark  outline-none p-2 rounded"
               >
                 {years.map((year) => (
                   <option key={year} value={year}>
@@ -122,18 +122,18 @@ const ViewCalendar = () => {
               </select>
             </div>
 
-            <span className="text-sm text-gray-400">Time zone</span>
+            <span className="text-sm dark:text-white text-gray-400">Time zone</span>
           </div>
           <div className="grid grid-cols-7 gap-1 text-center ">
             {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((day) => (
-              <div key={day} className="text-sm bg-white rounded-md p-4 ">
+              <div key={day} className="text-sm dark:bg-layout-dark bg-white rounded-md p-4 ">
                 {day}
               </div>
             ))}
             {Array.from({
               length: start.getDay() === 0 ? 6 : start.getDay() - 1,
             }).map((_, i) => (
-              <div key={`empty-${i}`} className=" bg-white rounded-md"></div>
+              <div key={`empty-${i}`} className=" dark:bg-layout-dark bg-white rounded-md"></div>
             ))}
             {days.map((day) => {
               // Find all projects for this day
@@ -150,7 +150,7 @@ const ViewCalendar = () => {
               return (
                 <div
                   key={day}
-                  className="h-18 bg-white rounded-md flex items-start relative"
+                  className="h-18 dark:bg-layout-dark bg-white rounded-md flex items-start relative"
                 >
                   {/* Left vertical bar for Completed */}
                   {hasCompleted && (
@@ -175,14 +175,14 @@ const ViewCalendar = () => {
 
         <div className="w-1/3 p-2 space-y-1">
           {filteredProjects.length === 0 ? (
-            <div className="flex justify-center items-center h-32 text-gray-400 font-semibold bg-white rounded-md">
+            <div className="flex justify-center items-center h-32 dark:text-white text-gray-400 font-semibold dark:bg-layout-dark bg-white rounded-md">
               No data for this month
             </div>
           ) : (
             filteredProjects.map((appt, idx) => (
               <div
                 key={idx}
-                className="flex  justify-center items-center bg-white  rounded-md space-x-3"
+                className="flex  justify-center items-center dark:bg-layout-dark bg-white  rounded-md space-x-3"
               >
                 <div
                   className={`py-9 px-1 rounded-l-md ${

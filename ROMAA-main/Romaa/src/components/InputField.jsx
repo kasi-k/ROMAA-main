@@ -14,7 +14,7 @@ export const InputField = ({
       <select
         defaultValue=""
         {...register(name)}
-        className={`col-span-5 border border-input-bordergrey rounded-lg outline-none py-2.5 pl-2 text-xs font-light 
+        className={`col-span-5 border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none py-2.5 pl-2 text-xs font-light 
         ${errors[name] ? "border-red-500" : ""}`}
       >
         <option value="" disabled>
@@ -30,7 +30,7 @@ export const InputField = ({
       <textarea
         placeholder={placeholder}
         {...register(name)}
-        className={`col-span-5 border border-input-bordergrey rounded-lg outline-none py-2 px-2 placeholder:text-xs placeholder:font-light
+        className={`col-span-5 border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none py-2 px-2 placeholder:text-xs placeholder:font-light
         ${errors[name] ? "border-red-500" : ""}`}
         rows={4}
       />
@@ -47,7 +47,7 @@ export const InputField = ({
         type={type}
         placeholder={placeholder}
         {...register(name)}
-        className={`col-span-5 border border-input-bordergrey rounded-lg outline-none py-2 px-2 placeholder:text-xs placeholder:font-light
+        className={`col-span-5 border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none py-2 px-2 placeholder:text-xs placeholder:font-light
         ${errors[name] ? "border-red-500" : ""}`}
       />
     )}

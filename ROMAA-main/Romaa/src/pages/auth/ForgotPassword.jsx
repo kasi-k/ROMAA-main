@@ -2,21 +2,27 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LOGO from "../../assets/images/romaa logo.png";
 import ThemeToggle from "../../components/ThemeToggle";
+import LOGO_D from "../../assets/images/romaadark.png";
 
 const ForgotPassword = () => {
   const navigate = useNavigate();
 
   return (
     <>
-      <div className="relative font-layout-font flex flex-col justify-center items-center gap-6 bg-[#E3ECFF]   h-screen ">
+      <div className="relative font-layout-font flex flex-col justify-center items-center gap-6 dark:bg-overall_bg-dark bg-[#E3ECFF] dark:text-white   h-screen ">
         <div className=" right-8 absolute top-6  p-1 rounded-full">
           <ThemeToggle />
         </div>
-        <div className="bg-white w-full max-w-lg p-8 rounded-xl shadow-lg">
+        <div className="dark:bg-layout-dark bg-white w-full max-w-lg p-8 rounded-xl shadow-lg">
           <div className="flex justify-between items-center py-4">
             <div>
-              <img src={LOGO} alt="Logo" className="w-44" />
-              {/* <img src={Logo_L} alt="Logo" className="w-44 dark:hidden" /> */}
+             <img src={LOGO} alt="logo" className="w-36 ml-8 -mt-1 dark:hidden " />
+                     <img
+                       src={LOGO_D}
+                       alt="logo"
+                       className="hidden w-36 ml-8 -mt-1 dark:block "
+                     />
+             
             </div>
             <p className="text-xl font-bold text-center my-4">Forgot Password?</p>
           </div>
@@ -25,7 +31,7 @@ const ForgotPassword = () => {
               Email / Phone Number
               <input
                 type="text"
-                className=" border-2 dark:border-overall_bg-dark border-[#D0D6FF] outline-none rounded-md py-2 px-2 my-1"
+                className=" border-2 dark:border-border-dark-grey border-[#D0D6FF]   dark:placeholder:text-white outline-none rounded-md py-2 px-2 my-1"
                 placeholder="Enter email or phone number"
               />
             </label>

@@ -34,7 +34,7 @@ const LineCharts = () => {
   const options = ["Month", "Quarter", "Year"];
 
   return (
-    <div className="bg-white p-6 rounded-xl w-full">
+    <div className="dark:bg-layout-dark bg-white p-6 rounded-xl w-full">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-semibold">
           Planned vs Actual{" "}
@@ -44,10 +44,10 @@ const LineCharts = () => {
           <div className="relative w-36 text-sm">
             <button
               onClick={() => setIsOpen((prev) => !prev)}
-              className="w-full h-10 flex justify-between items-center pl-3 border border-[#cdd3ff] rounded-md text-gray-600"
+              className="w-full h-10 flex justify-between items-center pl-3 border dark:border-border-dark-grey border-[#cdd3ff] rounded-md dark:text-white text-gray-600"
             >
               {selected}
-              <span className="flex items-center justify-center rounded-md bg-[#D0D6FF] w-10 h-10">
+              <span className="flex items-center justify-center rounded-md dark:bg-overall_bg-dark bg-[#D0D6FF] w-11 h-10">
                 <HiChevronDown
                   className={`transition-transform ${
                     isOpen ? "rotate-180" : ""
@@ -57,7 +57,7 @@ const LineCharts = () => {
               </span>
             </button>
             {isOpen && (
-              <ul className="absolute z-10 mt-1 w-full bg-white border border-[#cdd3ff] rounded-md shadow text-gray-700">
+              <ul className="absolute z-10 mt-1 w-full dark:bg-layout-dark bg-white border border-[#cdd3ff] rounded-md shadow dark:text-white text-gray-700">
                 {options.map((option) => (
                   <li
                     key={option}
@@ -65,7 +65,7 @@ const LineCharts = () => {
                       setSelected(option);
                       setIsOpen(false);
                     }}
-                    className={`px-3 py-2 hover:bg-[#eef0ff] cursor-pointer ${
+                    className={`px-3 py-2 dark:hover:bg-overall_bg-dark hover:bg-[#eef0ff] cursor-pointer ${
                       option === selected ? "font-semibold text-[#4c52ff]" : ""
                     }`}
                   >
@@ -75,17 +75,17 @@ const LineCharts = () => {
               </ul>
             )}
           </div>
-          <div className="flex w-36 h-10 rounded-md border border-[#cdd3ff] overflow-hidden text-sm relative">
+          <div className="flex w-36 h-10 rounded-md border  dark:border-border-dark-grey border-[#cdd3ff] overflow-hidden text-sm relative">
             <input
               ref={dateInputRef}
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              className="flex-1 px-3 outline-none appearance-none text-gray-600 bg-white h-full"
+              className="flex-1 px-3 outline-none appearance-none dark:text-white text-gray-600 dark:bg-layout-dark bg-white h-full"
               style={{ WebkitAppearance: "none", MozAppearance: "none" }}
             />
             <span
-              className="absolute right-0 top-0 h-full w-10 flex items-center justify-center bg-[#D0D6FF] cursor-pointer"
+              className="absolute right-0 top-0 h-full w-10 flex items-center justify-center dark:bg-overall_bg-dark bg-[#D0D6FF] cursor-pointer"
               tabIndex={-1}
               onClick={
                 () =>
@@ -94,7 +94,7 @@ const LineCharts = () => {
                     : dateInputRef.current && dateInputRef.current.focus() // Fallback
               }
             >
-              <CiCalendar className="text-[#1f2937]" size={20} />
+              <CiCalendar className="dark:text-white text-[#1f2937]" size={20} />
             </span>
           </div>
         </div>

@@ -97,7 +97,7 @@ const EmployeeDashboard = () => {
           />
         </div>
       </div>
-      <div className="mt-4 space-y-4 overflow-y-auto h-full no-scrollbar">
+      <div className="mt-4 space-y-2 overflow-y-auto h-full no-scrollbar">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
           <SummaryCard
             title="My Profile Status"
