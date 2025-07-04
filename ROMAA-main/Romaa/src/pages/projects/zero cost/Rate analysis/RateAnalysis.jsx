@@ -15,7 +15,7 @@ const RateAnalysis = () => {
         <div className="overflow-auto no-scrollbar">
           <table className="w-full whitespace-nowrap">
             <thead>
-              <tr className="font-semibold text-sm bg-white border-b-4 border-light-blue">
+              <tr className="font-semibold text-sm dark:bg-layout-dark bg-white border-b-4 dark:border-border-dark-grey border-light-blue">
                 <th className="p-3.5 rounded-l-lg">S.no</th>
                 {["Description", "Unit", "Quantity", "Rate", "Amount"].map(
                   (heading) => (
@@ -35,7 +35,7 @@ const RateAnalysis = () => {
                 ? RateAnalysisdata.map((data, index) => {
                     return (
                       <React.Fragment key={index}>
-                        <tr className="border-b-[3px] bg-white border-light-blue text-center">
+                        <tr className="border-b-[3px] dark:bg-layout-dark bg-white dark:border-border-dark-grey border-light-blue text-center">
                           <td className="rounded-l-lg py-3">{index + 1}</td>
                           <td>{data.Description}</td>
                           <td>{data.Unit}</td>
@@ -58,22 +58,22 @@ const RateAnalysis = () => {
                         {expandedRow === index && (
                           <tr>
                             <td colSpan="7" className="px-10 py-1">
-                              <div className="bg-white p-4 text-center rounded-md">
+                              <div className="dark:bg-layout-dark bg-white p-4 text-center rounded-md">
                                 {data.details && data.details.length > 0 ? (
                                   data.details.map((detail, i) => (
                                     <table
                                       className="w-full text-sm bg-indigo-200 "
                                       key={i}
                                     >
-                                      <thead className="border-b-2 border-white">
+                                      <thead className="border-b-2 dark:border-border-dark-grey border-white">
                                         <tr>
                                           <th className="py-2 px-2 font-semibold">
                                             {detail.head}
                                           </th>
                                         </tr>
                                       </thead>
-                                      <tbody className="bg-gray-200  ">
-                                        <tr className="border-b border-white">
+                                      <tbody className="dark:bg-overall_bg-dark bg-gray-200  ">
+                                        <tr className="border-b dark:border-border-dark-grey border-white">
                                           <td className="py-1.5 px-2 font-medium">
                                             {detail.desc}
                                           </td>
@@ -90,7 +90,7 @@ const RateAnalysis = () => {
                                             {detail.amount}
                                           </td>
                                         </tr>
-                                        <tr className="text-end border-b border-white">
+                                        <tr className="text-end border-b dark:border-border-dark-grey border-white">
                                           <td
                                             colSpan={5}
                                             className="py-1.5 px-22"
@@ -98,7 +98,7 @@ const RateAnalysis = () => {
                                             {detail.amount}
                                           </td>
                                         </tr>
-                                        <tr className=" bg-white text-end border-b border-white">
+                                        <tr className=" dark:bg-layout-dark bg-white text-end border-b dark:border-border-dark-grey border-white">
                                           <td className="font-semibold">
                                             Dismantling PCC Total =
                                           </td>

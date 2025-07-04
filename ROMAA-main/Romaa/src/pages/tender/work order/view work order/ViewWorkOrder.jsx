@@ -17,12 +17,12 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: "bg-white text-darkest-blue",
+        className: "dark:bg-layout-dark dark:text-white bg-white text-darkest-blue",
       },
       {
         label: "Filter",
         icon: <TbFilter size={23} />,
-        className: "bg-white text-darkest-blue",
+        className: " dark:bg-layout-dark dark:text-white  bg-white text-darkest-blue",
       },
     ],
   },
@@ -34,12 +34,12 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: "bg-white text-darkest-blue",
+        className: "dark:bg-layout-dark dark:text-white  bg-white text-darkest-blue",
       },
       {
         label: "Filter",
         icon: <TbFilter size={23} />,
-        className: "bg-white text-darkest-blue",
+        className: " dark:bg-layout-dark dark:text-white bg-white text-darkest-blue",
       },
     ],
   },
@@ -56,7 +56,7 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: "bg-white text-darkest-blue",
+        className: " dark:bg-layout-dark dark:text-white  bg-white text-darkest-blue",
       },
     ],
   },
@@ -68,7 +68,7 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: "bg-white text-darkest-blue",
+        className: " dark:bg-layout-dark dark:text-white  bg-white text-darkest-blue",
       },
     ],
   },
@@ -80,7 +80,7 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: "bg-white text-darkest-blue",
+        className: " dark:bg-layout-dark dark:text-white  bg-white text-darkest-blue",
       },
     ],
   },
@@ -92,7 +92,7 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: "bg-white text-darkest-blue",
+        className: " dark:bg-layout-dark dark:text-white  bg-white text-darkest-blue",
       },
     ],
   },
@@ -156,7 +156,7 @@ const ViewWorkOrder = () => {
                 className={`flex gap-2 items-center px-4 py-2.5 font-medium rounded-lg text-sm whitespace-nowrap ${
                   activeTab === id
                     ? "bg-darkest-blue text-white"
-                    : "bg-white text-darkest-blue "
+                    : "dark:bg-layout-dark dark:text-white bg-white text-darkest-blue "
                 }`}
                 onClick={() => handleTabChange(id)}
               >

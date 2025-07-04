@@ -94,8 +94,8 @@ const AccordionTable = ({
             <Button
               button_icon={<TbFileExport size={22} />}
               button_name="Export"
-              bgColor="bg-white"
-              textColor="text-darkest-blue"
+              bgColor="dark;bg-layout-dark bg-white"
+              textColor="dark:text-white text-darkest-blue"
               onClick={onExport}
             />
           )}
@@ -103,8 +103,8 @@ const AccordionTable = ({
             <Button
               button_icon={<BiFilterAlt size={22} />}
               button_name="Filter"
-              bgColor="bg-white"
-              textColor="text-darkest-blue"
+              bgColor="dark:bg-layout-dark bg-white"
+              textColor=" dark:text-white text-darkest-blue"
               onClick={() => setFilterModal(true)}
             />
           )}
@@ -115,7 +115,7 @@ const AccordionTable = ({
         <div className="overflow-auto no-scrollbar">
           <table className="w-full whitespace-nowrap">
             <thead>
-              <tr className="font-semibold bg-white rounded-l-full text-sml border-b-4 border-light-blue">
+              <tr className="font-semibold dark:bg-layout-dark bg-white rounded-l-full text-sml border-b-4 dark:border-border-dark-grey border-light-blue">
                 <th className="p-3.5 rounded-l-lg">S.no</th>
                 {columns.map((col, idx) => (
                   <th key={idx} className="p-3">
@@ -133,7 +133,7 @@ const AccordionTable = ({
                   const globalIndex = startIndex + index;
                   return (
                     <React.Fragment key={globalIndex}>
-                      <tr className="border-b-[3px] my-2  bg-white border-light-blue text-center">
+                      <tr className="border-b-[3px] my-2 dark:bg-layout-dark dark:border-border-dark-grey bg-white border-light-blue text-center">
                         <td className="p-2 rounded-l-lg">{globalIndex + 1}</td>
                         {columns.map((col, i) => (
                           <td key={i}>{row[col.key]}</td>
@@ -173,7 +173,7 @@ const AccordionTable = ({
                       {expandedRow === globalIndex && (
                         <tr>
                           <td colSpan={columns.length + 1} className="px-10 pl-28 py-1">
-                            <div className="bg-white p-2 py-5 rounded-md">
+                            <div className="dark:bg-layout-dark bg-white p-2 py-5 rounded-md">
                               <table className="w-full text-left text-sm">
                                 <thead className="bg-indigo-200 font-semibold">
                                   <tr className="border-b-[3px] border-white">

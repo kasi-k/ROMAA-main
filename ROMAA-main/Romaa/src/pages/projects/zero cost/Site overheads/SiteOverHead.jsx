@@ -18,7 +18,7 @@ const SiteOverHead = () => {
         <div className="overflow-auto no-scrollbar">
           <table className="w-full whitespace-nowrap">
             <thead>
-              <tr className="font-semibold text-sm bg-white border-b-4 border-light-blue">
+              <tr className="font-semibold text-sm dark:bg-layout-dark bg-white border-b-4 dark:border-border-dark-grey border-light-blue">
                 <th className="p-3.5 rounded-l-lg">S.no</th>
                 {[
                   "Item Description",
@@ -43,7 +43,7 @@ const SiteOverHead = () => {
                 ? siteoverheaddata.map((data, index) => {
                     return (
                       <React.Fragment key={index}>
-                        <tr className="border-b-[3px] bg-white border-light-blue text-center">
+                        <tr className="border-b-[3px] dark:bg-layout-dark bg-white dark:border-border-dark-grey border-light-blue text-center">
                           <td className="rounded-l-lg py-3">{index + 1}</td>
                           <td>{data.description}</td>
                           <td></td>
@@ -67,7 +67,7 @@ const SiteOverHead = () => {
                         {expandedRow === index && (
                           <tr>
                             <td colSpan="8" className="px-10 py-1">
-                              <div className="bg-white p-4 text-center rounded-md shadow">
+                              <div className="dark:bg-layout-dark bg-white p-4 text-center rounded-md shadow">
                                 {data.details?.items &&
                                 data.details.items.length > 0 ? (
                                   <table className="w-full text-sm">
@@ -85,11 +85,11 @@ const SiteOverHead = () => {
                                     </thead>
 
                                     {/* Data rows */}
-                                    <tbody className="bg-gray-100 ">
+                                    <tbody className="dark:bg-overall_bg-dark bg-gray-100 ">
                                       {data.details.items.map((item, i) => (
                                         <tr
                                           key={i}
-                                          className="border-t border-white"
+                                          className="border-t dark:border-border-dark-grey border-white"
                                         >
                                           <td className="px-4 py-2 font-medium">
                                             {item.desc}

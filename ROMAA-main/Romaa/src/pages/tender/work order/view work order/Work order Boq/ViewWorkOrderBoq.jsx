@@ -44,7 +44,7 @@ const ViewWorkOrderBoq = ({ onclose, boq }) => {
           ))}
           <div className="col-span-12 flex justify-end items-center gap-2 mt-4 text-sm font-extralight">
             <p
-              className="cursor-pointer border border-black px-6 py-1.5 rounded-sm"
+              className="cursor-pointer border dark:text-white dark:border-white border-black px-6 py-1.5 rounded-sm"
               onClick={onclose}
             >
               Cancel

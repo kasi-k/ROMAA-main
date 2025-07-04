@@ -16,7 +16,7 @@ const DonutChart = ({
   const options = ["Month", "Quarter", "Year"];
 
   return (
-    <div className="bg-white p-4  rounded-xl">
+    <div className="dark:bg-layout-dark bg-white p-4  rounded-xl">
       <div className="flex justify-between items-center">
         <h3 className="font-semibold">{title}</h3>
 
@@ -34,7 +34,7 @@ const DonutChart = ({
             </span>
           </button>}
           {isOpen && (
-            <ul className="absolute z-10 mt-1 w-full bg-white border border-[#cdd3ff] rounded-md shadow text-gray-700">
+            <ul className="absolute z-10 mt-1 w-full dark:bg-layout-dark bg-white border border-[#cdd3ff] rounded-md shadow text-gray-700">
               {options.map((option) => (
                 <li
                   key={option}

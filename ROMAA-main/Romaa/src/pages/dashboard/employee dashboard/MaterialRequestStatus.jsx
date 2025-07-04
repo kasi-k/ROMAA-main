@@ -48,10 +48,10 @@ const MaterialRequestStatus = () => {
 
   return (
     <div className="h-full overflow-x-auto no-scrollbar">
-      <h3 className="font-semibold mb-4 text-lg border-b border-input-bordergrey p-4">Materail Request</h3>
+      <h3 className="font-semibold mb-4 text-lg border-b dark:border-border-dark-grey border-input-bordergrey p-4">Materail Request</h3>
       <table className="w-full text-sm ">
         <thead >
-          <tr className=" border-b border-input-bordergrey   bg-white" >
+          <tr className=" border-b dark:border-border-dark-grey border-input-bordergrey  dark:bg-layout-dark bg-white" >
             <th className="px-2 py-2  ">
             S.no 
             </th>
@@ -90,7 +90,7 @@ const MaterialRequestStatus = () => {
         <tbody>
           {materialRequestData.map((row, index) => (
             <React.Fragment key={index}>
-              <tr className="text-center border-b border-input-bordergrey">
+              <tr className="text-center border-b dark:border-border-dark-grey border-input-bordergrey">
                 <td className=" px-2 py-2">{index+1}</td>
                 <td className="">{row.requestId}</td>
                 <td>{row.machineName}</td>

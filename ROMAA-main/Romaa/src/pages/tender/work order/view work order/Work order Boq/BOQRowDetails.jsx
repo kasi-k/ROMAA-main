@@ -3,7 +3,7 @@ const BOQRowDetails = ({ breakdown }) => {
     <div className="overflow-x-auto">
       <table className="w-full text-sm ">
         <thead className=" font-semibold">
-          <tr className="bg-white border-b-2 border-input-bordergrey">
+          <tr className="dark:bg-layout-dark bg-white border-b-2 dark:border-border-dark-grey border-input-bordergrey">
             <th className="p-3 rounded-l-md ">S.no</th>
             <th className="">Ref no</th>
             <th className="">Co Efficient</th>
@@ -15,7 +15,7 @@ const BOQRowDetails = ({ breakdown }) => {
         </thead>
         <tbody>
           {breakdown.map((item, idx) => (
-            <tr key={idx} className="bg-white border-b border-input-bordergrey text-center">
+            <tr key={idx} className="dark:bg-layout-dark bg-white border-b dark:border-border-dark-grey border-input-bordergrey text-center">
               <td className="p-2.5 rounded-l-md" >{idx + 1}</td>
               <td className="">{item.ref}</td>
               <td className="">{item.coefficient}</td>

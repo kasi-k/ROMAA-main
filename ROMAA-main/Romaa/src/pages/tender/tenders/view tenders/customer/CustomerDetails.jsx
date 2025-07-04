@@ -17,7 +17,7 @@ const CustomerDetails = () => {
   return (
     <>
     <div className="h-11/12">
-      <div className="w-fit h-fit  bg-white rounded-lg shadow p-4">
+      <div className="w-fit h-fit dark:bg-layout-dark  bg-white rounded-lg shadow p-4">
         <p className="font-semibold text-lg">Customer Details</p>
         <div className="grid grid-cols-12 gap-2  text-xs font-semibold px-2 py-2 ">
           {customerDetails.map((item, index) => (

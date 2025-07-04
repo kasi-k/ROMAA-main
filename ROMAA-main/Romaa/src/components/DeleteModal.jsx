@@ -6,10 +6,10 @@ const DeleteModal = ({ deletetitle , onclose, Children }) => {
   return (
     <>
       <div className=" font-roboto-flex fixed inset-0 flex justify-center  items-center backdrop-grayscale-50  drop-shadow-lg  backdrop-blur-xs">
-        <div className=" bg-white rounded-md ">
+        <div className="dark:bg-layout-dark bg-white rounded-md ">
           <button
             onClick={onclose}
-            className=" cursor-pointer grid place-self-end -mx-4 -my-4 bg-white py-2 px-2 rounded-full"
+            className=" cursor-pointer grid place-self-end -mx-4 -my-4 dark:bg-layout-dark bg-white py-2 px-2 rounded-full"
           >
             <IoClose className="size-[24px]" />
           </button>

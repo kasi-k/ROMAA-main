@@ -70,7 +70,7 @@ Pattukkottai Taluk in Thanjavur District`,
           )}
         </div>
 
-        <div className="bg-white p-4 rounded-lg space-y-2 text-sm">
+        <div className="dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm">
           <p className="font-semibold">Gs (General Abstract)</p>
           <div className="grid grid-cols-12 gap-1 items-center">
             {projectInfo.map((item, index) => (
@@ -86,7 +86,7 @@ Pattukkottai Taluk in Thanjavur District`,
                           updated[index].value = e.target.value;
                           setProjectInfo(updated);
                         }}
-                        className="border border-gray-300 rounded px-2 py-1 text-xs w-full min-h-[80px]"
+                        className="border dark:border-border-dark-grey outline-none border-input-bordergrey rounded px-2 py-1 text-xs w-full min-h-[80px]"
                       />
                     ) : (
                       <input
@@ -97,7 +97,7 @@ Pattukkottai Taluk in Thanjavur District`,
                           updated[index].value = e.target.value;
                           setProjectInfo(updated);
                         }}
-                        className="border border-gray-300 rounded px-2 py-1 text-xs w-full"
+                        className="border dark:border-border-dark-grey outline-none border-input-bordergrey rounded px-2 py-1 text-xs w-full"
                       />
                     )
                   ) : (

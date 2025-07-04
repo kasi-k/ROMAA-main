@@ -31,7 +31,7 @@ const InputField = ({
       type={type}
       placeholder={placeholder}
       {...register(name)}
-      className={`col-span-6 border border-input-bordergrey rounded-lg outline-none  py-2 px-2 placeholder:text-xs placeholder:font-light placeholder-black
+      className={`col-span-6 border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none  py-2 px-2 placeholder:text-xs placeholder:font-light placeholder-black dark:placeholder-white
         ${errors[name] ? "border-red-500" : ""}`}
     />
     {errors[name] && (
@@ -58,11 +58,11 @@ const AddWorkOrder = ({ onclose }) => {
 
   return (
     <div className="font-roboto-flex fixed inset-0 grid justify-center items-center backdrop-blur-xs backdrop-grayscale-50  drop-shadow-lg z-20">
-      <div className="mx-2 shadow-lg py-2  bg-white  rounded-md w-[420px]">
+      <div className="mx-2 shadow-lg py-2 dark:bg-layout-dark bg-white  rounded-md w-[420px]">
         <div className="grid">
           <button
             onClick={onclose}
-            className=" place-self-end   cursor-pointer bg-white  rounded-full lg:-mx-4 md:-mx-4 -mx-2 lg:-my-6 md:-my-5  -my-3 lg:shadow-md md:shadow-md shadow-none lg:py-2.5 md:py-2.5 py-0 lg:px-2.5 md:px-2.5 px-0 "
+            className=" place-self-end   cursor-pointer dark:bg-layout-dark bg-white  rounded-full lg:-mx-4 md:-mx-4 -mx-2 lg:-my-6 md:-my-5  -my-3 lg:shadow-md md:shadow-md shadow-none lg:py-2.5 md:py-2.5 py-0 lg:px-2.5 md:px-2.5 px-0 "
           >
             <IoClose className="size-[24px]" />
           </button>
@@ -115,7 +115,7 @@ const AddWorkOrder = ({ onclose }) => {
               <button
                 type="button"
                 onClick={onclose}
-                className="cursor-pointer  border  border-darkest-blue  text-darkest-blue px-6 py-2   rounded"
+                className="cursor-pointer  border dark:border-white  border-darkest-blue dark:text-white text-darkest-blue px-6 py-2   rounded"
               >
                 Cancel
               </button>

@@ -4,7 +4,7 @@ const Summary = () => {
   return (
     <>
       <div className="grid">
-        <div className="bg-white p-4 rounded-lg space-y-2 text-sm">
+        <div className="dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm">
           <p className="font-semibold">Zero Cost Estimate-Summary</p>
           <div className="grid grid-cols-12 gap-1 items-center">
             <p className="col-span-4 font-medium">Project</p>

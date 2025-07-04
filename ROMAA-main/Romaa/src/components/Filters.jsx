@@ -26,7 +26,7 @@ const InputField = ({
       type={type}
       placeholder={placeholder}
       {...register(name)}
-      className={`col-span-7 border border-input-bordergrey rounded-lg outline-none py-1.5 px-2 placeholder:text-xs placeholder:font-light
+      className={`col-span-7 border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none py-1.5 px-2 placeholder:text-xs placeholder:font-light
         ${errors[name] ? "border-red-500" : ""}`}
     />
     {errors[name] && (
@@ -54,11 +54,11 @@ const Filters = ({ onclose, onFilter }) => {
 
   return (
     <div className="font-roboto-flex fixed inset-0 grid justify-center items-center backdrop-blur-xs backdrop-grayscale-50 drop-shadow-lg z-20">
-      <div className="mx-2 shadow-lg py-2 bg-white rounded-md w-96">
-        <div className="grid">
+      <div className="mx-2 shadow-lg py-2 dark:bg-overall_bg-dark bg-white rounded-md w-96">
+        <div   onClick={onclose} className="grid">
           <button
-            onClick={onclose}
-            className="place-self-end cursor-pointer bg-white rounded-full -mx-4 -my-4 shadow-md py-2.5 px-2.5"
+          
+            className="place-self-end cursor-pointer dark:bg-overall_bg-dark bg-white rounded-full -mx-4 -my-4 shadow-md py-2.5 px-2.5"
           >
             <IoClose className="text-2xl" />
           </button>
@@ -83,7 +83,7 @@ const Filters = ({ onclose, onFilter }) => {
               <button
                 type="button"
                 onClick={onclose}
-                className="border border-darkest-blue text-darkest-blue px-6 py-2 rounded"
+                className="border dark:border-white border-darkest-blue dark:text-white text-darkest-blue px-6 py-2 rounded"
               >
                 Cancel
               </button>

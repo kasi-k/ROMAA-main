@@ -82,16 +82,16 @@ const EmployeeDashboard = () => {
           <Button
             onClick={() => navigate("viewcalendar")}
             button_name="Calendar"
-            bgColor="bg-white"
-            textColor="text-darkest-blue"
+            bgColor="dark:bg-layout-dark bg-white"
+            textColor="dark:text-white text-darkest-blue"
             button_icon={<TbCalendarDue size={23} />}
             paddingY="py-2.5"
           />
           <Button
             onClick={() => setViewWorkOrderModal(true)}
             button_name="Task Assigned"
-            bgColor="bg-white"
-            textColor="text-darkest-blue"
+            bgColor=" dark:bg-layout-dark bg-white"
+            textColor="dark:text-white text-darkest-blue"
             button_icon={<LuClipboardList size={23} />}
             paddingY="py-2.5"
           />
@@ -135,10 +135,10 @@ const EmployeeDashboard = () => {
         </div>
 
         <div className="grid md:grid-cols-12 gap-4">
-          <div className="col-span-8 bg-white p-4 rounded-md shadow">
+          <div className="col-span-8 dark:bg-layout-dark bg-white p-4 rounded-md shadow">
             <MaterialRequestStatus />
           </div>
-          <div className="bg-white col-span-4 p-4 rounded-md shadow">
+          <div className=" dark:bg-layout-dark bg-white col-span-4 p-4 rounded-md shadow">
             <h3 className="font-semibold mb-10">Current Project Status</h3>
             <ResponsiveContainer width="100%" height={240} >
               <BarChart data={datachart}    margin={{ top: 24, right: 16, left: 0, bottom: 0 }}>

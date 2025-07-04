@@ -24,7 +24,7 @@ const WorkOrderOverview = () => {
   return (
     <>
       <div className="h-full">
-        <div className="w-fit h-fit  bg-white rounded-lg shadow p-4">
+        <div className="w-fit h-fit dark:bg-layout-dark bg-white rounded-lg shadow p-4">
           <p className="font-semibold text-lg">General</p>
           <div className="grid grid-cols-12 gap-2  text-xs font-semibold  py-2 ">
             {WorkOrderOverviewDetails.map((item, index) => (

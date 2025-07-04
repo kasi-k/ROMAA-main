@@ -31,7 +31,7 @@ const TodaySchedule = () => {
   };
 
   return (
-    <div className="bg-white p-2 rounded-md shadow border border-blue-100 h-full overflow-x-auto no-scrollbar">
+    <div className="dark:bg-layout-dark bg-white p-2 rounded-md shadow border border-blue-100 h-full overflow-x-auto no-scrollbar">
       <h3 className="font-semibold mb-4 text-lg border-b border-input-bordergrey p-4">Today’s Schedule</h3>
       <table className="w-full text-sm ">
         <thead>
@@ -59,7 +59,7 @@ const TodaySchedule = () => {
           {scheduleData.map((row, index) => (
             <React.Fragment key={index}>
               {/* Parent row */}
-              <tr className=" border-b border-input-bordergrey">
+              <tr className=" border-b dark:border-border-dark-grey border-input-bordergrey">
                 <td className="px-4 py-2 font-medium">{row.title}</td>
                 <td></td>
                 <td></td>

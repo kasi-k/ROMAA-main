@@ -97,7 +97,7 @@ const handleTabChange = (id) => {
                 className={`flex gap-2 items-center px-4 py-2.5 font-medium rounded-lg text-sm whitespace-nowrap ${
                   activeTab === id
                     ? "bg-darkest-blue text-white"
-                    : "bg-white text-darkest-blue "
+                    : "dark:bg-layout-dark dark:text-white bg-white text-darkest-blue "
                 }`}
                 onClick={() => handleTabChange(id)}
               >

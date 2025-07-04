@@ -37,11 +37,11 @@ const MaterialRequest = () => {
 
 
   return (
-    <div className="bg-white p-2 rounded-md shadow border border-blue-100 h-full overflow-x-auto no-scrollbar">
+    <div className="dark:bg-layout-dark bg-white p-2 rounded-md shadow border border-blue-100 h-full overflow-x-auto no-scrollbar">
       <h3 className="font-semibold mb-4 text-lg border-b border-input-bordergrey p-4">Materail Request</h3>
       <table className="w-full text-sm ">
         <thead >
-          <tr className=" border-b border-input-bordergrey   bg-white" >
+          <tr className=" border-b dark:border-border-dark-grey border-input-bordergrey  dark:bg-layout-dark bg-white" >
             <th className="px-2  ">
              <p className=" flex items-center gap-2"> Name <HiArrowsUpDown /></p>
             </th>
@@ -66,7 +66,7 @@ const MaterialRequest = () => {
         <tbody>
           {materialRequestData.map((row, index) => (
             <React.Fragment key={index}>
-              <tr className=" border-b border-input-bordergrey">
+              <tr className=" border-b dark:border-border-dark-grey border-input-bordergrey">
                 <td className="text-start px-2 py-1.5">{row.name}</td>
                 <td className="px-4 text-start">{row.quantity}</td>
                 <td>{row.unit}</td>

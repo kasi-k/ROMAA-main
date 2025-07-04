@@ -188,8 +188,8 @@ const EditRateAnalysis = () => {
             <Button
               button_name="Add"
               button_icon={<LuPlus size={23} />}
-              bgColor={"bg-white"}
-              textColor={"text-darkest-blue"}
+              bgColor="dark:bg-layout-dark bg-white"
+              textColor=" dark:text-white text-darkest-blue"
               onClick={() => setIsAdding(true)}
             />
             <Button
@@ -200,7 +200,7 @@ const EditRateAnalysis = () => {
           </div>
         </div>
 
-        <div className="bg-white p-4 rounded-lg space-y-2 text-sm">
+        <div className="dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm">
           <p className="font-semibold text-center text-lg">
             Zero Cost Estimate-Rate Analysis
           </p>
@@ -223,10 +223,10 @@ const EditRateAnalysis = () => {
                     }}
                     button_name={"Remove"}
                     button_icon={<MdOutlineClose size={16} />}
-                    bgColor={"bg-red-50"}
-                    textColor={"text-red-500"}
-                    paddingX={"px-2.5"}
-                    paddingY={"py-2.5"}
+                    bgColor="dark:bg-icon-dark-red bg-red-50"
+                    textColor="text-red-500"
+                    paddingX="px-2.5"
+                    paddingY="py-2.5"
                   />
                 </div>
 
@@ -314,7 +314,7 @@ const EditRateAnalysis = () => {
                   <button
                     type="button"
                     onClick={onclose}
-                    className="cursor-pointer border border-darkest-blue text-darkest-blue px-6 py-2 rounded"
+                    className="cursor-pointer border dark:border-white border-darkest-blue dark:text-white text-darkest-blue px-6 py-2 rounded"
                   >
                     Cancel
                   </button>

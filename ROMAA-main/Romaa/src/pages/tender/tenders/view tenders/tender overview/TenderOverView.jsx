@@ -72,7 +72,7 @@ const TenderOverView = () => {
   return (
     <>
     <div className="font-roboto-flex grid grid-cols-12 h-full gap-4  overflow-y-auto no-scrollbar py-2">
-      <div className="col-span-4 row-span-2 bg-white rounded-lg shadow p-4 space-y-4">
+      <div className="col-span-4 row-span-2 dark:bg-layout-dark bg-white rounded-lg shadow p-4 space-y-4">
         <div className="flex justify-between items-center pb-4 mt-2">
           <p className="font-semibold text-lg">Important Dates</p>
           <button className="bg-darkest-blue px-3 py-1.5 text-xs font-extralight text-white rounded">
@@ -104,7 +104,7 @@ const TenderOverView = () => {
         </div>
       </div>
 
-      <div className="col-span-4 bg-white rounded-lg shadow p-4">
+      <div className="col-span-4 dark:bg-layout-dark bg-white rounded-lg shadow p-4">
         <div className="flex justify-between items-center px-2 py-2">
           <p className="font-semibold text-lg">General</p>
           <p className="bg-gray-400 text-gray-600 rounded-full px-1.5 py-1.5">
@@ -122,7 +122,7 @@ const TenderOverView = () => {
           ))}
         </div>
       </div>
-      <div className="col-span-4 bg-white rounded-lg shadow p-4">
+      <div className="col-span-4 dark:bg-layout-dark bg-white rounded-lg shadow p-4">
         {" "}
         <div className="flex justify-between items-center px-2 py-2">
           <p className="font-semibold text-lg">Tender Details</p>
@@ -141,7 +141,7 @@ const TenderOverView = () => {
           ))}
         </div>
       </div>
-      <div className="col-span-8 bg-white rounded-lg shadow p-4 ">
+      <div className="col-span-8 dark:bg-layout-dark bg-white rounded-lg shadow p-4 ">
         {" "}
         <p className="font-semibold text-sm py-2 mx-4">Tender Process</p>
         <div className="space-y-1 mx-4 text-sm">

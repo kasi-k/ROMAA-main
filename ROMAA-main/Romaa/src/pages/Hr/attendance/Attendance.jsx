@@ -67,7 +67,7 @@ const Attendance = () => {
   const paginatedData = filteredData.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="p-4 min-h-screen">
+    <div className="h-full">
       <div className="mb-4 flex flex-col lg:flex-row justify-between items-start lg:items-center">
         <Title title="HR Management" sub_title="Attendance" page_title="Attendance" />
         <div className="mt-4 lg:mt-0 flex flex-wrap items-center gap-3">
@@ -82,14 +82,14 @@ const Attendance = () => {
           <ButtonBg
             button_icon={<TbFileExport size={23} />}
             button_name="Export"
-            bgColor="bg-white"
-            textColor="text-darkest-blue"
+            bgColor="dark:bg-layout-dark bg-white"
+            textColor=" dark:text-white text-darkest-blue"
           />
           <ButtonBg
             button_icon={<BiFilterAlt size={23} />}
             button_name="Filter"
-            bgColor="bg-white"
-            textColor="text-darkest-blue"
+            bgColor=" dark:bg-layout-dark bg-white"
+            textColor=" dark:text-white text-darkest-blue"
             onClick={() => setFilterModal(true)}
           />
         </div>
@@ -98,7 +98,7 @@ const Attendance = () => {
       <div className="overflow-auto no-scrollbar">
         <table className="w-full whitespace-nowrap">
           <thead>
-            <tr className="text-sm bg-white border-b-4 border-light-blue">
+            <tr className="text-sm dark:bg-layout-dark bg-white border-b-[3px] dark:border-border-dark-grey border-light-blue">
               <th className="rounded-l-md px-2 pl-5 py-1">S.No</th>
               <th className="px-2 py-1 flex items-center justify-center gap-1 pt-[14px]">
                 Name <HiArrowsUpDown size={18} />
@@ -113,24 +113,24 @@ const Attendance = () => {
               <th className="rounded-r-md px-2 py-1 pr-5">Total</th>
             </tr>
           </thead>
-          <tbody className="text-greyish bg-white text-sm">
+          <tbody className="text-greyish dark:bg-layout-dark bg-white text-sm">
             {days.length > 0 && paginatedData.length > 0 ? (
               paginatedData.map((row, idx) => (
-                <tr className="border-light-blue border-b-[3px]" key={idx}>
-                  <td className="rounded-l-md text-center px-2 py-1">
+                <tr className="border-light-blue border-b-2 dark:border-border-dark-grey " key={idx}>
+                  <td className="rounded-l-md text-center">
                     {(currentPage - 1) * itemsPerPage + idx + 1}
                   </td>
-                  <td className="px-2 py-1">{row.name}</td>
+                  <td className="p-3">{row.name}</td>
                   {days.map((day, i) => (
-                    <td key={i} className="px-4 py-3">
+                    <td key={i} className="px-2">
                       {row.attendance[day.date] ? (
-                        <Check className="text-green-600 font-bold" size={23} />
+                        <Check className="text-green-600 stroke-3" size={16}/>
                       ) : (
-                        <X className="text-red-600" size={23} />
+                        <X className="text-red-600 stroke-3" size={16} />
                       )}
                     </td>
                   ))}
-                  <td className="rounded-r-md px-2 py-1">
+                  <td className="rounded-r-md px-2 ">
                     {days.reduce(
                       (acc, day) => acc + (row.attendance[day.date] ? 1 : 0),
                       0

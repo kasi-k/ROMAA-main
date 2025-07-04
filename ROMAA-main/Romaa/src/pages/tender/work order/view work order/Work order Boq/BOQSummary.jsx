@@ -11,7 +11,7 @@ const BOQSummary = ({ summary }) => {
 
   return (
     <div className="p-2 font-poppins">
-      <div className="grid grid-cols-12 text-sm text-black">
+      <div className="grid grid-cols-12 text-sm dark:text-white text-black">
   
         <div className="col-span-8 flex justify-center">
           <p className="flex gap-4 font-medium">

@@ -23,9 +23,9 @@ const ViewClients = ({ onclose, item }) => {
   }
   return (
     <div className="font-roboto-flex fixed inset-0 flex justify-center items-center backdrop-blur-xs backdrop-grayscale-50 drop-shadow-lg z-20">
-      <div className="bg-white rounded-lg drop-shadow-md w-[420px]">
+      <div className="dark:bg-overall_bg-dark bg-white rounded-lg drop-shadow-md w-[420px]">
         <p
-          className="grid place-self-end cursor-pointer -mx-4 -my-4 bg-white shadow-sm py-2.5 px-2.5 rounded-full"
+          className="grid place-self-end cursor-pointer -mx-4 -my-4 dark:bg-overall_bg-dark bg-white shadow-sm py-2.5 px-2.5 rounded-full"
           onClick={onclose}
         >
           <IoClose className="size-[20px]" />
@@ -49,7 +49,7 @@ const ViewClients = ({ onclose, item }) => {
 
         <div className="flex justify-end items-center gap-2 py-8 mx-6 text-sm font-extralight">
           <p
-            className="cursor-pointer border border-black px-6 py-1.5 rounded-sm"
+            className="cursor-pointer border dark:border-white border-black px-6 py-1.5 rounded-sm"
             onClick={onclose}
           >
             Cancel

@@ -14,7 +14,7 @@ const schema = yup.object().shape({
     .string()
     .matches(/^[0-9]{10}$/, "Phone number must be 10 digits")
     .required("Phone Number is required"),
-    
+
   email: yup.string().required("EmailID is required"),
   city: yup.string().required("City is required"),
   state: yup.string().required("State is required"),
@@ -39,7 +39,7 @@ const InputField = ({
       type={type}
       placeholder={placeholder}
       {...register(name)}
-      className={`col-span-5 border border-input-bordergrey rounded-lg outline-none  py-2 px-2 placeholder:text-xs placeholder:font-light placeholder-black
+      className={`col-span-5 border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none  py-2 px-2 placeholder:text-xs placeholder:font-light placeholder-black dark:placeholder-white
         ${errors[name] ? "border-red-500" : ""}`}
     />
     {errors[name] && (
@@ -59,35 +59,29 @@ const AddClients = ({ onclose }) => {
     resolver: yupResolver(schema),
   });
 
-const onSubmit = async (data) => {
-   onclose();
-   console.log(data);
-  // try {
-  //   console.log(data);
-    
-  //   const response = await axios.post("http://localhost:5000/api/customers", data);
-  //   console.log("Customer added:", response.data);
-  //   onclose();
-  // } catch (error) {
-  //   console.error("Failed to add customer:", error);
-   
-  // }
-};
+  const onSubmit = async (data) => {
+    onclose();
+    console.log(data);
+    // try {
+    //   console.log(data);
 
+    //   const response = await axios.post("http://localhost:5000/api/customers", data);
+    //   console.log("Customer added:", response.data);
+    //   onclose();
+    // } catch (error) {
+    //   console.error("Failed to add customer:", error);
+
+    // }
+  };
 
   return (
     <div className="font-roboto-flex fixed inset-0 grid justify-center items-center backdrop-blur-xs backdrop-grayscale-50  drop-shadow-lg z-20">
-      <div className="mx-2 shadow-lg py-2  bg-white  rounded-md lg:w-[900px] md:w-[500px] w-96">
-        <div   onClick={onclose} className="grid cursor-pointer">
-          <button
-          
-            className=" place-self-end    bg-white  rounded-full lg:-mx-4 md:-mx-4 -mx-2 lg:-my-6 md:-my-5  -my-3 lg:shadow-md md:shadow-md shadow-none lg:py-2.5 md:py-2.5 py-0 lg:px-2.5 md:px-2.5 px-0 "
-          >
+      <div className="mx-2 shadow-lg py-2 dark:bg-overall_bg-dark bg-white  rounded-md lg:w-[900px] md:w-[500px] w-96">
+        <div onClick={onclose} className="grid cursor-pointer">
+          <button className=" place-self-end   dark:bg-overall_bg-dark bg-white  rounded-full lg:-mx-4 md:-mx-4 -mx-2 lg:-my-6 md:-my-5  -my-3 lg:shadow-md md:shadow-md shadow-none lg:py-2.5 md:py-2.5 py-0 lg:px-2.5 md:px-2.5 px-0 ">
             <IoClose className="size-[24px]" />
           </button>
-          <h1 className="text-center font-medium text-2xl py-2">
-            Add Client
-          </h1>
+          <h1 className="text-center font-medium text-2xl py-2">Add Client</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-4 px-6 py-6">
               <div className="space-y-4">
@@ -171,7 +165,7 @@ const onSubmit = async (data) => {
               <button
                 type="button"
                 onClick={onclose}
-                className="cursor-pointer  border  border-darkest-blue  text-darkest-blue px-6 py-2   rounded"
+                className="cursor-pointer  border dark:border-white  border-darkest-blue  dark:text-white text-darkest-blue px-6 py-2   rounded"
               >
                 Cancel
               </button>

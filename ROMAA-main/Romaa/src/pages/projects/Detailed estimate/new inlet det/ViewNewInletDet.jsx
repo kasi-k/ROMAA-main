@@ -115,7 +115,7 @@ const ViewNewInletDet = () => {
       return (
         <input
           type="text"
-          className="w-full p-1 border rounded text-xs"
+          className="w-full p-1 border  border-input-bordergrey dark:border-border-dark-grey rounded text-xs outline-none"
           value={field.value}
           onChange={(e) => updateField(field.key, e.target.value, section)}
         />
@@ -144,8 +144,8 @@ const ViewNewInletDet = () => {
               <Button
                 button_name="Add"
                 button_icon={<TbPlus size={20} />}
-                bgColor={"bg-white"}
-                textColor={"text-darkest-blue"}
+                bgColor="dark:bg-layout-dark bg-white"
+                textColor="dark:text-white text-darkest-blue"
                 onClick={() => setIsAdding(true)}
               />
               <Button button_name="Save" button_icon={<AiOutlineSave  size={23}/>} onClick={handleSaveClick} />
@@ -153,7 +153,7 @@ const ViewNewInletDet = () => {
           )}
         </div>
         <div className="h-11/12 overflow-y-auto no-scrollbar">
-          <div className="font-roboto-flex bg-white p-4 rounded-lg space-y-2 text-sm">
+          <div className="font-roboto-flex dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm">
             <p className="font-semibold text-center text-lg">Bill of Qty</p>
 
             <div className="grid grid-cols-12 gap-2 items-start">
@@ -195,8 +195,8 @@ const ViewNewInletDet = () => {
                         }}
                         button_name={"Remove"}
                         button_icon={<MdOutlineClose size={20} />}
-                        bgColor={"bg-red-200"}
-                        textColor={"text-red-500"}
+                        bgColor="dark:bg-icon-dark-red bg-red-200"
+                        textColor="text-red-500"
                       />
                     )}
                   </div>
@@ -291,7 +291,7 @@ const ViewNewInletDet = () => {
                 <button
                   type="button"
                   onClick={() => setIsAdding(false)}
-                  className="border border-darkest-blue text-darkest-blue px-6 py-2 rounded"
+                  className="border dark:border-white border-darkest-blue dark:text-white text-darkest-blue px-6 py-2 rounded"
                 >
                   Cancel
                 </button>

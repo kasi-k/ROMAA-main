@@ -2295,7 +2295,7 @@ export const SupplierOutstandingData = [
 export const Summarydata = [
   {
     description: "50kg bag of Portland cement",
-    amount: "₹513,042.00",
+    amount: "513,042.00",
     details: [
       { item: "a) Direct Cost", formula: "(L+S/C)M+p" },
       { item: "b) Indirect Cost", formula: "OH" },
@@ -2303,23 +2303,23 @@ export const Summarydata = [
   },
   {
     description: "10mm diameter, 12m length",
-    amount: "₹513,042.00",
+    amount: "513,042.00",
   },
   {
     description: "1 ton of river sand",
-    amount: "₹513,042.00",
+    amount: "513,042.00",
   },
   {
     description: "500 clay bricks",
-    amount: "₹513,042.00",
+    amount: "513,042.00",
   },
   {
     description: "2 workers, 8 hours each",
-    amount: "₹513,042.00",
+    amount: "513,042.00",
   },
   {
     description: "50kg bag of Portland cement",
-    amount: "₹513,042.00",
+    amount: "513,042.00",
     details: [
       { item: "a) Direct Cost", formula: "(L+S/C)M+p" },
       { item: "b) Indirect Cost", formula: "OH" },
@@ -2327,7 +2327,7 @@ export const Summarydata = [
   },
   {
     description: "50kg bag of Portland cement",
-    amount: "₹513,042.00",
+    amount: "513,042.00",
     details: [
       { item: "a) Direct Cost", formula: "(L+S/C)M+p" },
       { item: "b) Indirect Cost", formula: "OH" },
@@ -2335,7 +2335,7 @@ export const Summarydata = [
   },
   {
     description: "50kg bag of Portland cement",
-    amount: "₹513,042.00",
+    amount: "513,042.00",
     details: [
       { item: "a) Direct Cost", formula: "(L+S/C)M+p" },
       { item: "b) Indirect Cost", formula: "OH" },
@@ -2343,7 +2343,7 @@ export const Summarydata = [
   },
   {
     description: "50kg bag of Portland cement",
-    amount: "₹513,042.00",
+    amount: "513,042.00",
     details: [
       { item: "a) Direct Cost", formula: "(L+S/C)M+p" },
       { item: "b) Indirect Cost", formula: "OH" },
@@ -2351,7 +2351,7 @@ export const Summarydata = [
   },
   {
     description: "50kg bag of Portland cement",
-    amount: "₹513,042.00",
+    amount: "513,042.00",
     details: [
       { item: "a) Direct Cost", formula: "(L+S/C)M+p" },
       { item: "b) Indirect Cost", formula: "OH" },
@@ -2359,7 +2359,7 @@ export const Summarydata = [
   },
   {
     description: "50kg bag of Portland cement",
-    amount: "₹513,042.00",
+    amount: "513,042.00",
     details: [
       { item: "a) Direct Cost", formula: "(L+S/C)M+p" },
       { item: "b) Indirect Cost", formula: "OH" },

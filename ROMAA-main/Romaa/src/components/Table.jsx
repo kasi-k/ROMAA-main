@@ -282,11 +282,11 @@ const Table = ({
                               setSelectedItem(item);
                               setShowDelete(true);
                             }}
-                            className="cursor-pointer bg-red-100 p-1.5 rounded-sm"
+                            className="cursor-pointer bg-red-100 dark:bg-icon-dark-red p-1.5 rounded-sm"
                           >
                             <RiDeleteBinLine
                               size={14}
-                              className="text-red-600"
+                              className=" text-red-600"
                             />
                           </button>
                         )}
