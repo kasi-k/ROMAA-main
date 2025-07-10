@@ -5497,13 +5497,13 @@ export const machineproductivityData = [
 ];
 
 export const scheduleData = [
-  { name: "1", value: 35 },
+  { name: "1", value: 40 },
   { name: "2", value: 58 },
   { name: "3", value: 72 },
   { name: "4", value: 90 },
-  { name: "5", value: 105 },
+  { name: "5", value: 98 },
   { name: "6", value: 58 },
-  { name: "7", value: 105 },
+  { name: "7", value: 100 },
 ];
 
 export const piechartData = [

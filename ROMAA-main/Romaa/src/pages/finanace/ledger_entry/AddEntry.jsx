@@ -3,6 +3,7 @@ import Modal from "../../../components/Modal";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { InputField } from "../../../components/InputField";
 
 const schema = yup.object().shape({
   companyId: yup.string().required("Company Id is required"),
@@ -19,56 +20,6 @@ const schema = yup.object().shape({
   itemGroup: yup.string().required("Item Group is required"),
   gstType: yup.string().required("GST Type is required"),
 });
-
-const SelectField = ({ label, name, register, errors, options }) => (
-  <div className="grid grid-cols-8 items-center gap-4">
-    <label className="col-span-3 text-sm font-medium">{label}</label>
-    <select
-      {...register(name)}
-      className={`col-span-5 border border-input-bordergrey rounded-lg outline-none py-2 px-4 text-sm ${
-        errors[name] ? "border-red-500" : ""
-      }`}
-    >
-      <option value="">Select {label}</option>
-      {options.map((opt) => (
-        <option key={opt} value={opt}>
-          {opt}
-        </option>
-      ))}
-    </select>
-    {errors[name] && (
-      <p className="text-red-500 text-xs col-span-8 text-end">
-        {errors[name].message}
-      </p>
-    )}
-  </div>
-);
-
-const InputField = ({
-  label,
-  name,
-  register,
-  errors,
-  placeholder,
-  type = "text",
-}) => (
-  <div className="grid grid-cols-8 items-center gap-4">
-    <label className="col-span-3 text-sm font-medium">{label}</label>
-    <input
-      type={type}
-      placeholder={placeholder}
-      {...register(name)}
-      className={`col-span-5 border border-input-bordergrey rounded-lg outline-none py-2 w-64 px-3 placeholder:text-start placeholder:text-xs placeholder:font-light placeholder-black ${
-        errors[name] ? "border-red-500" : ""
-      }`}
-    />
-    {errors[name] && (
-      <p className="text-red-500 text-xs col-span-8 text-end">
-        {errors[name].message}
-      </p>
-    )}
-  </div>
-);
 
 const AddEntry = ({ onclose }) => {
   const {
@@ -112,12 +63,18 @@ const AddEntry = ({ onclose }) => {
               errors={errors}
               placeholder="Enter Vehicle No"
             />
-            <SelectField
+            <InputField
               label="Location"
               name="location"
+              type="select"
+              placeholder="select location"
               register={register}
               errors={errors}
-              options={["Chennai", "Mumbai", "Delhi", "Other"]}
+              options={[
+                { label: "Chennai", value: "Chennai" },
+                { label: "Mumbai", value: "Mumbai" },
+                { label: "Delhi", value: "Delhi" },
+              ]}
             />
             <InputField
               label="Amount"
@@ -127,12 +84,17 @@ const AddEntry = ({ onclose }) => {
               type="number"
               placeholder="Enter Amount"
             />
-            <SelectField
+            <InputField
               label="ITC"
               name="itc"
+              placeholder="select itc"
+              type="select"
               register={register}
               errors={errors}
-              options={["Yes", "No"]}
+              options={[
+                { label: "Yes", value: "Yes" },
+                { label: "No", value: "No" },
+              ]}
             />
             <InputField
               label="Document Year"
@@ -168,7 +130,7 @@ const AddEntry = ({ onclose }) => {
             <button
               type="button"
               onClick={onclose}
-              className="cursor-pointer border border-darkest-blue text-darkest-blue px-6 py-2 rounded"
+              className="cursor-pointer border dark:border-white dark:text-white border-darkest-blue text-darkest-blue px-6 py-2 rounded"
             >
               Cancel
             </button>

@@ -1,86 +1,115 @@
 import React, { useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import Title from "../../../components/Title";
-import Button from "../../../components/Button";
 import { TbFileExport } from "react-icons/tb";
 import { BiFilterAlt } from "react-icons/bi";
-import Filters from "../../../components/Filters";
 import BulkMateialSite from "./bulk_material site/BulkMaterialSite";
 import SteelSite from "./steel site/SteelSite";
 
 
+const tabs = [
+  {
+    id: "1",
+    label: " Bulk Material",
+    component:<BulkMateialSite />,
+    buttons: [
+      {
+        label: "Export",
+        icon: <TbFileExport size={23} />,
+        className: "dark:bg-layout-dark dark:text-white bg-white text-darkest-blue",
+      },
+      {
+        label: "Filter",
+        icon: <BiFilterAlt size={23} />,
+        className: " dark:bg-layout-dark dark:text-white bg-white text-darkest-blue",
+      },
+    ],
+  },
+  {
+    id: "2",
+    label: "Steel",
+    component:<SteelSite />,
+    buttons: [
+      {
+        label: "Export",
+        icon: <TbFileExport size={23} />,
+        className: "dark:bg-layout-dark dark:text-white bg-white text-darkest-blue",
+      },
+      {
+        label: "Filter",
+        icon: <BiFilterAlt size={23} />,
+        className: " dark:bg-layout-dark dark:text-white bg-white text-darkest-blue",
+      },
+    ],
+  },
+
+];
+
 const ReconciliationSite = () => {
-  const [activeTab, setActiveTab] = useState("bulkmaterial");
-  const [filter, setFilter] = useState(false);
+  const navigate = useNavigate();
+  const [openModal, setOpenModal] = useState(null);
+const [searchParams, setSearchParams] = useSearchParams();
+const defaultTab = tabs[0].id;
+const activeTab = searchParams.get("tab") || defaultTab;
 
-  const tabs = [
-    { id: "bulkmaterial", label: "Bulk Material" },
-    { id: "steel", label: "Steel" },
-  ];
-  const [filterParams, setFilterParams] = useState({
-    fromdate: "",
-    todate: "",
-  });
+const handleTabChange = (id) => {
+  setSearchParams({ tab: id });
+};
 
-  const handleFilter = ({ fromdate, todate }) => {
-    setFilterParams({ fromdate, todate });
-    setFilter(false);
-    setCurrentPage(1);
-  };
-  const currentTabLabel = tabs.find((tab) => tab.id === activeTab)?.label;
+  const activeTabData = tabs.find((tab) => tab.id === activeTab);
+const buttonsWithHandlers = (activeTabData.buttons || []).map((button) => {
+  const modalMap = {};
+  if (modalMap[button.label]) {
+    return {
+      ...button,
+      onClick: () => setOpenModal(modalMap[button.label]),
+    };
+  }
+  return button;
+});
 
   return (
     <>
-      <div className="flex justify-between py-2 pb-3">
-        <Title
-          title="Site"
-          sub_title="Reconciliation"
-          page_title={currentTabLabel}
-          page_title_2={currentTabLabel}
-        />
-        <div className="flex items-center gap-2">
-          <Button
-            button_icon={<TbFileExport size={22} />}
-            button_name="Export"
-            bgColor="bg-white"
-            textColor="text-darkest-blue"
+      <div className="font-roboto-flex flex flex-col h-full">
+        <div className="font-roboto-flex flex justify-between items-center ">
+          <Title
+            title="Site Management"
+            sub_title="Reconciliation"
+            active_title={activeTabData?.label}
           />
-          <Button
-            button_icon={<BiFilterAlt size={22} />}
-            button_name="Filter"
-            bgColor="bg-white"
-            textColor="text-darkest-blue"
-            onClick={() => setFilter(true)}
-          />
-        </div>
-      </div>
-      <div className="">
-        <div className="flex justify-between mt-2 ">
-          <div className="flex gap-2  ">
-            {tabs.map((tab) => (
+          <div className="flex gap-2">
+            {buttonsWithHandlers.map((button, index) => (
               <button
-                key={tab.id}
-                className={`py-2 px-3 rounded-md text-sm font-medium ${
-                  activeTab === tab.id
-                    ? " text-white bg-darkest-blue font-light   font-roboto-flex"
-                    : "text-black bg-white font-light font-roboto-flex"
-                }`}
-                onClick={() => setActiveTab(tab.id)}
+                key={index}
+                className={`cursor-pointer w-fit text-sm flex items-center gap-2 px-4 py-2 rounded-md ${button.className}`}
+                onClick={button.onClick}
               >
-                {tab.label}
+                {button.icon} {button.label}
               </button>
             ))}
           </div>
-         
-           
         </div>
-        <div className="">
-          {activeTab === "bulkmaterial" && <BulkMateialSite />}
-          {activeTab === "steel" && <SteelSite/>}
+        <div className=" font-roboto-flex  cursor-pointer flex justify-between items-center  ">
+          <div className="flex flex-wrap gap-2 py-2.5 ">
+            {tabs.map(({ id, label }) => (
+              <p
+                key={id}
+                className={`flex gap-2 items-center px-4 py-2.5 font-medium rounded-lg text-sm whitespace-nowrap ${
+                  activeTab === id
+                    ? "bg-darkest-blue text-white"
+                    : "dark:text-white dark:bg-layout-dark bg-white text-darkest-blue "
+                }`}
+                onClick={() => handleTabChange(id)}
+              >
+                {label}
+              </p>
+            ))}
+          </div>
+        </div>
+        <div className=" h-full overflow-y-auto  no-scrollbar">
+          {activeTabData?.component}
         </div>
       </div>
-      {filter && (
-        <Filters onclose={() => setFilter(false)} onFilter={handleFilter} />
-      )}
     </>
   );
 };

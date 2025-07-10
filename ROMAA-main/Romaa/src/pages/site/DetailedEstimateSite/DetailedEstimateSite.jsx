@@ -7,12 +7,12 @@ import GSsite from "./GS/GSsite";
 import BillQtySite from "./BillQty/BillQtySite";
 import NewInletSite from "./NewInletDetSite/NewInletSite";
 import NewInletAbsSite from "./NewInletAbsSite/NewInletAbsSite";
-import RoadDetailed from "../../projects/Detailed estimate/road detailed/RoadDetailed";
 import RoadAbstract from "./RoadAbstract/RoadAbstract";
 import Retainingwall from "./RetainingWall/RatainingWall";
 import RetainingAbstractSite from "./retaining abstract site/RetainingAbstractSite";
 import ContractSite from "./contract site/ContractSite";
 import VendorSite from "./vendor site/VendorSite";
+import RoadDetails from "./Roaddetails/RoadDetails";
 
 const tabs = [
   {
@@ -53,7 +53,7 @@ const tabs = [
   {
     id: "5",
     label: " Road Detailed",
-  component:<RoadDetailed />,
+  component:<RoadDetails/>,
     
   },
   {
@@ -112,7 +112,7 @@ const buttonsWithHandlers = (activeTabData.buttons || []).map((button) => {
       <div className="font-roboto-flex flex flex-col h-full">
         <div className="font-roboto-flex flex justify-between items-center ">
           <Title
-            title="Projects Management"
+            title="Site Management"
             sub_title="Detailed Estimate"
             active_title={activeTabData?.label}
           />

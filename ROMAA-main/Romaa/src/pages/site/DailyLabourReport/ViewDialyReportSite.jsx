@@ -36,10 +36,9 @@ const ViewDialyReportSite = () => {
  
         <Title
           title="Site Management"
-         // sub_title="Daily Labour Report"
           active_title="Daily Labour Report"
         />
-      <div className="bg-white p-4 rounded-lg space-y-2 text-sm mt-3">
+      <div className="dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm mt-3">
             <p className="font-semibold text-center text-lg ">
              Daily Labour Report
             </p>

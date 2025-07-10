@@ -57,7 +57,7 @@ const ViewSiteAssest = () => {
   return (
     <div>
       <Title title="Site Management" active_title="Site Asset Details" />
-      <div className="bg-white p-4 rounded-lg space-y-2 text-sm mt-3">
+      <div className="dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm mt-3">
         <p className="font-semibold text-center text-lg">Site Asset Details</p>
         <div className="grid grid-cols-12 gap-2 items-start mt-3">
           {mainFields.map((field, idx) => (

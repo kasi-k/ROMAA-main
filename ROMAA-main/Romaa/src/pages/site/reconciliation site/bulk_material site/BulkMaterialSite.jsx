@@ -15,17 +15,14 @@ export const bulkmaterialcolumn = [
 
 const BulkMateialSite = () => {
   return (
-    <div className="font-roboto-flex flex flex-col h-full">
+  
       <Table
-        ExportModal={false}
+        contentMarginTop="mt-0"
         endpoint={bulkmaterialData}
         columns={bulkmaterialcolumn}
-        onExport={() => console.log("Exporting...")}
-        addButtonLabel={null}
-        addButtonIcon={null}
         exportModal={false}
       />
-    </div>
+   
   );
 };
 

@@ -13,22 +13,14 @@ export const steelColumns = [
   { key: "percentage", label: "Percentage" },
 ];
 
-
-
-
 const SteelSite = () => {
   return (
-    <div className="font-roboto-flex flex flex-col h-full">
-      <Table
-        ExportModal={false}
-        endpoint={steelData}
-        columns={steelColumns}  
-        onExport={() => console.log("Exporting...")}
-        addButtonLabel={null}
-        addButtonIcon={null}
-        exportModal={false}
-      />
-    </div>
+    <Table
+      contentMarginTop="mt-0"
+      endpoint={steelData}
+      columns={steelColumns}
+      exportModal={false}
+    />
   );
 };
 

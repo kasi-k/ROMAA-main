@@ -31,7 +31,7 @@ const RoadDetails = () => {
       contentMarginTop="mt-0"
       endpoint={roaddetailsData}
       columns={roaddetails}
-      routepoint={"viewroaddetails"}
+      routepoint={"viewroaddetailsSite"}
       exportModal={false}
     />
   );

@@ -16,7 +16,7 @@ const machineproductivityColumns =[
 
 const MachineryEntry = () => {
   return (
-    <div className="font-roboto-flex flex flex-col">
+    
       <Table
         title="Site"
         subtitle="Machinery Entry"
@@ -26,7 +26,7 @@ const MachineryEntry = () => {
         exportModal={true}
         FilterModal={Filters}
       />
-    </div>
+   
   );
 };
 

@@ -57,7 +57,7 @@ const ViewPurchaseRequestSite = () => {
   return (
     <div>
       <Title title="Site Management" active_title="Purchase Request Details" />
-      <div className="bg-white p-4 rounded-lg space-y-2 text-sm mt-3">
+      <div className="dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm mt-3">
         <p className="font-semibold text-center text-lg">
           Purchase Request Details
         </p>

@@ -1,78 +1,119 @@
 import React, { useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import Title from "../../../components/Title";
-import Filters from "../../../components/Filters";
-import TableReport from "./table site/TableReportSite";
+import { TbFileExport } from "react-icons/tb";
+import { BiFilterAlt } from "react-icons/bi";
+import TableReportSite from "./table site/TableReportSite";
 import ChartSite from "./chart site/ChartSite";
 
+const tabs = [
+  {
+    id: "1",
+    label: "Table",
+    component: <TableReportSite />,
+    buttons: [
+      {
+        label: "Export",
+        icon: <TbFileExport size={23} />,
+        className:
+          "dark:bg-layout-dark dark:text-white bg-white text-darkest-blue",
+      },
+      {
+        label: "Filter",
+        icon: <BiFilterAlt size={23} />,
+        className:
+          " dark:bg-layout-dark dark:text-white bg-white text-darkest-blue",
+      },
+    ],
+  },
+  {
+    id: "2",
+    label: "Chart",
+    component: <ChartSite />,
+    buttons: [
+      {
+        label: "Export",
+        icon: <TbFileExport size={23} />,
+        className:
+          "dark:bg-layout-dark dark:text-white bg-white text-darkest-blue",
+      },
+      {
+        label: "Filter",
+        icon: <BiFilterAlt size={23} />,
+        className:
+          " dark:bg-layout-dark dark:text-white bg-white text-darkest-blue",
+      },
+    ],
+  },
+];
 
-const PlannedvsAchived = () => {
-  const [activeTab, setActiveTab] = useState("chart");
-  const [filter, setFilter] = useState(false);
+const PlannedVsAchived = () => {
+  const navigate = useNavigate();
+  const [openModal, setOpenModal] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const defaultTab = tabs[0].id;
+  const activeTab = searchParams.get("tab") || defaultTab;
 
-  const tabs = [
-    { id: "chart", label: "Chart" },
-    { id: "table", label: "Table" },
-  ];
-  const [filterParams, setFilterParams] = useState({
-    fromdate: "",
-    todate: "",
+  const handleTabChange = (id) => {
+    setSearchParams({ tab: id });
+  };
+
+  const activeTabData = tabs.find((tab) => tab.id === activeTab);
+  const buttonsWithHandlers = (activeTabData.buttons || []).map((button) => {
+    const modalMap = {};
+    if (modalMap[button.label]) {
+      return {
+        ...button,
+        onClick: () => setOpenModal(modalMap[button.label]),
+      };
+    }
+    return button;
   });
 
-  const handleFilter = ({ fromdate, todate }) => {
-    setFilterParams({ fromdate, todate });
-    setFilter(false);
-    setCurrentPage(1);
-  };
-  const currentTabLabel = tabs.find((tab) => tab.id === activeTab)?.label;
-
   return (
-    <div className="flex flex-col ">
-     <div className="sticky top-0 z-20 w-full bg-light-blue pb-3">
-       <div className="flex justify-between py-2 pb-3">
-        <Title
-          title="Reports"
-          sub_title="Planned vs Actual"
-          page_title={currentTabLabel}
-          page_title_2={currentTabLabel}
-        />
-      </div>
-      <div className="">
-        <div className="flex justify-between mt-2  ">
-          <div className="flex gap-2  ">
-            {tabs.map((tab) => (
+    <>
+      <div className="font-roboto-flex flex flex-col h-full">
+        <div className="font-roboto-flex flex justify-between items-center ">
+          <Title
+            title="Site Management"
+            sub_title="Reconciliation"
+            active_title={activeTabData?.label}
+          />
+          <div className="flex gap-2">
+            {buttonsWithHandlers.map((button, index) => (
               <button
-                key={tab.id}
-                className={`py-2 px-3 rounded-md text-sm font-medium ${
-                  activeTab === tab.id
-                    ? " text-white bg-darkest-blue font-light   font-roboto-flex"
-                    : "text-black bg-white font-light font-roboto-flex"
-                }`}
-                onClick={() => setActiveTab(tab.id)}
+                key={index}
+                className={`cursor-pointer w-fit text-sm flex items-center gap-2 px-4 py-2 rounded-md ${button.className}`}
+                onClick={button.onClick}
               >
-                {tab.label}
+                {button.icon} {button.label}
               </button>
             ))}
           </div>
         </div>
+        <div className=" font-roboto-flex  cursor-pointer flex justify-between items-center  ">
+          <div className="flex flex-wrap gap-2 py-2.5 ">
+            {tabs.map(({ id, label }) => (
+              <p
+                key={id}
+                className={`flex gap-2 items-center px-4 py-2.5 font-medium rounded-lg text-sm whitespace-nowrap ${
+                  activeTab === id
+                    ? "bg-darkest-blue text-white"
+                    : "dark:text-white dark:bg-layout-dark bg-white text-darkest-blue "
+                }`}
+                onClick={() => handleTabChange(id)}
+              >
+                {label}
+              </p>
+            ))}
+          </div>
+        </div>
+        <div className=" h-full overflow-y-auto  no-scrollbar">
+          {activeTabData?.component}
+        </div>
       </div>
-     </div>
-      <div className="overflow-y-auto my-3 no-scrollbar">
-        {activeTab === "chart" && (
-          <>
-            <ChartSite />
-          </>
-        )}
-        {activeTab === "table" && (
-          <>
-            <TableReport />
-          </>
-        )}
-      </div>
-      {filter && (
-        <Filters onclose={() => setFilter(false)} onFilter={handleFilter} />
-      )}
-    </div>
+    </>
   );
 };
 
-export default PlannedvsAchived;
+export default PlannedVsAchived;

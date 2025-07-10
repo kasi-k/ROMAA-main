@@ -96,7 +96,7 @@ const ViewMaterialRecieved = () => {
       if (field.type === "textarea") {
         return (
           <textarea
-            className="w-full p-2 border rounded resize-none text-xs"
+            className="w-full p-2 border border-input-bordergrey dark:border-border-dark-grey rounded resize-none text-xs"
             rows={4}
             value={field.value}
             onChange={(e) => updateField(field.key, e.target.value)}
@@ -106,7 +106,7 @@ const ViewMaterialRecieved = () => {
       return (
         <input
           type={field.type || "text"}
-          className="w-full p-1 border rounded text-xs"
+          className="w-full p-1 border border-input-bordergrey dark:border-border-dark-grey  rounded text-xs"
           value={field.value}
           onChange={(e) => updateField(field.key, e.target.value)}
         />
@@ -126,7 +126,7 @@ const ViewMaterialRecieved = () => {
         <Title
           title="Site Management"
           sub_title="Material Recieved"
-          active_title="View Material Recieved"
+          active_title={isEditing?"Edit Material Received":"View Material Recieved"}
         />
         {!isEditing ? (
           <Button
@@ -139,7 +139,7 @@ const ViewMaterialRecieved = () => {
         )}
       </div>
 
-      <div className="bg-white p-4 rounded-lg space-y-2 text-sm">
+      <div className="dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm">
         <p className="font-semibold text-center text-lg">
           Material Recieved Details
         </p>

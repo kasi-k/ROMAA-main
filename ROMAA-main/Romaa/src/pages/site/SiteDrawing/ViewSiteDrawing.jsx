@@ -82,7 +82,7 @@ const ViewSiteDrawing = () => {
       if (field.type === "textarea") {
         return (
           <textarea
-            className="w-full p-2 border border-input-bordergrey rounded resize-none text-xs"
+            className="w-full p-2 border dark:border-border-dark-grey border-input-bordergrey rounded resize-none text-xs"
             rows={8}
             value={field.value}
             onChange={(e) => updateField(field.key, e.target.value, section)}
@@ -92,7 +92,7 @@ const ViewSiteDrawing = () => {
       if (field.key === "units") {
         return (
           <select
-            className="w-full px-2 py-2 rounded text-xs border border-input-bordergrey"
+            className="w-full px-2 py-2 rounded text-xs border dark:border-border-dark-grey dark:bg-layout-dark border-input-bordergrey"
             value={field.value}
             onChange={(e) => updateField(field.key, e.target.value, section)}
           >
@@ -108,7 +108,7 @@ const ViewSiteDrawing = () => {
       return (
         <input
           type={field.type || "text"}
-          className="w-full p-1 border border-input-bordergrey rounded text-xs"
+          className="w-full p-1 border dark:border-border-dark-grey border-input-bordergrey rounded text-xs"
           value={field.value}
           onChange={(e) => updateField(field.key, e.target.value, section)}
         />
@@ -128,7 +128,7 @@ const ViewSiteDrawing = () => {
         <Title
           title="Site Management"
           sub_title="Site Drawing "
-          active_title="Site Drawing"
+          active_title={isEditing?"Edit Site Drawing":"View Site Drawing"}
         />
         {!isEditing ? (
           <Button
@@ -141,7 +141,7 @@ const ViewSiteDrawing = () => {
         )}
       </div>
 
-      <div className="bg-white p-4 rounded-lg space-y-2 text-sm">
+      <div className="dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm">
         <p className="font-semibold text-center text-lg">
          Drawing vs BOQ
         </p>
