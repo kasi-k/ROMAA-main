@@ -19,7 +19,7 @@ const WORequest = () => {
         <div className="overflow-auto no-scrollbar">
           <table className="w-full whitespace-nowrap">
             <thead>
-              <tr className="font-semibold  text-sm bg-white border-b-4 border-light-blue">
+              <tr className="font-semibold  text-sm dark:bg-layout-dark bg-white border-b-4 dark:border-border-dark-grey  border-light-blue">
                 <th className="p-3.5 rounded-l-lg">S.no</th>
                 {[
                   "Contractor",
@@ -40,12 +40,12 @@ const WORequest = () => {
               </tr>
             </thead>
 
-            <tbody className="text-greyish  text-sm font-light">
+            <tbody className="text-greyish dark:text-gray-200  text-sm font-light">
               {WORequestData.length > 0
                 ? WORequestData.map((data, index) => {
                     return (
                       <React.Fragment key={index}>
-                        <tr className="border-b-[3px] bg-white border-light-blue text-center">
+                        <tr className="border-b-[3px] dark:bg-layout-dark dark:border-border-dark-grey bg-white border-light-blue text-center">
                           <td className="rounded-l-lg py-3">{index + 1}</td>
                           <td>{data.description}</td>
                           <td></td>
@@ -91,15 +91,15 @@ const WORequest = () => {
                         {expandedRow === index && (
                           <tr>
                             <td colSpan="9" className="px-6 py-1  ">
-                              <div className=" bg-white px-4 py-4 rounded-md ">
+                              <div className=" dark:bg-layout-dark bg-white px-4 py-4 rounded-md ">
                                 <table className="w-full text-end  text-sm table-fixed ">
-                                  <tbody className="bg-gray-200">
+                                  <tbody className=" dark:bg-overall_bg-dark bg-gray-200">
                                     {data.details && data.details.length > 0 ? (
                                       <>
                                         {data.details.map((detail, i) => (
                                           <tr
                                             key={i}
-                                            className="border-b-2 border-white "
+                                            className="border-b-2 dark:border-border-dark-grey border-white "
                                           >
                                             <td className="py-1.5 text-start px-8">
                                               {String.fromCharCode(97 + i)}){" "}

@@ -109,11 +109,11 @@ const EditBOQSite = ({ onclose }) => {
 
   return (
     <div className="font-roboto-flex fixed inset-0 grid justify-center items-center backdrop-blur-xs backdrop-grayscale-50  drop-shadow-lg z-20 ">
-      <div className=" shadow-lg py-2  bg-white  rounded-md lg:w-[500px] md:w-[500px] w-96">
+      <div className=" shadow-lg py-2  dark:bg-layout-dark bg-white  rounded-md lg:w-[500px] md:w-[500px] w-96">
         <div className="grid ">
           <button
             onClick={onclose}
-            className=" place-self-end   cursor-pointer bg-white  rounded-full lg:-mx-4 md:-mx-4 -mx-2 lg:-my-6 md:-my-5  -my-3 lg:shadow-md md:shadow-md shadow-none lg:py-2.5 md:py-2.5 py-1 lg:px-2.5 md:px-2.5 px-1 "
+            className=" place-self-end   cursor-pointer dark:bg-layout-dark bg-white  rounded-full lg:-mx-4 md:-mx-4 -mx-2 lg:-my-6 md:-my-5  -my-3 lg:shadow-md md:shadow-md shadow-none lg:py-2.5 md:py-2.5 py-1 lg:px-2.5 md:px-2.5 px-1 "
           >
             <IoClose className="size-[24px]" />
           </button>
@@ -194,7 +194,7 @@ const EditBOQSite = ({ onclose }) => {
               <button
                 type="button"
                 onClick={onclose}
-                className="cursor-pointer  border  border-darkest-blue  text-darkest-blue px-6 py-2   rounded"
+                className="cursor-pointer  border dark:border-white dark:text-white  border-darkest-blue  text-darkest-blue px-6 py-2   rounded"
               >
                 Cancel
               </button>

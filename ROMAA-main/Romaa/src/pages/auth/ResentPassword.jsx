@@ -4,6 +4,7 @@ import bg from "../../assets/images/resetpassword.png"
 import LOGO from "../../assets/images/romaa logo.png";
 import { IoEyeOff, IoEye } from "react-icons/io5";
 import ThemeToggle from "../../components/ThemeToggle";
+import LOGO_D from "../../assets/images/romaadark.png";
 
 
 const ResetPassword = () => {
@@ -17,18 +18,24 @@ const ResetPassword = () => {
   <img
     src={bg}
     alt="bg"
-    className="absolute inset-0 w-full h-full object-cover z-0"
+    className="absolute inset-0 w-full h-full object-cover z-0 dark:hidden"
   />
+  <div className="absolute inset-0 w-full h-full object-cover z-0  bg-overall_bg-dark dark:block hidden"></div>
 
   <div className="absolute right-8 top-10 z-20">
     <ThemeToggle />
   </div>
 
   {/* Login Box */}
-  <div className="w-full max-w-lg bg-white z-10 p-8 rounded-xl shadow-lg">
+  <div className="w-full max-w-lg dark:bg-layout-dark bg-white  dark:text-white z-10 p-8 rounded-xl shadow-lg">
     <div className="flex justify-between items-center py-4">
       <div>
-        <img src={LOGO} alt="Logo" className="w-44" />
+        <img src={LOGO} alt="logo" className="w-36 ml-8 -mt-1 dark:hidden " />
+                            <img
+                              src={LOGO_D}
+                              alt="logo"
+                              className="hidden w-36 ml-8 -mt-1 dark:block "
+                            />
       </div>
       <p className="text-3xl font-bold text-center my-4">Login</p>
     </div>
@@ -37,11 +44,11 @@ const ResetPassword = () => {
         Password
         <input
           type={showPassword ? "text" : "password"}
-          className="border-2 border-input-bordergrey outline-none rounded-md py-2 px-2 pr-10"
+          className="border-2 dark:border-border-dark-grey border-input-bordergrey outline-none rounded-md py-2 px-2 pr-10"
           placeholder="Enter password"
         />
         <span
-          className="absolute right-3 top-9 cursor-pointer dark:text-gray-400 text-black"
+          className="absolute right-3 top-9 cursor-pointer dark:text-gray-300 text-black"
           onClick={() => setShowPassword(!showPassword)}
         >
           {showPassword ? <IoEyeOff /> : <IoEye />}
@@ -52,11 +59,11 @@ const ResetPassword = () => {
         Confirm Password
         <input
           type={showPassword ? "text" : "password"}
-          className="border-2 border-input-bordergrey outline-none rounded-md py-2 px-2 pr-10"
+          className="border-2 dark:border-border-dark-grey border-input-bordergrey outline-none rounded-md py-2 px-2 pr-10"
           placeholder="Enter password"
         />
         <span
-          className="absolute right-3 top-9 cursor-pointer dark:text-gray-400 text-black"
+          className="absolute right-3 top-9 cursor-pointer dark:text-gray-300 text-black"
           onClick={() => setShowPassword(!showPassword)}
         >
           {showPassword ? <IoEyeOff /> : <IoEye />}

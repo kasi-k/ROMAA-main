@@ -3,7 +3,7 @@ import Title from "../../../components/Title";
 import { TbFileExport, TbFilter } from "react-icons/tb";
 import { LuFileCheck } from "react-icons/lu";
 import { MdArrowBackIosNew } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import WORequest from "./work order request/WORequest";
 import CreateRequest from "./work order request/CreateRequest";
 import WorkOrderIssuance from "./Work order issuance/WorkOrderIssuance";
@@ -22,12 +22,12 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: "bg-white text-darkest-blue",
+        className: " dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
       },
       {
         label: "Filter",
         icon: <TbFilter size={23} />,
-        className: "bg-white text-darkest-blue",
+        className: " dark:bg-layout-dark  dark:text-white  bg-white text-darkest-blue",
       },
     ],
   },
@@ -39,12 +39,12 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: "bg-white text-darkest-blue",
+        className: "  dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
       },
       {
         label: "Filter",
         icon: <TbFilter size={23} />,
-        className: "bg-white text-darkest-blue",
+        className: " dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
       },
     ],
   },
@@ -53,7 +53,13 @@ const tabs = [
 const WoIssuance = () => {
   const navigate = useNavigate();
   const [openModal, setOpenModal] = useState(null);
-  const [activeTab, setActiveTab] = useState(tabs[0].id);
+const [searchParams, setSearchParams] = useSearchParams();
+const defaultTab = tabs[0].id;
+const activeTab = searchParams.get("tab") || defaultTab;
+
+const handleTabChange = (id) => {
+  setSearchParams({ tab: id });
+};
 
   const activeTabData = tabs.find((tab) => tab.id === activeTab);
   const buttonsWithHandlers = activeTabData.buttons.map((button) => {
@@ -99,9 +105,9 @@ const WoIssuance = () => {
                 className={`flex gap-2 items-center px-4 py-2.5 font-medium rounded-lg text-sm  whitespace-nowrap ${
                   activeTab === id
                     ? "bg-darkest-blue text-white"
-                    : "bg-white text-darkest-blue "
+                    : "dark:bg-layout-dark dark:text-white bg-white text-darkest-blue "
                 }`}
-                onClick={() => setActiveTab(id)}
+                onClick={() => handleTabChange(id)}
               >
                 {label}
               </p>

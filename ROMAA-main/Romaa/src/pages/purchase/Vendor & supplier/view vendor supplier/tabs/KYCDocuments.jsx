@@ -1,7 +1,16 @@
+import React from "react";
 import { ChevronLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../../../../components/Button";
 import { KYCDocumentspurchasedata } from "../../../../../components/Data";
+
+const kycFields = [
+  { label: "GST", key: "gst" },
+  { label: "PAN", key: "pannumber" },
+  { label: "RC", key: "rc" },
+  { label: "IPR", key: "ipr" },
+  { label: "Account Details", key: "accountdetails" },
+];
 
 const KYCDocuments = () => {
   const navigate = useNavigate();
@@ -9,41 +18,19 @@ const KYCDocuments = () => {
   return (
     <>
       <div className="h-full">
-        <div className="bg-white w-full  gap-y-2 rounded-md px-6 py-6 ">
-          <p className="text-xl text-center  font-semibold pb-4">
+        <div className="dark:bg-layout-dark bg-white w-full gap-y-2 rounded-md px-6 py-6">
+          <p className="text-xl text-center font-semibold pb-4">
             KYC Documents
           </p>
-
-          <div className=" flex flex-col col-span-2 sm:grid grid-cols-7 w-full space-y-2">
-            <p className="text-sm col-span-3 font-bold text-gray-800"> GST</p>
-            <p className="text-sm col-span-2 text-gray-600">
-              {KYCDocumentspurchasedata.gst}
-            </p>
-
-            <p className="text-sm col-span-3 font-bold text-gray-800">
-              PAN
-            </p>
-            <p className="text-sm col-span-2 text-gray-600">
-              {KYCDocumentspurchasedata.pannumber}
-            </p>
-
-            <p className="text-sm col-span-3 font-bold text-gray-800">
-             RC
-            </p>
-            <p className="text-sm col-span-2 text-gray-600">
-              {KYCDocumentspurchasedata.rc}
-            </p>
-
-            <p className="text-sm col-span-3 font-bold text-gray-800">IPR</p>
-            <p className="text-sm col-span-2 text-gray-600">
-              {KYCDocumentspurchasedata.ipr}
-            </p>
-            <p className="text-sm col-span-3 font-bold text-gray-800">
-              Account Details
-            </p>
-            <p className="text-sm col-span-2 text-gray-600">
-              {KYCDocumentspurchasedata.accountdetails}
-            </p>
+          <div className="flex flex-col col-span-2 sm:grid grid-cols-7 w-full space-y-2">
+            {kycFields.map(field => (
+              <React.Fragment key={field.key}>
+                <p className="text-sm col-span-3 font-bold dark:text-gray-200 text-gray-800">{field.label}</p>
+                <p className="text-sm col-span-2 dark:text-gray-400 text-gray-600">
+                  {KYCDocumentspurchasedata[field.key] || "-"}
+                </p>
+              </React.Fragment>
+            ))}
           </div>
         </div>
       </div>

@@ -131,7 +131,7 @@ const ViewRoadDetailed = () => {
       if (field.key === "units") {
         return (
           <select
-            className="w-full px-2 py-2 rounded text-xs border border-input-bordergrey"
+            className="w-full px-2 py-2 dark:bg-layout-dark rounded text-xs border dark:border-border-dark-grey border-input-bordergrey"
             value={field.value}
             onChange={(e) => updateField(field.key, e.target.value, section)}
           >
@@ -147,7 +147,7 @@ const ViewRoadDetailed = () => {
       if (field.key === "description") {
         return (
           <textarea
-            className="w-full p-1 border border-input-bordergrey rounded text-xs"
+            className="w-full p-1 border dark:border-border-dark-grey border-input-bordergrey rounded text-xs"
             value={field.value}
             onChange={(e) => updateField(field.key, e.target.value, section)}
             rows={4}
@@ -157,7 +157,7 @@ const ViewRoadDetailed = () => {
       return (
         <input
           type="text"
-          className="w-full p-1 border border-input-bordergrey rounded text-xs"
+          className="w-full p-1 border dark:border-border-dark-grey border-input-bordergrey rounded text-xs"
           value={field.value}
           onChange={(e) => updateField(field.key, e.target.value, section)}
         />
@@ -189,8 +189,8 @@ const ViewRoadDetailed = () => {
               <Button
                 button_name="Add "
                 button_icon={<TbPlus size={20} />}
-                bgColor={"bg-white"}
-                textColor={"text-darkest-blue"}
+                bgColor=" dark:bg-layout-dark bg-white"
+                textColor="dark:text-white text-darkest-blue"
                 onClick={() => setIsAdding(true)}
               />
               <Button
@@ -202,7 +202,7 @@ const ViewRoadDetailed = () => {
           )}
         </div>
 
-        <div className="bg-white p-4 rounded-lg space-y-2 text-sm">
+        <div className=" dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm">
           <p className="font-semibold text-center text-lg">Road Detailed</p>
 
           <div className="grid grid-cols-12 gap-2 items-start">
@@ -218,10 +218,10 @@ const ViewRoadDetailed = () => {
                           return newData;
                         });
                       }}
-                      button_name={"Remove"}
+                      button_name="Remove"
                       button_icon={<MdOutlineClose size={20} />}
-                      bgColor={"bg-red-200"}
-                      textColor={"text-red-500"}
+                      bgColor="dark:bg-icon-dark-red bg-red-200"
+                      textColor="text-red-500"
                     />
                   )}
                 </div>
@@ -308,7 +308,7 @@ const ViewRoadDetailed = () => {
                   <button
                     type="button"
                     onClick={() => setIsAdding(false)}
-                    className="cursor-pointer border border-darkest-blue text-darkest-blue px-6 py-2 rounded"
+                    className="cursor-pointer border dark:border-white dark:text-white  border-darkest-blue text-darkest-blue px-6 py-2 rounded"
                   >
                     Cancel
                   </button>

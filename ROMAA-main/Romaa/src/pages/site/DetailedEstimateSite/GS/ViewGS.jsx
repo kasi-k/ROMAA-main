@@ -132,7 +132,7 @@ const ViewGs = () => {
         )}
       </div>
 
-      <div className="bg-white p-4 rounded-lg space-y-2 text-sm">
+      <div className="dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm">
         <p className="font-semibold text-center text-lg">
          GS(General Abstract)
         </p>

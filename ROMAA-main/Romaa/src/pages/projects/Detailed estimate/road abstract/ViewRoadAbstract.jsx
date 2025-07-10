@@ -131,7 +131,7 @@ const ViewRoadAbstract = () => {
       if (field.key === "units") {
         return (
           <select
-            className="w-full px-2 py-2 rounded text-xs border border-input-bordergrey"
+            className="w-full px-2 py-2 rounded text-xs dark:bg-layout-dark dark:border-border-dark-grey border border-input-bordergrey"
             value={field.value}
             onChange={(e) => updateField(field.key, e.target.value, section)}
           >
@@ -147,7 +147,7 @@ const ViewRoadAbstract = () => {
       if (field.key === "description") {
         return (
           <textarea
-            className="w-full p-1 border border-input-bordergrey rounded text-xs"
+            className="w-full p-1 border dark:border-border-dark-grey border-input-bordergrey rounded text-xs"
             value={field.value}
             onChange={(e) => updateField(field.key, e.target.value, section)}
             rows={4}
@@ -157,7 +157,7 @@ const ViewRoadAbstract = () => {
       return (
         <input
           type="text"
-          className="w-full p-1 border border-input-bordergrey rounded text-xs"
+          className="w-full p-1 border dark:border-border-dark-grey border-input-bordergrey rounded text-xs"
           value={field.value}
           onChange={(e) => updateField(field.key, e.target.value, section)}
         />
@@ -189,8 +189,8 @@ const ViewRoadAbstract = () => {
               <Button
                 button_name="Add "
                 button_icon={<TbPlus size={20} />}
-                bgColor={"bg-white"}
-                textColor={"text-darkest-blue"}
+                bgColor=" dark:bg-layout-dark bg-white"
+                textColor="dark:text-white text-darkest-blue"
                 onClick={() => setIsAdding(true)}
               />
               <Button
@@ -202,7 +202,7 @@ const ViewRoadAbstract = () => {
           )}
         </div>
 <div className="h-11/12 overflow-y-auto no-scrollbar">
-        <div className="bg-white p-4 rounded-lg space-y-2 text-sm">
+        <div className=" dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm">
           <p className="font-semibold text-center text-lg">Road Abstract</p>
 
           <div className="grid grid-cols-12 gap-2 items-start">
@@ -220,8 +220,8 @@ const ViewRoadAbstract = () => {
                       }}
                       button_name={"Remove"}
                       button_icon={<MdOutlineClose size={20} />}
-                      bgColor={"bg-red-200"}
-                      textColor={"text-red-500"}
+                      bgColor=" dark:bg-icon-dark-red bg-red-200"
+                      textColor="text-red-500"
                     />
                   )}
                 </div>
@@ -241,7 +241,7 @@ const ViewRoadAbstract = () => {
         
         <div className="flex justify-end py-2 ">
           <Button
-            onClick={() => navigate("..?tab=7")}
+            onClick={() => navigate("..?tab=6")}
             button_name="Back"
             button_icon={<IoChevronBackSharp />}
           />

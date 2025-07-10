@@ -23,12 +23,12 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: "bg-white text-darkest-blue",
+        className: "dark:bg-layout-dark dark:text-white bg-white text-darkest-blue",
       },
       {
         label: "Filter",
         icon: <BiFilterAlt size={23} />,
-        className: "bg-white text-darkest-blue",
+        className: " dark:bg-layout-dark dark:text-white bg-white text-darkest-blue",
       },
     ],
   },
@@ -136,7 +136,7 @@ const buttonsWithHandlers = (activeTabData.buttons || []).map((button) => {
                 className={`flex gap-2 items-center px-4 py-2.5 font-medium rounded-lg text-sm whitespace-nowrap ${
                   activeTab === id
                     ? "bg-darkest-blue text-white"
-                    : "bg-white text-darkest-blue "
+                    : "dark:text-white dark:bg-layout-dark bg-white text-darkest-blue "
                 }`}
                 onClick={() => handleTabChange(id)}
               >

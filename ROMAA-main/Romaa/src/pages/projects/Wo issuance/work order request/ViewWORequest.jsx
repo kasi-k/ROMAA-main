@@ -48,7 +48,7 @@ const ViewWORequest = () => {
         />
         </div>
         <div className="overflow-auto h-11/12 no-scrollbar">
-        <div className="bg-white p-4 rounded-lg space-y-2 text-sm mt-6">
+        <div className="dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm mt-6">
           <div className="grid grid-cols-12 gap-2 items-start">
             {Object.entries(data).map(([section, fields]) => (
               <React.Fragment key={section}>
@@ -64,7 +64,7 @@ const ViewWORequest = () => {
             ))}
           </div>
         </div>
-        <div className="bg-white p-4 rounded-lg space-y-2 text-sm mt-6">
+        <div className=" dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm mt-6">
           <p className="font-bold text-xl">Terms & Conditions</p>
           <p className="text-xs opacity-50">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias

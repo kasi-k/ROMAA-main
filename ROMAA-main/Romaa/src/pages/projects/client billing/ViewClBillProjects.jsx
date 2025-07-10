@@ -55,7 +55,7 @@ const ViewClBillProjects = () => {
       return (
         <input
           type="date"
-          className="w-full p-1 border border-input-bordergrey rounded text-xs"
+          className="w-full p-1 border dark:border-border-dark-grey border-input-bordergrey rounded text-xs"
           value={field.value}
           onChange={(e) => updateField(field.key, e.target.value, section)}
         />
@@ -64,7 +64,7 @@ const ViewClBillProjects = () => {
       return (
         <input
           type="text"
-          className="w-full p-1 border border-input-bordergrey rounded text-xs"
+          className="w-full p-1 border dark:border-border-dark-grey border-input-bordergrey rounded text-xs"
           value={field.value}
           onChange={(e) => updateField(field.key, e.target.value, section)}
         />
@@ -108,7 +108,7 @@ const ViewClBillProjects = () => {
           )}
         </div>
 
-        <div className="bg-white p-4 rounded-lg space-y-2 text-sm">
+        <div className="dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm">
           <div className="grid grid-cols-12 gap-2 items-start">
             {Object.entries(data).map(([section, fields]) => (
               <React.Fragment key={section}>

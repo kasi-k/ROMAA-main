@@ -49,7 +49,7 @@ const ViewProjectWorkProgress = () => {
           />
         </div>
         <div className="overflow-auto h-11/12 no-scrollbar">
-          <div className="bg-white p-4 rounded-lg space-y-2 text-sm mt-6">
+          <div className="dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm mt-6">
             <div className="grid grid-cols-12 gap-2 items-start">
               {Object.entries(data).map(([section, fields]) => (
                 <React.Fragment key={section}>

@@ -50,7 +50,7 @@ const ViewWbs = () => {
       if (field.key === "description") {
         return (
           <textarea
-            className="w-full p-1 border border-input-bordergrey rounded text-xs"
+            className="w-full p-1 border dark:border-border-dark-grey border-input-bordergrey rounded text-xs"
             value={field.value}
             onChange={(e) => updateField(field.key, e.target.value, section)}
             rows={4}
@@ -60,7 +60,7 @@ const ViewWbs = () => {
       return (
         <input
           type="text"
-          className="w-full p-1 border border-input-bordergrey rounded text-xs"
+          className="w-full p-1 border dark:border-border-dark-grey border-input-bordergrey rounded text-xs"
           value={field.value}
           onChange={(e) => updateField(field.key, e.target.value, section)}
         />
@@ -96,7 +96,7 @@ const ViewWbs = () => {
           )}
         </div>
 
-        <div className="bg-white p-4 rounded-lg space-y-2 text-sm">
+        <div className=" dark:bg-layout-dark bg-white p-4 rounded-lg space-y-2 text-sm">
           <p className="font-semibold text-center text-lg">Work Breakdown structure</p>
           <div className="grid grid-cols-12 gap-2 items-start">
             {Object.entries(data).map(([section, fields]) => (
@@ -115,7 +115,7 @@ const ViewWbs = () => {
         </div>
         <div className="flex justify-end py-2 ">
           <Button
-            onClick={() => navigate("..?tab=5")}
+            onClick={() => navigate("..")}
             button_name="Back"
             button_icon={<IoChevronBackSharp />}
           />
