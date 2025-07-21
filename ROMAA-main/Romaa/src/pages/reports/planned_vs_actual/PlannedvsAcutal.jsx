@@ -27,7 +27,7 @@ const PlannedvsAcutal = () => {
 
   return (
     <div className="flex flex-col ">
-     <div className="sticky top-0 z-20 w-full bg-light-blue pb-3">
+     <div className="sticky top-0 z-20 w-full  pb-3">
        <div className="flex justify-between py-2 pb-3">
         <Title
           title="Reports"
@@ -45,7 +45,7 @@ const PlannedvsAcutal = () => {
                 className={`py-2 px-3 rounded-md text-sm font-medium ${
                   activeTab === tab.id
                     ? " text-white bg-darkest-blue font-light   font-roboto-flex"
-                    : "text-black bg-white font-light font-roboto-flex"
+                    : "dark:text-white dark:bg-layout-dark text-black bg-white font-light font-roboto-flex"
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >

@@ -3,6 +3,7 @@ import Modal from "../../../components/Modal";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { InputField } from "../../../components/InputField";
 
 const schema = yup.object().shape({
   userId: yup.string().required("User ID is required"),
@@ -16,55 +17,8 @@ const schema = yup.object().shape({
 });
 
 
-const SelectField = ({ label, name, register, errors, options }) => (
-  <div className="grid grid-cols-8 items-center gap-4">
-    <label className="sm:col-span-3 grid-cols-8 text-sm font-medium">{label}</label>
-    <select
-      {...register(name)}
-      className={`sm:col-span-5 col-span-8 w-full border border-input-bordergrey rounded-lg outline-none py-2 px-4 text-sm ${
-        errors[name] ? "border-red-500" : ""
-      }`}
-    >
-      <option value="">Select {label}</option>
-      {options.map((opt) => (
-        <option key={opt} value={opt}>
-          {opt}
-        </option>
-      ))}
-    </select>
-    {errors[name] && (
-      <p className="text-red-500 text-xs col-span-8 text-end">
-        {errors[name].message}
-      </p>
-    )}
-  </div>
-);
 
-const InputField = ({
-  label,
-  name,
-  register,
-  errors,
-  placeholder,
-  type = "text",
-}) => (
-  <div className="grid grid-cols-8 items-center gap-4">
-    <label className="sm:col-span-3 col-span-8 text-sm font-medium">{label}</label>
-    <input
-      type={type}
-      placeholder={placeholder}
-      {...register(name)}
-      className={`sm:col-span-5 col-span-8 w-full border border-input-bordergrey rounded-lg outline-none py-2 sm:w-64 px-3 placeholder:text-start placeholder:text-xs placeholder:font-light placeholder-black ${
-        errors[name] ? "border-red-500" : ""
-      }`}
-    />
-    {errors[name] && (
-      <p className="text-red-500 text-xs col-span-8 text-end">
-        {errors[name].message}
-      </p>
-    )}
-  </div>
-);
+
 const AddUser = ({ onclose }) => {
   const {
     register,
@@ -124,12 +78,14 @@ const AddUser = ({ onclose }) => {
               errors={errors}
               placeholder="Type Here"
             />
-            <SelectField
+            <InputField
               label="Role"
+              type="select"
               name="role"
+              placeholder="select role"
               register={register}
               errors={errors}
-              options={["Admin", "User", "Manager"]}
+              options={[{label:"Admin", value:"admin"},{label:"User", value:"User" },]}
             />
           </div>
         </div>
@@ -137,7 +93,7 @@ const AddUser = ({ onclose }) => {
           <button
             type="button"
             onClick={onclose}
-            className="cursor-pointer border border-darkest-blue text-darkest-blue px-6 py-2 rounded"
+            className="cursor-pointer border dark:border-white border-darkest-blue dark:text-white text-darkest-blue px-6 py-2 rounded"
           >
             Cancel
           </button>

@@ -3,8 +3,6 @@ import Filters from "../../../components/Filters";
 import Table from "../../../components/Table";
 import { RoleData } from "../../../components/Data";
 import { RiUserAddLine } from "react-icons/ri";
-import DeleteRoles from "./DeleteRoles";
-import { useNavigate } from "react-router-dom";
 import DeleteModal from "../../../components/DeleteModal";
 
 const RoleColumns = [
@@ -14,11 +12,9 @@ const RoleColumns = [
 ];
 
 const Roles = () => {
-  const navigate = useNavigate();
-  const [deleteRoles, setDeleteRoles] = useState(false);
-
+ 
   return (
-    <div>
+  
       <Table
         title="Settings"
         subtitle="Roles "
@@ -35,8 +31,7 @@ const Roles = () => {
         addButtonLabel="Add Roles"
         addButtonIcon={<RiUserAddLine size={23} />}
       />
-      {deleteRoles && <DeleteRoles onclose={() => setDeleteRoles(false)} />}
-    </div>
+
   );
 };
 

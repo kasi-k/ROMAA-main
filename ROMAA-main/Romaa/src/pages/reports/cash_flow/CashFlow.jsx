@@ -41,14 +41,14 @@ const CashFlow = () => {
           <Button
             button_icon={<TbFileExport size={22} />}
             button_name="Export"
-            bgColor="bg-white"
-            textColor="text-darkest-blue"
+            bgColor="dark:bg-layout-dark bg-white"
+            textColor="dark:text-white text-darkest-blue"
           />
           <Button
             button_icon={<BiFilterAlt size={22} />}
             button_name="Filter"
-            bgColor="bg-white"
-            textColor="text-darkest-blue"
+            bgColor=" dark:bg-layout-dark bg-white"
+            textColor="dark:text-white text-darkest-blue"
             onClick={() => setFilter(true)}
           />
         </div>
@@ -62,7 +62,7 @@ const CashFlow = () => {
                 className={`py-2 px-3 rounded-md text-sm font-medium ${
                   activeTab === tab.id
                     ? " text-white bg-darkest-blue font-light   font-roboto-flex"
-                    : "text-black bg-white font-light font-roboto-flex"
+                    : "dark:text-white dark:bg-layout-dark text-black bg-white font-light font-roboto-flex"
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
@@ -74,7 +74,7 @@ const CashFlow = () => {
             <div className="w-52 flex rounded-md justify-between items-center">
               <input
                 type="text"
-                className="bg-white w-full rounded-l-md placeholder:text-sm px-3 py-2 pl-6"
+                className="bg-white dark:bg-layout-dark outline-none w-full rounded-l-md placeholder:text-sm px-3 py-2 pl-6"
                 placeholder="Search month"
               />
               <p className="bg-select-subbar text-darkest-blue rounded-r-md py-3 px-3">

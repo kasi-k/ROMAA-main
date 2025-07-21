@@ -446,7 +446,7 @@ const LayOut = () => {
         },
         {
           title: "Client Billing",
-          icon: <RiBillLine RoundSearch size={23} />,
+          icon: <RiBillLine  size={23} />,
           to: "/reports/clientbilling",
         },
         {

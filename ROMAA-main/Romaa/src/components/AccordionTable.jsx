@@ -94,7 +94,7 @@ const AccordionTable = ({
             <Button
               button_icon={<TbFileExport size={22} />}
               button_name="Export"
-              bgColor="dark;bg-layout-dark bg-white"
+              bgColor="dark:bg-layout-dark bg-white"
               textColor="dark:text-white text-darkest-blue"
               onClick={onExport}
             />
@@ -127,7 +127,7 @@ const AccordionTable = ({
                 {(ViewModal || routepoint || Action) && <th className="py-3 px-4 rounded-r-lg">Action</th>}
               </tr>
             </thead>
-            <tbody className="text-greyish text-sm font-light">
+            <tbody className="text-greyish dark:text-gray-200 text-sm font-light">
               {paginatedData.length > 0 ? (
                 paginatedData.map((row, index) => {
                   const globalIndex = startIndex + index;
@@ -175,16 +175,16 @@ const AccordionTable = ({
                           <td colSpan={columns.length + 1} className="px-10 pl-28 py-1">
                             <div className="dark:bg-layout-dark bg-white p-2 py-5 rounded-md">
                               <table className="w-full text-left text-sm">
-                                <thead className="bg-indigo-200 font-semibold">
-                                  <tr className="border-b-[3px] border-white">
+                                <thead className="bg-indigo-200 dark:bg-indigo-400 font-semibold">
+                                  <tr className="border-b-[3px] border-white dark:border-border-dark-grey">
                                     {nestedHeaders.map((header, i) => (
                                       <th key={i} className="py-3 px-4">{header}</th>
                                     ))}
                                   </tr>
                                 </thead>
-                                <tbody className="bg-gray-200">
+                                <tbody className="bg-gray-200 dark:bg-overall_bg-dark">
                                   {row.nestedData?.map((nestedRow, i) => (
-                                    <tr key={i} className="border-b-2 border-white">
+                                    <tr key={i} className="border-b-2 border-white dark:border-border-dark-grey">
                                       {nestedHeaders.map((header, j) => {
                                         const key = header
                                           .toLowerCase()

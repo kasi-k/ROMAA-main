@@ -85,7 +85,7 @@ const RaiseTickets = ({ onclose }) => {
               <button
                 type="button"
                 onClick={onclose}
-                className="cursor-pointer border border-darkest-blue text-darkest-blue px-6 py-2 rounded"
+                className="cursor-pointer border dark:border-white dark:text-white border-darkest-blue text-darkest-blue px-6 py-2 rounded"
               >
                 Cancel
               </button>

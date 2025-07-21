@@ -35,13 +35,12 @@ const ViewTableReport = () => {
           }
         />
       </div>
-     <div className="bg-white w-full flex flex-col sm:grid grid-cols-2 gap-y-3 gap-x-6 rounded-md px-4 py-6">
+     <div className="dark:bg-layout-dark bg-white w-full flex flex-col sm:grid grid-cols-2 gap-y-3 gap-x-6 rounded-md px-4 py-6">
   {/* Title */}
   <div className="col-span-2 flex justify-center items-center mb-4">
     <p className="text-xl font-semibold">Planned vs Actual</p>
   </div>
 
-  {/* Description Block */}
   <p className="text-xl font-bold text-gray-800">Description</p>
   <p className="text-sm text-gray-600">Earthwork</p>
 

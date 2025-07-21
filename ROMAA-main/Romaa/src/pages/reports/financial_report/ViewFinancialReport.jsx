@@ -1,7 +1,16 @@
-import { Pencil } from "lucide-react";
+import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Title from "../../../components/Title";
 import ButtonBg from "../../../components/Button";
+
+const fields = [
+  { label: "Project", key: "project" },
+  { label: "Work Type", key: "workType" },
+  { label: "Project Value", key: "projectValue" },
+  { label: "Completed Value", key: "completedValue" },
+  { label: "Current Profit", key: "currentProfit" },
+  { label: "Predicted Profit", key: "predictedProfit" },
+];
 
 const ViewFinancialReport = () => {
   const { state } = useLocation();
@@ -20,39 +29,25 @@ const ViewFinancialReport = () => {
           sub_title="Financial Report"
           page_title="View Financial Report"
         />
-        <ButtonBg
-          button_name="Back"
-          button_icon={<Pencil size={16} />}
-          onClick={() => navigate(-1)}
-        />
+        <ButtonBg button_name="Back" onClick={() => navigate(-1)} />
       </div>
 
-    <div className="bg-white w-full  mx-auto rounded-md px-6 py-6">
-  <p className="grid grid-cols-2 mb-2">
-    <span></span>
-    <span className="font-bold text-xl px-2">Financial Report</span>
-  </p>
-  <div className="grid grid-cols-2 text-sm gap-y-2">
-    <p className="font-semibold text-gray-800">Project</p>
-    <p className="text-gray-600">{project.project}</p>
+      <div className="dark:bg-layout-dark bg-white w-full mx-auto rounded-md px-6 py-6">
+        <p className="font-bold text-center text-xl px-2 mb-2">Financial Report</p>
 
-    <p className="font-semibold text-gray-800">Work Type</p>
-    <p className="text-gray-600">{project.workType}</p>
-
-    <p className="font-semibold text-gray-800">Project Value</p>
-    <p className="text-gray-600">{project.projectValue}</p>
-
-    <p className="font-semibold text-gray-800">Completed Value</p>
-    <p className="text-gray-600">{project.completedValue}</p>
-
-    <p className="font-semibold text-gray-800">Current Profit</p>
-    <p className="text-gray-600">{project.currentProfit}</p>
-
-    <p className="font-semibold text-gray-800">Predicted Profit</p>
-    <p className="text-gray-600">{project.predictedProfit}</p>
-  </div>
-</div>
-
+        <div className="grid grid-cols-9 text-sm gap-y-2">
+          {fields.map(({ label, key }) => (
+            <React.Fragment key={key}>
+              <p className="font-semibold dark:text-gray-200 text-gray-800 col-span-4">
+                {label}
+              </p>
+              <p className="text-gray-600 dark:text-gray-500 col-span-3">
+                {project[key] ?? "-"}
+              </p>
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
     </>
   );
 };

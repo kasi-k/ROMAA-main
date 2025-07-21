@@ -41,14 +41,14 @@ const Reconciliation = () => {
           <Button
             button_icon={<TbFileExport size={22} />}
             button_name="Export"
-            bgColor="bg-white"
-            textColor="text-darkest-blue"
+            bgColor="dark:bg-layout-dark bg-white"
+            textColor="dark:text-white text-darkest-blue"
           />
           <Button
             button_icon={<BiFilterAlt size={22} />}
             button_name="Filter"
-            bgColor="bg-white"
-            textColor="text-darkest-blue"
+            bgColor=" dark:bg-layout-dark  bg-white"
+            textColor="dark:text-white text-darkest-blue"
             onClick={() => setFilter(true)}
           />
         </div>
@@ -62,7 +62,7 @@ const Reconciliation = () => {
                 className={`py-2 px-3 rounded-md text-sm font-medium ${
                   activeTab === tab.id
                     ? " text-white bg-darkest-blue font-light   font-roboto-flex"
-                    : "text-black bg-white font-light font-roboto-flex"
+                    : "dark:text-white dark:bg-layout-dark text-black bg-white font-light font-roboto-flex"
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >

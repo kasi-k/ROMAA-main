@@ -53,8 +53,8 @@ const WorkSchedule = () => {
 
 
   return (
-    <div className=" dark:bg-layout-dark bg-white p-2 rounded-md shadow border border-blue-100 h-full overflow-x-auto no-scrollbar">
-      <h3 className="font-semibold mb-4 text-lg border-b border-input-bordergrey p-4">Weekly  Schedule</h3>
+    <div className=" dark:bg-layout-dark bg-white p-2 rounded-md shadow  h-full overflow-x-auto no-scrollbar">
+      <h3 className="font-semibold mb-4 text-lg border-b border-input-bordergrey dark:border-border-dark-grey p-4">Weekly  Schedule</h3>
       <table className="w-full text-sm ">
         <thead >
           <tr className=" border-b dark:border-border-dark-grey border-input-bordergrey dark:bg-layout-dark bg-white" >

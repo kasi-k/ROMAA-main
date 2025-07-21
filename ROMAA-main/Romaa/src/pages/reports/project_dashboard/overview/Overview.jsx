@@ -10,7 +10,7 @@ const Overview = () => {
   return (
     <>
       <div className="grid grid-cols-12 mb-[100px] mt-6 gap-3">
-        <div className="md:col-span-6 col-span-12 bg-white rounded-md">
+        <div className="md:col-span-6 col-span-12 dark:bg-layout-dark  bg-white rounded-md">
           <div className=" flex justify-between items-center p-5 ">
             <p className="text-lg font-bold">Schedule based chart</p>
             <Button
@@ -41,7 +41,7 @@ const Overview = () => {
             </BarChart>
           </div>
         </div>
-        <div className="md:col-span-6 col-span-12 bg-white rounded-md">
+        <div className="md:col-span-6 col-span-12 dark:bg-layout-dark bg-white rounded-md">
           <div className=" flex justify-between items-center p-5 ">
             <p className="text-lg font-bold">Budget flow chart</p>
             <Button
@@ -72,7 +72,7 @@ const Overview = () => {
             </BarChart>
           </div>
         </div>
-        <div className="md:col-span-6 col-span-12 bg-white rounded-md py-3">
+        <div className="md:col-span-6 col-span-12 dark:bg-layout-dark bg-white rounded-md py-3">
           <div className=" flex justify-between items-center p-5 ">
             <p className="text-lg font-bold">Budget flow chart</p>
             <Button
@@ -106,7 +106,7 @@ const Overview = () => {
             </AreaChart>
           </ResponsiveContainer>
         </div>
-        <div className="md:col-span-6 col-span-12 bg-white rounded-md py-3">
+        <div className="md:col-span-6 col-span-12 dark:bg-layout-dark bg-white rounded-md py-3">
           <div className=" flex justify-between items-center p-5 ">
             <p className="text-lg font-bold">Budget flow chart</p>
             <Button

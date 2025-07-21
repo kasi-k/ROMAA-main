@@ -25,16 +25,13 @@ const ViewP_L = () => {
         />
         <ButtonBg
           button_name="Back"
-          button_icon={<Pencil size={16} />}
           onClick={() => navigate(-1)}
         />
       </div>
 
-      <div className="bg-white w-full  mx-auto rounded-md px-6 py-6">
-        <p className="grid grid-cols-2 mb-2">
-          <span></span>
-          <span className="font-bold text-xl px-2">P&L</span>
-        </p>
+      <div className="dark:bg-layout-dark bg-white w-full  mx-auto rounded-md px-6 py-6">
+        <p className="text-center font-bold text-xl px-2">P&L</p>
+
         <p className="font-bold ">ROMAA INFRAA PVT LTD</p>
         {[
           { label: "Projects", value: "Name" },
@@ -45,8 +42,8 @@ const ViewP_L = () => {
           { label: "Agg Value Excluding GST18%", value: "TNCSC" },
         ].map((items, index) => (
           <div key={index} className="grid grid-cols-2 text-sm gap-y-2 py-1">
-            <p className="font-semibold text-gray-800">{items.label}</p>
-            <p className="text-gray-600 font-medium">{items.value}</p>
+            <p className="font-semibold dark:text-gray-200 text-gray-800">{items.label}</p>
+            <p className="text-gray-600 dark:text-gray-500 font-medium">{items.value}</p>
           </div>
         ))}
         <p className="font-bold mt-4">P&L AND FINACIAL STATUS as on 25.03.25</p>
@@ -74,8 +71,8 @@ const ViewP_L = () => {
 
           return (
             <div key={index} className="grid grid-cols-2 text-sm gap-y-2 py-1">
-              <p className="font-semibold text-gray-800">{item.label}</p>
-              <p className={valueClass} >{item.value}</p>
+              <p className="font-semibold dark:text-gray-200 text-gray-800">{item.label}</p>
+              <p className={valueClass}>{item.value}</p>
             </div>
           );
         })}

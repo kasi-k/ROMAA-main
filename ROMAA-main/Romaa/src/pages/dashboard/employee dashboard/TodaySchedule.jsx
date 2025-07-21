@@ -31,11 +31,11 @@ const TodaySchedule = () => {
   };
 
   return (
-    <div className="dark:bg-layout-dark bg-white p-2 rounded-md shadow border border-blue-100 h-full overflow-x-auto no-scrollbar">
-      <h3 className="font-semibold mb-4 text-lg border-b border-input-bordergrey p-4">Today’s Schedule</h3>
+    <div className="dark:bg-layout-dark bg-white p-2 rounded-md shadow  h-full overflow-x-auto no-scrollbar">
+      <h3 className="font-semibold mb-4 text-lg border-b border-input-bordergrey dark:border-border-dark-grey p-4">Today’s Schedule</h3>
       <table className="w-full text-sm ">
         <thead>
-          <tr className=" text-black border-b border-input-bordergrey ">
+          <tr className=" text-black dark:text-white border-b border-input-bordergrey dark:border-border-dark-grey ">
             <th className="px-2 ">
               <p className="flex items-center gap-2">Description{" "}
               <HiArrowsUpDown />

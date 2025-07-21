@@ -35,7 +35,7 @@ const ViewCollectionProjection = () => {
           }
         />
       </div>
-      <div className="bg-white w-full flex flex-col sm:grid grid-cols-2 gap-y-2 rounded-md px-4 py-6">
+      <div className="dark:bg-layout-dark bg-white w-full flex flex-col sm:grid grid-cols-2 gap-y-2 rounded-md px-4 py-6">
         <div className="col-span-2 flex justify-center items-center mb-4 ">
           <p className="text-xl font-semibold"> Collection Projection</p>
         </div>
@@ -46,14 +46,14 @@ const ViewCollectionProjection = () => {
   { label: "Projection Date", value: "02.06.2025" },
   { label: "Received Amount", value: "₹56758765" },
   { label: "Received Date", value: "06.06.2025" },
-  { label: "Remarks", value: <span className="text-orange-600 font-semibold">Remarks</span> }
+  { label: "Remarks", value: <span className="text-[#FF6F00] font-semibold">Remarks</span> }
 ].map((item, index) => (
   <div
     className="flex flex-col col-span-2 sm:grid grid-cols-2 w-full space-y-2"
     key={index}
   >
-    <p className="text-sm col-span-1 font-bold text-gray-800">{item.label}</p>
-    <p className="text-sm col-span-1 text-gray-600">{item.value}</p>
+    <p className="text-sm col-span-1 font-bold text-gray-800 dark:text-gray-200">{item.label}</p>
+    <p className="text-sm col-span-1 text-gray-600 dark:text-gray-400">{item.value}</p>
   </div>
 ))}
 

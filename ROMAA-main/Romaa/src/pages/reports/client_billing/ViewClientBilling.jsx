@@ -1,7 +1,16 @@
-import { Pencil } from "lucide-react";
+import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Title from "../../../components/Title";
 import ButtonBg from "../../../components/Button";
+
+const fields = [
+  { label: "Start Date", key: "startDate" },
+  { label: "End Date", key: "endDate" },
+  { label: "Project Value", key: "projectValue" },
+  { label: "Payment Collected", key: "paymentCollected" },
+  { label: "Billed", key: "billed" },
+  { label: "To Be Billed", key: "toBeBilled" },
+];
 
 const ViewClientBilling = () => {
   const { state } = useLocation();
@@ -20,36 +29,23 @@ const ViewClientBilling = () => {
           sub_title="Client Billing"
           page_title="View Client Billing"
         />
-        <ButtonBg
-          button_name="Back"
-          button_icon={<Pencil size={16} />}
-          onClick={() => navigate(-1)}
-        />
+        <ButtonBg button_name="Back" onClick={() => navigate(-1)} />
       </div>
 
-      <div className="bg-white w-full  mx-auto rounded-md px-6 py-6">
-        <p className="grid grid-cols-2 mb-2">
-          <span></span>
-          <span className="font-bold text-xl px-2">Client Billing</span>
-        </p>
-        <div className="grid grid-cols-2 text-sm gap-y-2">
-          <p className="font-semibold text-gray-800">Start Date</p>
-          <p className="text-gray-600">{project.startDate}</p>
+      <div className="dark:bg-layout-dark bg-white w-full  mx-auto rounded-md px-6 py-6">
+        <p className="font-bold text-center text-xl px-2 mb-2">Client Billing</p>
 
-          <p className="font-semibold text-gray-800">End Date</p>
-          <p className="text-gray-600">{project.endDate}</p>
-
-          <p className="font-semibold text-gray-800">Project Value</p>
-          <p className="text-gray-600">{project.projectValue}</p>
-
-          <p className="font-semibold text-gray-800">Payment Collected</p>
-          <p className="text-gray-600">{project.paymentCollected}</p>
-
-          <p className="font-semibold text-gray-800">Billed</p>
-          <p className="text-gray-600">{project.billed}</p>
-
-          <p className="font-semibold text-gray-800">To Be Billed</p>
-          <p className="text-gray-600">{project.toBeBilled}</p>
+        <div className="grid grid-cols-9 text-sm gap-y-2">
+          {fields.map(({ label, key }) => (
+            <React.Fragment key={key}>
+              <p className=" dark:text-gray-200 text-gray-800 col-span-4">
+                {label}
+              </p>
+              <p className=" col-span-3 text-gray-600 dark:text-gray-500">
+                {project[key] ?? "-"}
+              </p>
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </>

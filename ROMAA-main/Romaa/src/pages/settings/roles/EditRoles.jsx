@@ -86,12 +86,12 @@ const EditRoles = () => {
         <Title
           title="Settings"
           sub_title="Role Access"
-          page_title="Add role Access"
+          page_title="Edit role Access"
         />
         <div className="flex gap-3">
           <p
             onClick={() => navigate("/settings/roles")}
-            className="cursor-pointer  border border-darkest-blue px-8 py-2 rounded-sm"
+            className="cursor-pointer  border dark:border-white border-darkest-blue px-8 py-2 rounded-sm"
           >
             Cancel
           </p>
@@ -109,18 +109,18 @@ const EditRoles = () => {
           type="text"
           value={roleName}
           onChange={(e) => setRoleName(e.target.value)}
-          className="  px-3 py-1.5 rounded-md outline-none bg-white text-black"
+          className="  px-3 py-1.5 rounded-md outline-none dark:bg-layout-dark bg-white text-black dark:text-white"
         />
         <span className="font-semibold ">Created By</span>
         <input
           type="text"
           value={createdBy}
           onChange={(e) => setCreatedBy(e.target.value)}
-          className="  px-3 py-1.5 rounded-md outline-none bg-white text-black"
+          className="  px-3 py-1.5 rounded-md outline-none dark:bg-layout-dark dark:text-white bg-white text-black "
         />
       </div>
 
-      <div className="bg-white p-10  rounded-xl  ">
+      <div className="dark:bg-layout-dark bg-white p-10  rounded-xl  ">
         <div className="grid grid-cols-3 gap-2 ">
           <div className="border-r-2 p-3 h-80">
             <h2 className="text-lg font-medium mb-4 w-1/2 text-center">
@@ -134,7 +134,7 @@ const EditRoles = () => {
                       type="checkbox"
                       checked={!!selectedSettings[setting]}
                       onChange={() => toggleSetting(setting)}
-                      className="appearance-none w-5 h-5 border-2 border-darkest-blue rounded-md checked:bg-darkest-blue  checked:border-transparent focus:outline-none transition-all duration-200"
+                      className="appearance-none w-5 h-5 border-2 dark:border-white border-darkest-blue rounded-md checked:bg-darkest-blue  checked:border-transparent focus:outline-none transition-all duration-200"
                     />
                     {/* Custom Checkmark */}
                     <span className="absolute w-5 h-5 flex justify-center items-center pointer-events-none">
@@ -186,7 +186,7 @@ const EditRoles = () => {
                                 e.target.checked
                               )
                             }
-                            className="appearance-none w-5 h-5 border-2 border-darkest-blue rounded-md checked:bg-darkest-blue checked:border-transparent focus:outline-none transition-all duration-200"
+                            className="appearance-none w-5 h-5 border-2 dark:border-white border-darkest-blue rounded-md checked:bg-darkest-blue checked:border-transparent focus:outline-none transition-all duration-200"
                           />
                           {/* Custom Checkmark */}
                           <span className="absolute w-5 h-5 flex justify-center items-center pointer-events-none">

@@ -5,6 +5,7 @@ import Title from "../../../components/Title";
 import { IoSave } from "react-icons/io5";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { InputField } from "../../../components/InputField";
 
 const Editschema = yup.object().shape({
   userId: yup.string().required("User ID is required"),
@@ -32,79 +33,9 @@ const Changeschema = yup.object().shape({
     .oneOf([yup.ref("newPassword")], "Passwords must match"),
 });
 
-const ChangeInputField = ({ label, name, register, errors, type = "text" }) => (
-  <div className="grid grid-cols-8 items-center gap-4">
-    <label className="col-span-3 text-sm font-medium">{label}</label>
-    <input
-      type={type}
-      autoComplete={"off"}
-      placeholder="Type Here"
-      {...register(name)}
-      className={`col-span-5 border border-input-bordergrey rounded-lg outline-none py-2 px-3 w-full placeholder:text-xs placeholder:font-light placeholder-black ${
-        errors[name] ? "border-red-500" : ""
-      }`}
-    />
-    {errors[name] && (
-      <p className="text-red-500 text-xs col-span-8 text-end">
-        {errors[name].message}
-      </p>
-    )}
-  </div>
-);
 
-const SelectField = ({ label, name, register, errors, options }) => (
-  <div className="grid grid-cols-8 items-center gap-4">
-    <label className="sm:col-span-3 grid-cols-8 text-sm font-medium">
-      {label}
-    </label>
-    <select
-      {...register(name)}
-      className={`sm:col-span-5 col-span-8 w-full border border-input-bordergrey rounded-lg outline-none py-2 px-4 text-sm ${
-        errors[name] ? "border-red-500" : ""
-      }`}
-    >
-      <option value="">Select {label}</option>
-      {options.map((opt) => (
-        <option key={opt} value={opt}>
-          {opt}
-        </option>
-      ))}
-    </select>
-    {errors[name] && (
-      <p className="text-red-500 text-xs col-span-8 text-end">
-        {errors[name].message}
-      </p>
-    )}
-  </div>
-);
 
-const InputField = ({
-  label,
-  name,
-  register,
-  errors,
-  placeholder,
-  type = "text",
-}) => (
-  <div className="grid grid-cols-8 items-center gap-4">
-    <label className="sm:col-span-3 col-span-8 text-sm font-medium">
-      {label}
-    </label>
-    <input
-      type={type}
-      placeholder={placeholder}
-      {...register(name)}
-      className={`sm:col-span-5 col-span-8 w-full border border-input-bordergrey rounded-lg outline-none py-2  px-3 placeholder:text-start placeholder:text-xs placeholder:font-light placeholder-black ${
-        errors[name] ? "border-red-500" : ""
-      }`}
-    />
-    {errors[name] && (
-      <p className="text-red-500 text-xs col-span-8 text-end">
-        {errors[name].message}
-      </p>
-    )}
-  </div>
-);
+
 
 const EditUser = () => {
   const location = useLocation();
@@ -150,7 +81,7 @@ const EditUser = () => {
     <div className="h-screen ">
       <Title title="Settings" sub_title="User" page_title="Edit User" />
       <div className="grid grid-cols-12  gap-2 my-4">
-        <div className="sm:col-span-6 col-span-12 w-full py-9 rounded-lg bg-white">
+        <div className="sm:col-span-6 col-span-12 w-full py-9 rounded-lg dark:bg-layout-dark bg-white">
           <p className="w-full text-2xl font-semibold flex justify-center items-center">
             {" "}
             Edit user
@@ -188,12 +119,14 @@ const EditUser = () => {
                     errors={errors}
                     placeholder="Type Here"
                   />
-                  <SelectField
+                  <InputField
                     label="Role"
                     name="role"
+                    type="select"
+                    placeholder="select role"
                     register={register}
                     errors={errors}
-                    options={["Admin", "User", "Manager"]}
+                    options={[{label:"Admin", value:"admin"},{label:"User", value:"User" },]}
                   />
                 </div>
               </div>
@@ -209,7 +142,7 @@ const EditUser = () => {
             </form>
           </div>
         </div>
-        <div className="sm:col-span-6 col-span-12 w-full py-9 rounded-lg bg-white">
+        <div className="sm:col-span-6 col-span-12 w-full py-9 rounded-lg dark:bg-layout-dark bg-white">
           <p className="w-full text-2xl font-semibold flex justify-center items-center">
             Change Password
           </p>
@@ -218,26 +151,28 @@ const EditUser = () => {
               onSubmit={handleSubmitPassword(onSubmitPassword)}
               className="space-y-4"
             >
-              <ChangeInputField
+              <InputField
                 label="New password"
                 name="newPassword"
                 register={registerPassword}
                 errors={errorsPassword}
                 type="password"
+                placeholder="enter new password"
               />
-              <ChangeInputField
+              <InputField
                 label="Confirm Password"
                 name="confirmPassword"
                 register={registerPassword}
                 errors={errorsPassword}
                 type="password"
+                 placeholder="enter confirm password"
               />
-              <p className="text-xs text-gray-700">
+              <p className="text-xs dark:text-gray-400 text-gray-700">
                 "Make sure your password has: one capital letter, one small
                 letter, one number, one special symbol, and is at least 9
                 characters long."
               </p>
-              <p className="text-sm mt-1">
+              <p className="text-xs mt-1">
                 <strong>Example:</strong> Design@2024
               </p>
               <div className="flex justify-end mt-4">
