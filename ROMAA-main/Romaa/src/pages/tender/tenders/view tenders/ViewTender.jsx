@@ -6,7 +6,6 @@ import { MdArrowBackIosNew } from "react-icons/md";
 import TenderOverView from "./tender overview/TenderOverView";
 import ApproveTender from "./tender overview/ApproveTender";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import CustomerDetails from "./customer/CustomerDetails";
 import Plan from "./plans/Plan";
 import BOQ from "./Boq/BOQ";
 import ZeroCost from "./zero cost/ZeroCost";
@@ -37,20 +36,9 @@ const tabs = [
       },
     ],
   },
+ 
   {
     id: "2",
-    label: "Customer Details",
-    component: <CustomerDetails />,
-    buttons: [
-      {
-        label: "Export",
-        icon: <TbFileExport size={23} />,
-        className: "dark:bg-layout-dark bg-white  dark:text-white text-darkest-blue",
-      },
-    ],
-  },
-  {
-    id: "3",
     label: "Plan",
     component: <Plan />,
     buttons: [
@@ -62,7 +50,7 @@ const tabs = [
     ],
   },
   {
-    id: "4",
+    id: "3",
     label: "BOQ",
     component: <BOQ />,
     buttons: [
@@ -82,7 +70,7 @@ const tabs = [
     ],
   },
   {
-    id: "5",
+    id: "4",
     label: "Zero Cost",
     component: <ZeroCost />,
     buttons: [
@@ -102,7 +90,7 @@ const tabs = [
     ],
   },
   {
-    id: "6",
+    id: "5",
     label: "Project Documents",
     component: <ProjectDocuments />,
     buttons: [
@@ -118,7 +106,7 @@ const tabs = [
     ],
   },
   {
-    id: "7",
+    id: "6",
     label: "EMD",
     component: <EMD />,
     buttons: [
@@ -130,7 +118,7 @@ const tabs = [
     ],
   },
   {
-    id: "8",
+    id: "7",
     label: "Contract",
     component: <Contract />,
     buttons: [
@@ -142,7 +130,7 @@ const tabs = [
     ],
   },
   {
-    id: "9",
+    id: "8",
     label: "Vendor",
     component: <Vendor />,
     buttons: [
@@ -154,7 +142,7 @@ const tabs = [
     ],
   },
   {
-    id: "10",
+    id: "9",
     label: "Preliminary",
     component: <Preliminary />,
     buttons: [
@@ -166,19 +154,19 @@ const tabs = [
     ],
   },
 ];
-const tenderBreadcrumb = [{ label: "Tender", to: ".." }];
-const tabBreadcrumbs = {
-  "Tender Overview": [...tenderBreadcrumb, { label: "Tender Overview" }],
-  "Customer Details": [...tenderBreadcrumb, { label: "Customer Details" }],
-  Plan: [...tenderBreadcrumb, { label: "Plan" }],
-  BOQ: [...tenderBreadcrumb, { label: "BOQ" }],
-  "Zero Cost": [...tenderBreadcrumb, { label: "Zero Cost" }],
-  "Project Documents": [...tenderBreadcrumb, { label: "Project Documents" }],
-  EMD: [...tenderBreadcrumb, { label: "EMD" }],
-  Contract: [...tenderBreadcrumb, { label: "Contract" }],
-  Vendor: [...tenderBreadcrumb, { label: "Vendor" }],
-  Preliminary: [...tenderBreadcrumb, { label: "Preliminary" }],
-};
+// const tenderBreadcrumb = [{ label: "Tender", to: ".." }];
+// const tabBreadcrumbs = {
+//   "Tender Overview": [...tenderBreadcrumb, { label: "Tender Overview" }],
+//   "Customer Details": [...tenderBreadcrumb, { label: "Customer Details" }],
+//   Plan: [...tenderBreadcrumb, { label: "Plan" }],
+//   BOQ: [...tenderBreadcrumb, { label: "BOQ" }],
+//   "Zero Cost": [...tenderBreadcrumb, { label: "Zero Cost" }],
+//   "Project Documents": [...tenderBreadcrumb, { label: "Project Documents" }],
+//   EMD: [...tenderBreadcrumb, { label: "EMD" }],
+//   Contract: [...tenderBreadcrumb, { label: "Contract" }],
+//   Vendor: [...tenderBreadcrumb, { label: "Vendor" }],
+//   Preliminary: [...tenderBreadcrumb, { label: "Preliminary" }],
+// };
 
 const ViewTender = () => {
   const navigate = useNavigate();
@@ -215,7 +203,7 @@ const ViewTender = () => {
         <div className="font-roboto-flex flex justify-between items-center ">
           <Title
             title="Tender Management"
-            sub_title={tabBreadcrumbs[activeTabData?.label] || tenderBreadcrumb}
+            sub_title="Tender"
             active_title={activeTabData?.label}
           />
           <div className="flex gap-2">

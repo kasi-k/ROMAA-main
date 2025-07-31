@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { IoClose } from "react-icons/io5";
 import axios from "axios";
+import { InputField } from "../../../components/InputField";
 
 const schema = yup.object().shape({
   clientName: yup.string().required("Client Name is required"),
@@ -25,30 +26,7 @@ const schema = yup.object().shape({
     .required("Pincode is required"),
 });
 
-const InputField = ({
-  label,
-  name,
-  register,
-  errors,
-  placeholder,
-  type = "text",
-}) => (
-  <div className="grid grid-cols-8 items-center gap-4">
-    <label className="col-span-3 text-sm font-medium">{label}</label>
-    <input
-      type={type}
-      placeholder={placeholder}
-      {...register(name)}
-      className={`col-span-5 border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none  py-2 px-2 placeholder:text-xs placeholder:font-light placeholder-black dark:placeholder-white
-        ${errors[name] ? "border-red-500" : ""}`}
-    />
-    {errors[name] && (
-      <p className="text-red-500 text-xs col-span-8 text-end">
-        {errors[name].message}
-      </p>
-    )}
-  </div>
-);
+
 
 const AddClients = ({ onclose }) => {
   const {
@@ -77,8 +55,8 @@ const AddClients = ({ onclose }) => {
   return (
     <div className="font-roboto-flex fixed inset-0 grid justify-center items-center backdrop-blur-xs backdrop-grayscale-50  drop-shadow-lg z-20">
       <div className="mx-2 shadow-lg py-2 dark:bg-overall_bg-dark bg-white  rounded-md lg:w-[900px] md:w-[500px] w-96">
-        <div onClick={onclose} className="grid cursor-pointer">
-          <button className=" place-self-end   dark:bg-overall_bg-dark bg-white  rounded-full lg:-mx-4 md:-mx-4 -mx-2 lg:-my-6 md:-my-5  -my-3 lg:shadow-md md:shadow-md shadow-none lg:py-2.5 md:py-2.5 py-0 lg:px-2.5 md:px-2.5 px-0 ">
+        <div className="grid">
+          <button  onClick={onclose} className="  cursor-pointer place-self-end   dark:bg-overall_bg-dark bg-white  rounded-full lg:-mx-4 md:-mx-4 -mx-2 lg:-my-6 md:-my-5  -my-3 lg:shadow-md md:shadow-md shadow-none lg:py-2.5 md:py-2.5 py-0 lg:px-2.5 md:px-2.5 px-0 ">
             <IoClose className="size-[24px]" />
           </button>
           <h1 className="text-center font-medium text-2xl py-2">Add Client</h1>

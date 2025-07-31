@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { IoClose } from "react-icons/io5";
 import axios from "axios";
+import { InputField } from "../../../components/InputField";
 
 const schema = yup.object().shape({
   pName: yup.string().required("Project name is required"),
@@ -17,30 +18,7 @@ const schema = yup.object().shape({
     .min(0, "Amount cannot be negative"),
 });
 
-const InputField = ({
-  label,
-  name,
-  register,
-  errors,
-  placeholder,
-  type = "text",
-}) => (
-  <div className="grid grid-cols-11 items-center gap-4">
-    <label className="col-span-5 text-sm font-medium">{label}</label>
-    <input
-      type={type}
-      placeholder={placeholder}
-      {...register(name)}
-      className={`col-span-6 border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none  py-2 px-2 placeholder:text-xs placeholder:font-light placeholder-black dark:placeholder-white
-        ${errors[name] ? "border-red-500" : ""}`}
-    />
-    {errors[name] && (
-      <p className="text-red-500 text-xs col-span-11 text-end">
-        {errors[name].message}
-      </p>
-    )}
-  </div>
-);
+
 
 const AddWorkOrder = ({ onclose }) => {
   const {

@@ -8,18 +8,20 @@ export const InputField = ({
   errors,
   placeholder,
   type = "text",
+  colInp="col-span-5",
+  colLab="col-span-3",
   options = [],
 }) => {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="grid grid-cols-8 items-center gap-4">
-      <label className="col-span-3 text-sm font-medium">{label}</label>
+      <label className={`${colLab} text-sm font-medium`}>{label}</label>
 
       {type === "select" ? (
         <select
           defaultValue=""
           {...register(name)}
-          className={`col-span-5 dark:bg-layout-dark border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none py-2.5 pl-2 text-xs font-light 
+          className={`col-span-5 dark:bg-overall_bg-dark border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none py-2.5 pl-2 text-xs font-light 
         ${errors[name] ? "border-red-500" : ""}`}
         >
           <option value="" disabled>
@@ -35,7 +37,7 @@ export const InputField = ({
         <textarea
           placeholder={placeholder}
           {...register(name)}
-          className={`col-span-5 border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none py-2 px-2 placeholder:text-xs placeholder:font-light
+          className={`${colInp} border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none py-2 px-2 placeholder:text-xs placeholder:font-light
         ${errors[name] ? "border-red-500" : ""}`}
           rows={4}
         />

@@ -13,6 +13,7 @@ const data = [
   { label: "Contact Number", value: "+91 98765 43210" },
   { label: "Email ID", value: "ramesh@example.com" },
   { label: "Address", value: "123, Anna Nagar, Chennai, 600096" },
+  { label: "Work Order ID", value: " 600096" },
 ];
 
 

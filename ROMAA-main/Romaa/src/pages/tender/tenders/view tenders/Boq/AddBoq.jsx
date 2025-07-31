@@ -4,6 +4,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { IoClose } from "react-icons/io5";
 import axios from "axios";
+import Modal from "../../../../../components/Modal";
+import { InputField } from "../../../../../components/InputField";
 
 const schema = yup.object().shape({
   description: yup.string().required("Item description is required"),
@@ -35,30 +37,7 @@ const schema = yup.object().shape({
     .min(0, "Amount cannot be negative"),
 });
 
-const InputField = ({
-  label,
-  name,
-  register,
-  errors,
-  placeholder,
-  type = "text",
-}) => (
-  <div className="grid grid-cols-11 items-center gap-4">
-    <label className="col-span-5 text-sm font-medium">{label}</label>
-    <input
-      type={type}
-      placeholder={placeholder}
-      {...register(name)}
-      className={`col-span-6 border border-input-bordergrey rounded-lg outline-none  py-2 px-2 placeholder:text-xs placeholder:font-light placeholder-black
-        ${errors[name] ? "border-red-500" : ""}`}
-    />
-    {errors[name] && (
-      <p className="text-red-500 text-xs col-span-11 text-end">
-        {errors[name].message}
-      </p>
-    )}
-  </div>
-);
+
 
 const AddBoq = ({ onclose }) => {
   const {
@@ -75,18 +54,12 @@ const AddBoq = ({ onclose }) => {
   };
 
   return (
-    <div className="font-roboto-flex fixed inset-0 grid justify-center items-center backdrop-blur-xs backdrop-grayscale-50  drop-shadow-lg z-20">
-      <div className="mx-2 shadow-lg py-2  bg-white  rounded-md w-[420px]">
-        <div className="grid">
-          <button
-            onClick={onclose}
-            className=" place-self-end   cursor-pointer bg-white  rounded-full lg:-mx-4 md:-mx-4 -mx-2 lg:-my-6 md:-my-5  -my-3 lg:shadow-md md:shadow-md shadow-none lg:py-2.5 md:py-2.5 py-0 lg:px-2.5 md:px-2.5 px-0 "
-          >
-            <IoClose className="size-[24px]" />
-          </button>
-          <h1 className="text-center font-medium text-xl py-2">
-            Add BOQ(Bill Of Quantity)
-          </h1>
+    <>
+      <Modal
+        title="Add BOQ(Bill Of Quantity)"
+        widthClassName="lg:w-[550px]"
+        onclose={onclose}
+        child={
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="grid  px-6 py-6">
               <div className="space-y-4">
@@ -96,6 +69,9 @@ const AddBoq = ({ onclose }) => {
                   register={register}
                   errors={errors}
                   placeholder="Enter item description"
+                  type="textarea"
+                  colInp="col-span-8"
+                  colLab="col-span-8"
                 />
                 <InputField
                   label="Unit"
@@ -160,9 +136,9 @@ const AddBoq = ({ onclose }) => {
               </button>
             </div>
           </form>
-        </div>
-      </div>
-    </div>
+        }
+      />
+    </>
   );
 };
 
