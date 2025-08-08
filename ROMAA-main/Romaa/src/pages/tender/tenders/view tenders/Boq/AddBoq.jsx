@@ -57,7 +57,7 @@ const AddBoq = ({ onclose }) => {
     <>
       <Modal
         title="Add BOQ(Bill Of Quantity)"
-        widthClassName="lg:w-[550px]"
+        widthClassName="lg:w-[550px] md:w-[450px] w-96"
         onclose={onclose}
         child={
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -124,7 +124,7 @@ const AddBoq = ({ onclose }) => {
               <button
                 type="button"
                 onClick={onclose}
-                className="cursor-pointer  border  border-darkest-blue  text-darkest-blue px-6 py-2   rounded"
+                className="cursor-pointer  border dark:border-white dark:text-white  border-darkest-blue  text-darkest-blue px-6 py-2   rounded"
               >
                 Cancel
               </button>

@@ -22,12 +22,12 @@ const WorkOrder = () => {
       pagetitle="Work Order"
       endpoint={Workorderdata}
       columns={Columns}
-      AddModal={AddWorkOrder}
+      // AddModal={AddWorkOrder}
       EditModal={EditWorkOrder}
         routepoint={"viewworkorder"}
       FilterModal={Filters}
-      addButtonLabel="Add Work order"
-      addButtonIcon={<LiaClipboardListSolid size={24} />}
+      // addButtonLabel="Add Work order"
+      // addButtonIcon={<LiaClipboardListSolid size={24} />}
     />
   );
 };

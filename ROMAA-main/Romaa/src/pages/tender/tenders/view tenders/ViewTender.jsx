@@ -32,11 +32,12 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: "dark:bg-layout-dark bg-white dark:text-white text-darkest-blue",
+        className:
+          "dark:bg-layout-dark bg-white dark:text-white text-darkest-blue",
       },
     ],
   },
- 
+
   {
     id: "2",
     label: "Plan",
@@ -45,7 +46,8 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: "dark:bg-layout-dark bg-white dark:text-white text-darkest-blue",
+        className:
+          "dark:bg-layout-dark bg-white dark:text-white text-darkest-blue",
       },
     ],
   },
@@ -60,12 +62,14 @@ const tabs = [
       },
       {
         label: "Upload BOQ",
-        className: " dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
+        className:
+          " dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
       },
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: " dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
+        className:
+          " dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
       },
     ],
   },
@@ -80,12 +84,14 @@ const tabs = [
       },
       {
         label: "Upload Zero Cost",
-        className: "dark:bg-layout-dark  dark:text-white  bg-white text-darkest-blue",
+        className:
+          "dark:bg-layout-dark  dark:text-white  bg-white text-darkest-blue",
       },
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: " dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
+        className:
+          " dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
       },
     ],
   },
@@ -101,7 +107,8 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: " dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
+        className:
+          " dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
       },
     ],
   },
@@ -111,9 +118,14 @@ const tabs = [
     component: <EMD />,
     buttons: [
       {
+        label: "Add EMD",
+        className: "bg-darkest-blue text-white",
+      },
+      {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: " dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
+        className:
+          " dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
       },
     ],
   },
@@ -125,8 +137,9 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: "dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
-      }, 
+        className:
+          "dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
+      },
     ],
   },
   {
@@ -137,7 +150,8 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: "dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
+        className:
+          "dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
       },
     ],
   },
@@ -149,7 +163,8 @@ const tabs = [
       {
         label: "Export",
         icon: <TbFileExport size={23} />,
-        className: " dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
+        className:
+          " dark:bg-layout-dark  dark:text-white bg-white text-darkest-blue",
       },
     ],
   },

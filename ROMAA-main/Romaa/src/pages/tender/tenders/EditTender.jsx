@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { IoClose } from "react-icons/io5";
+import { InputField } from "../../../components/InputField";
 
 const schema = yup.object().shape({
   customerName: yup.string().required("Tender Name is required"),
@@ -14,6 +15,7 @@ const schema = yup.object().shape({
       "Invalid Tender Type"
     )
     .required("Tender Type is required"),
+  clientID: yup.string().required("Client ID is required"),
   clientName: yup.string().required("Client Name is required"),
   contactperson: yup.string().required("Contact Person is required"),
   phoneNumber: yup
@@ -29,65 +31,12 @@ const schema = yup.object().shape({
     .required("Proposal Cost is required"),
   duedate: yup.date().required("Due Date is required"),
   emd: yup.string().required("EMD is required"),
+  emdexpirydate: yup.date().required("Due Date is required"),
   description: yup
     .string()
     .max(500, "Description cannot exceed 500 characters")
     .required("Description is required"),
 });
-
-const InputField = ({
-  label,
-  name,
-  register,
-  errors,
-  placeholder,
-  type = "text",
-  options = [],
-}) => (
-  <div className="grid grid-cols-8 items-center gap-4">
-    <label className="col-span-3 text-sm font-medium">{label}</label>
-
-    {type === "select" ? (
-      <select
-        defaultValue=""
-        {...register(name)}
-        className={`col-span-5 border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none py-2 px-2 text-xs font-light 
-        ${errors[name] ? "border-red-500" : ""}`}
-      >
-        <option value="" disabled>
-          {placeholder}
-        </option>
-        {options?.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
-    ) : type === "textarea" ? (
-      <textarea
-        placeholder={placeholder}
-        {...register(name)}
-        className={`col-span-5 border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none py-2 px-2 placeholder:text-xs placeholder:font-light
-        ${errors[name] ? "border-red-500" : ""}`}
-        rows={4}
-      />
-    ) : (
-      <input
-        type={type}
-        placeholder={placeholder}
-        {...register(name)}
-        className={`col-span-5 border dark:border-border-dark-grey border-input-bordergrey rounded-lg outline-none py-2 px-2 placeholder:text-xs placeholder:font-light
-        ${errors[name] ? "border-red-500" : ""}`}
-      />
-    )}
-
-    {errors[name] && (
-      <p className="text-red-500 text-xs col-span-8 text-end">
-        {errors[name].message}
-      </p>
-    )}
-  </div>
-);
 
 const EditTender = ({ onclose }) => {
   const {
@@ -106,14 +55,14 @@ const EditTender = ({ onclose }) => {
   return (
     <div className="font-roboto-flex fixed inset-0 grid justify-center items-center backdrop-blur-xs backdrop-grayscale-50  drop-shadow-lg z-20">
       <div className="mx-2 shadow-lg py-2 dark:bg-overall_bg-dark bg-white  rounded-md ">
-        <div onClick={onclose} className="grid">
-          <button className=" place-self-end   cursor-pointer dark:bg-overall_bg-dark bg-white  rounded-full lg:-mx-4 md:-mx-4 -mx-2 lg:-my-6 md:-my-5  -my-3 lg:shadow-md md:shadow-md shadow-none lg:py-2.5 md:py-2.5 py-1 lg:px-2.5 md:px-2.5 px-1 ">
+        <div  className="grid">
+          <button onClick={onclose} className=" place-self-end   cursor-pointer dark:bg-overall_bg-dark bg-white  rounded-full lg:-mx-4 md:-mx-4 -mx-2 lg:-my-6 md:-my-5  -my-3 lg:shadow-md md:shadow-md shadow-none lg:py-2.5 md:py-2.5 py-1 lg:px-2.5 md:px-2.5 px-1 ">
             <IoClose className="size-[24px]" />
           </button>
           <h1 className="text-center font-medium text-2xl py-2">Edit Tender</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 px-6 py-6">
-              <div className="lg:space-y-6  space-y-3">
+              <div className="lg:space-y-6  space-y-2">
                 <InputField
                   label="Tender Name"
                   name="customerName"
@@ -145,6 +94,13 @@ const EditTender = ({ onclose }) => {
                   ]}
                 />
                 <InputField
+                  label="Client ID"
+                  name="clientID"
+                  register={register}
+                  errors={errors}
+                  placeholder="Enter client Id"
+                />
+                <InputField
                   label="Client Name"
                   name="clientName"
                   register={register}
@@ -166,7 +122,7 @@ const EditTender = ({ onclose }) => {
                   placeholder="Enter Mob.no"
                 />
               </div>
-              <div className="lg:space-y-6 space-y-3 ">
+              <div className="lg:space-y-4 space-y-2 ">
                 <InputField
                   label="Project Location"
                   name="projectLocation"
@@ -201,6 +157,14 @@ const EditTender = ({ onclose }) => {
                   register={register}
                   errors={errors}
                   placeholder="Enter emd"
+                />
+
+                <InputField
+                  label="EMD Expiry Date"
+                  name="emdexpirydate"
+                  register={register}
+                  errors={errors}
+                  type="date"
                 />
                 <InputField
                   label="Description"

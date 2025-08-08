@@ -4,7 +4,10 @@ import { HiArrowsUpDown } from "react-icons/hi2";
 import { FiEye } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { PiLinkBold } from "react-icons/pi";
-import { DailyProjectData, WeeklyProjectData } from "../../../../../components/Data";
+import {
+  DailyProjectData,
+  WeeklyProjectData,
+} from "../../../../../../components/Data";
 
 const MonthlyProjects = () => {
   const navigate = useNavigate();
@@ -21,24 +24,19 @@ const MonthlyProjects = () => {
             <thead>
               <tr className="font-semibold  text-sm bg-white border-b-4 border-light-blue">
                 <th className="p-3.5 rounded-l-lg">S.no</th>
-                {[
-                  "Description",
-                  "Quantity ",
-                  "Units ",
-                
-                ].map((heading) => (
+                {["Description", "Quantity ", "Units "].map((heading) => (
                   <th key={heading} className="p-3">
                     <h1 className="flex items-center justify-center  gap-2">
                       {heading} <HiArrowsUpDown size={18} />
                     </h1>
                   </th>
                 ))}
-                
-                <th >22 Mon</th>
-                <th >23 Tue</th>
-                <th >24 Wed</th>
-                <th > 25 Thur</th>
-                <th >26 Fri</th>
+
+                <th>22 Mon</th>
+                <th>23 Tue</th>
+                <th>24 Wed</th>
+                <th> 25 Thur</th>
+                <th>26 Fri</th>
                 <th>27 Sat</th>
                 <th className="pr-2 rounded-r-lg">Action</th>
               </tr>
@@ -84,7 +82,7 @@ const MonthlyProjects = () => {
                               Planned <span>Acheived</span>
                             </p>
                           </td>
-                       
+
                           <td className="rounded-r-lg flex items-center justify-center gap-2 mt-2 px-4">
                             <p className="cursor-pointer bg-green-200  rounded-sm  p-1.5  text-green-600">
                               <FiEye />
@@ -110,47 +108,49 @@ const MonthlyProjects = () => {
                         </tr>
 
                         {expandedRow === index && (
-                       <tr>
-  <td colSpan="12" className="px-6 py-1">
-    <div className="bg-white px-4 py-2 rounded-md">
-      <table className="w-full text-sm table-fixed">
-        <tbody>
-          {data.details.map((detail, i) => (
-            <tr
-              key={i}
-              className="bg-gray-200 border-b border-white text-center"
-            >
-              {/* Description */}
-              <td className="text-start pl-4 py-1 font-medium whitespace-nowrap">
-                {String.fromCharCode(97 + i)}) {detail.contractor}
-              </td>
+                          <tr>
+                            <td colSpan="12" className="px-6 py-1">
+                              <div className="bg-white px-4 py-2 rounded-md">
+                                <table className="w-full text-sm table-fixed">
+                                  <tbody>
+                                    {data.details.map((detail, i) => (
+                                      <tr
+                                        key={i}
+                                        className="bg-gray-200 border-b border-white text-center"
+                                      >
+                                        {/* Description */}
+                                        <td className="text-start pl-4 py-1 font-medium whitespace-nowrap">
+                                          {String.fromCharCode(97 + i)}){" "}
+                                          {detail.contractor}
+                                        </td>
 
-              {/* Quantity */}
-              <td className="py-1">{detail.quantity}</td>
+                                        {/* Quantity */}
+                                        <td className="py-1">
+                                          {detail.quantity}
+                                        </td>
 
-              {/* Units */}
-              <td className="py-1">{detail.unit}</td>
+                                        {/* Units */}
+                                        <td className="py-1">{detail.unit}</td>
 
-              {/* Dates: 22 Mon to 27 Sat */}
-              {[...Array(6)].map((_, idx) => (
-                <td key={idx} className="py-1">
-                  <p className="flex justify-center gap-1">
-                    <span>{detail.planned}</span>
-                    <span>{detail.acheived}</span>
-                  </p>
-                </td>
-              ))}
+                                        {/* Dates: 22 Mon to 27 Sat */}
+                                        {[...Array(6)].map((_, idx) => (
+                                          <td key={idx} className="py-1">
+                                            <p className="flex justify-center gap-1">
+                                              <span>{detail.planned}</span>
+                                              <span>{detail.acheived}</span>
+                                            </p>
+                                          </td>
+                                        ))}
 
-              {/* Action column (empty for alignment) */}
-              <td className="py-1"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  </td>
-</tr>
-
+                                        {/* Action column (empty for alignment) */}
+                                        <td className="py-1"></td>
+                                      </tr>
+                                    ))}
+                                  </tbody>
+                                </table>
+                              </div>
+                            </td>
+                          </tr>
                         )}
                       </React.Fragment>
                     );

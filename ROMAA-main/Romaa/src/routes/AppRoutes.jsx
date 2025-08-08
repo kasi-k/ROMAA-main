@@ -148,7 +148,12 @@ import ViewPurchaseBill from "../pages/purchase/purchase bill/ViewPurchaseBill";
 import ViewPurchaseEnquiry from "../pages/purchase/purchase enquiry/ViewPurchaseEnquiry";
 import PurchaseStocks from "../pages/purchase/purchase stocks/PurchaseStocks";
 import PurchaseAssets from "../pages/purchase/purchase assets/PurchaseAssets";
-import ScheduleProjects from "../pages/projects/schedule/ScheduleProjects";
+import ScheduleProjects from "../pages/projects/schedule/schedule/ScheduleProjects";
+import ViewWeekly from "../pages/projects/schedule/schedule/tabs/weekly/ViewWeekly";
+import ViewDailyProject from "../pages/projects/schedule/schedule/tabs/daily/ViewDailyProjects";
+import ViewProjectSchedule from "../pages/projects/schedule/schedule/tabs/project schedule/ViewProjectSchedule";
+import ViewManPowerHistogram from "../pages/projects/schedule/schedule/tabs/Man Power Histogram/ViewManPowerHistogram";
+import ViewMechinerySchedule from "../pages/projects/schedule/schedule/tabs/machinery Schedule/ViewMechinerySchedule";
 
 const AppRoutes = () => {
   return (
@@ -224,9 +229,28 @@ const AppRoutes = () => {
                 <Route index element={<WBS />} />
                 <Route path="viewwbs" element={<ViewWbs />} />
               </Route>
-              <Route path="projectschedule">
+      <Route path="projectschedule">
                 <Route index element={<ScheduleProjects />} />
-              
+                <Route
+                  path="viewdailyproject"
+                  element={<ViewDailyProject/>}
+                /> 
+                <Route
+                  path="viewweekly"
+                  element={<ViewWeekly />}
+                />
+                <Route
+                  path="viewprojectschedule"
+                  element={<ViewProjectSchedule />}
+                />
+                 <Route
+                  path="viewmanpowerhistogram"
+                  element={<ViewManPowerHistogram />}
+                />
+                <Route
+                  path="viewmechineryschedule"
+                  element={<ViewMechinerySchedule />}
+                />
               </Route>
 
               <Route path="woissuance">

@@ -1,9 +1,12 @@
 
 import { useSearchParams } from "react-router-dom";
-import Title from "../../../components/Title";
+import Title from "../../../../components/Title"
 import DailyProjects from "./tabs/daily/DailyProjects";
 import WeeklyProjects from "./tabs/weekly/WeeklyProjects";
 import MonthlyProjects from "./tabs/monthly/Monthly";
+import ProjectSchedule from "./tabs/project schedule/ProjectSchedule";
+import ManPowerHistogram from "./tabs/Man Power Histogram/ManPowerHistogram";
+import MachinerySchedule from "./tabs/machinery Schedule/MachinerySchedule";
 
 
 
@@ -26,7 +29,22 @@ const tabs = [
     component:<MonthlyProjects/>,
     
   },
-  
+    {
+    id: "4",
+    label: "Project Schedule",
+    component:<ProjectSchedule/>,
+    
+  },
+      {
+    id: "5",
+    label: "Man Power Histogram",
+    component:<ManPowerHistogram/>,
+  },
+        {
+    id: "6",
+    label: "Machinery Schedule",
+    component:<MachinerySchedule/>,
+  },
  
 ];
 

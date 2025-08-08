@@ -7219,45 +7219,219 @@ export const DailyProjectData = [
 
 export const WeeklyProjectData = [
   {
-    description: "Concrete Pouring",
+    description: "Retaining Wall",
     details: [
       {
-        contractor: "ABC Constructions",
-        quantity: 100,
-        unit: "Cubic Meters",
-        planned: 20,
-        acheived: 18,
+        contractor: "Earthwork",
+        quantity: 195,
+        unit: "M3",
+        daily: [
+          { planned: 2, achieved: 2 }, // 22 Mon
+          { planned: 2, achieved: 2 }, // 23 Tue
+          { planned: 2, achieved: 2 }, // 24 Wed
+          { planned: 2, achieved: 2 }, // 25 Thu
+          { planned: 2, achieved: 2 }, // 26 Fri
+          { planned: 2, achieved: 2 }, // 27 Sat
+        ]
       },
       {
-        contractor: "XYZ Builders",
-        quantity: 120,
-        unit: "Cubic Meters",
-        planned: 25,
-        acheived: 25,
+        contractor: "Shear Key Reinforcement",
+        quantity: 195,
+        unit: "M3",
+        daily: [
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+        ]
+      },
+      {
+        contractor: "Shear Key Concrete",
+        quantity: 195,
+        unit: "M3",
+        daily: [
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+        ]
+      },
+      {
+        contractor: "Raft Reinforcement",
+        quantity: 195,
+        unit: "M3",
+        daily: [
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+          { planned: 2, achieved: 2 },
+        ]
+      }
+    ]
+  },
+  // ...other main rows as needed
+];
+
+
+
+ export const MechanicalScheduleData = [
+  {
+    sno: 1,
+    machineName: "Excavator",
+    assignedSite: "Tower A Foundation",
+    startDate: "04.06.2025",
+    workingHours: 45,
+    status: "Scheduled",
+  },
+  {
+    sno: 2,
+    machineName: "Bulldozer",
+    assignedSite: "Tower B Foundation",
+    startDate: "05.06.2025",
+    workingHours: 50,
+    status: "Scheduled",
+  },
+  {
+    sno: 3,
+    machineName: "Crane",
+    assignedSite: "Tower C Roof",
+    startDate: "06.06.2025",
+    workingHours: 38,
+    status: "Scheduled",
+  },
+  {
+    sno: 4,
+    machineName: "Excavator",
+    assignedSite: "Tower D Basement",
+    startDate: "07.06.2025",
+    workingHours: 42,
+    status: "Scheduled",
+  },
+];
+export const manpowerhistogramData = [
+  {
+    description: "Retaining Wall",
+ 
+   
+    details: [
+      {
+        contractor: "Earthwork",
+        quantity: 195,
+        unit: "M3",
+        startDate: "01.04.2025",
+        daysRemaining: 26,
+        manPower:20
+      },
+      {
+        contractor: "Shear Key Reinforcement",
+        quantity: 195,
+        unit: "M3",
+        startDate: "01.04.2025",
+        daysRemaining: 26,
+        manPower:20
+      },
+      {
+        contractor: "Shear Key Concrete - 0.4*0.3m",
+        quantity: 195,
+        unit: "M3",
+        startDate: "01.04.2025",
+        daysRemaining: 26,
+        manPower:20
+      },
+      {
+        contractor: "Raft Reinforcement",
+        quantity: 195,
+        unit: "M3",
+        startDate: "01.04.2025",
+        daysRemaining: 26,
+        manPower:20
       },
     ],
   },
   {
-    description: "Steel Reinforcement",
+    description: "Road Work",
+ 
+    details: [],
+  }, {
+    description: "New Inletvent - 9nos - 10*3*1.35m",
+ 
+    details: [],
+  },
+];
+
+export const projectScheduledata = [
+  {
+    description: "Excavation Work",
+    quantity: 100,
+    unit: "m³",
+    startDate: "2025-08-10",
+    daysRemaining: 12,
     details: [
       {
-        contractor: "SteelWorks Ltd.",
-        quantity: 50,
-        unit: "Tons",
-        planned: 10,
-        acheived: 9,
+        contractor: "ABC Contractors",
+        quantity: 60,
+        unit: "m³",
+        startDate: "2025-08-10",
+        daysRemaining: 7,
+      },
+      {
+        contractor: "XYZ Infra",
+        quantity: 40,
+        unit: "m³",
+        startDate: "2025-08-12",
+        daysRemaining: 5,
+      },
+    ],
+  },
+  {
+    description: "Foundation Concrete",
+    quantity: 50,
+    unit: "m³",
+    startDate: "2025-08-15",
+    daysRemaining: 20,
+    details: [
+      {
+        contractor: "BuildWell Ltd.",
+        quantity: 30,
+        unit: "m³",
+        startDate: "2025-08-15",
+        daysRemaining: 12,
+      },
+      {
+        contractor: "SolidBase",
+        quantity: 20,
+        unit: "m³",
+        startDate: "2025-08-18",
+        daysRemaining: 8,
       },
     ],
   },
   {
     description: "Brick Masonry",
+    quantity: 200,
+    unit: "m²",
+    startDate: "2025-08-20",
+    daysRemaining: 30,
     details: [
       {
-        contractor: "Brick Masters",
-        quantity: 20000,
-        unit: "Nos",
-        planned: 4000,
-        acheived: 4000,
+        contractor: "MasonPro",
+        quantity: 120,
+        unit: "m²",
+        startDate: "2025-08-20",
+        daysRemaining: 18,
+      },
+      {
+        contractor: "WallCrafters",
+        quantity: 80,
+        unit: "m²",
+        startDate: "2025-08-25",
+        daysRemaining: 12,
       },
     ],
   },
