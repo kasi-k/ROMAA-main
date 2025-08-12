@@ -5,7 +5,7 @@ import Table from "../../../components/Table";
 const Columns = [
   { label: "Tender ID", key: "id" },
   { label: "Project Name", key: "pName" },
-  { label: "Deposit", key: "deposit" },
+  // { label: "Deposit", key: "deposit" },
   { label: "EMP", key: "emp" },
   { label: "Expiry Date", key: "expdate" },
   { label: "Amount Collected", key: "amountcollected" },

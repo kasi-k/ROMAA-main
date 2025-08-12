@@ -7,13 +7,20 @@ import axios from "axios";
 import { InputField } from "../../../../../components/InputField";
 
 const schema = yup.object().shape({
-  status: yup.string().required("Project name is required"),
-  level: yup.string().required("Client name is required"),
+  date: yup.string().required("Date is required"),
+  company: yup.string().required("company name is required"),
+  proposedvalue: yup.string().required("proposed value is required"),
+  amount: yup
+    .number()
+    .typeError("Amount must be a number")
+    .required("Amount is required")
+    .min(0, "Amount cannot be negative"),
+  bankname: yup.string().required("bank name is required"),
+  level: yup.string().required("level is required"),
+  status: yup.string().required("status is required"),
 });
 
-
-
-const EditEMD = ({ onclose }) => {
+const AddEMD = ({ onclose }) => {
   const {
     register,
     handleSubmit,
@@ -38,17 +45,47 @@ const EditEMD = ({ onclose }) => {
             <IoClose className="size-[24px]" />
           </button>
           <h1 className="text-center font-medium text-xl py-2">
-            Edit EMD
+            Edit Work Order
           </h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="grid  px-6 py-6">
               <div className="space-y-4">
                 <InputField
-                  label="Status"
-                  name="status"
+                  label="Date"
+                  name="date"
                   register={register}
                   errors={errors}
-                  placeholder="Enter status"
+                  type="date"
+                />
+                <InputField
+                  label="Company Name"
+                  name="company"
+                  register={register}
+                  errors={errors}
+                  placeholder="Enter company name"
+                />
+                <InputField
+                  label="Proposed Value"
+                  name="proposedvalue"
+                  register={register}
+                  errors={errors}
+                  placeholder="Enter proposed value"
+                />
+
+                <InputField
+                  label="EMD Amount"
+                  name="amount"
+                  type="number"
+                  register={register}
+                  errors={errors}
+                  placeholder="Enter emd amount"
+                />
+                <InputField
+                  label="Bank Name"
+                  name="bankname"
+                  register={register}
+                  errors={errors}
+                  placeholder="Enter bank name"
                 />
                 <InputField
                   label="Level"
@@ -56,6 +93,13 @@ const EditEMD = ({ onclose }) => {
                   register={register}
                   errors={errors}
                   placeholder="Enter level"
+                />
+                <InputField
+                  label="Status"
+                  name="status"
+                  register={register}
+                  errors={errors}
+                  placeholder="Enter status"
                 />
               </div>
             </div>
@@ -81,4 +125,4 @@ const EditEMD = ({ onclose }) => {
   );
 };
 
-export default EditEMD;
+export default AddEMD;

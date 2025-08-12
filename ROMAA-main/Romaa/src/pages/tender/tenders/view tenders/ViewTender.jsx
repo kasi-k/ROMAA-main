@@ -17,6 +17,7 @@ import AddZeroCost from "./zero cost/AddZeroCost";
 import AddBoq from "./Boq/AddBoq";
 import EMD from "./Emd/EMD";
 import UploadModal from "./project documents/UploadModal";
+import AddEMD from "./Emd/AddEMD";
 
 const tabs = [
   {
@@ -201,6 +202,7 @@ const ViewTender = () => {
       "Add BOQ": "addBoq",
       "Add Zero Cost": "zeroCost",
       "Upload Documents": "uploadDocuments",
+      "Add EMD": "addEmd",
     };
 
     if (modalMap[button.label]) {
@@ -274,6 +276,9 @@ const ViewTender = () => {
         )}
         {openModal === "uploadDocuments" && (
           <UploadModal onclose={() => setOpenModal(null)} />
+        )}
+        {openModal === "addEmd" && (
+          <AddEMD onclose={() => setOpenModal(null)} />
         )}
       </div>
     </>
